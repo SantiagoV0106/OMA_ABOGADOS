@@ -1,0 +1,54 @@
+:root {
+  /* Fonts */
+  --primary-font: 'Lora', sans-serif;
+  --secondary-font: 'Montserrat', sans-serif;
+
+  /* Colors */
+  --background-color : #F7F7F7;
+  --dark-blue-color: #0B1125;
+  --light-blue-color: #162249;
+  --light-blue-variant-color: #21336E;
+  --light-blue-variant-2-color: #21336E;
+  --light-blue-variant-3-color: #3E549C;
+  --light-blue-variant-4-color: #808FBE;
+  --light-blue-variant-4-color: #ABB4D4;
+  --silver-color: #D5DAE9;
+  --golden-color: #BC993D;
+
+  background-color:var(--background-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  cursor: default;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: var(--primary-font);
+  font-size: 64px;
+}
+
+p {
+  font-family: var(--secondary-font);
+  font-weight: 300;
+}
+
+a {
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--silver-color);
+}
