@@ -1,14 +1,20 @@
-
+import { Hero } from './components'
 import './App.css'
-import { Header } from './components'
 
 function App() {
 
   return (
     <>
-      <Header />
-      <h1>Hola desde app</h1>
+      <Hero
+        imageUrl='../src/assets/Images/hero-landing-img.jpg'
+        subTitle = 'Orjuela Morales'
+        title='Comprometidos con la excelencia'
+        desc='Bienvenido a OMA Abogados, 
+      donde nos destacamos en derecho financiero, seguros, 
+      responsabilidad fiscal, jurisdicción contencioso-administrativa, 
+      derecho penal y procesos de insolvencia. '/>
     </>
+
   )
 }
 

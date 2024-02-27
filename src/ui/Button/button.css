@@ -2,6 +2,21 @@
     display: flex;
     align-items: center;
     gap: 0 7px;
+    padding: 15px 75px;
+
+    cursor: pointer;
+
+    color: var(--golden-color);
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid var(--golden-color);
+    border-radius: 33px;
+}
+
+.secondary-btn {
+    display: flex;
+    align-items: center;
+    gap: 0 7px;
     padding: 9px 18px;
 
     color: var(--silver-color);

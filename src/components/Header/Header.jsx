@@ -30,7 +30,7 @@ export function Header() {
                     <li><a href="#">Contáctanos</a></li>
                 </ul>
                 <div className={`${active? 'interaction-btn-container' : ''}`} >
-                    <Button className='primary-btn' type='button'  icon={<FaWhatsapp/>} name='(+57) 310 279 1873' />
+                    <Button icon={<FaWhatsapp/>} name='(+57) 310 279 1873' />
                 </div>
             </div>
             </div>

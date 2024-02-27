@@ -4,7 +4,7 @@
   --secondary-font: 'Montserrat', sans-serif;
 
   /* Colors */
-  --background-color : #F7F7F7;
+  --background-color: #F7F7F7;
   --dark-blue-color: #0B1125;
   --light-blue-color: #162249;
   --light-blue-variant-color: #21336E;
@@ -15,7 +15,7 @@
   --silver-color: #D5DAE9;
   --golden-color: #BC993D;
 
-  background-color:var(--background-color);
+  background-color: var(--background-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -38,11 +38,22 @@ body {
 
 h1 {
   font-family: var(--primary-font);
+  color: var(--silver-color);
   font-size: 64px;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: var(--secondary-font);
+  color: var(--silver-color);
+  font-size: 16px;
+  font-weight: 600;
 }
 
 p {
   font-family: var(--secondary-font);
+  color: var(--silver-color);
+  font-size: 16px;
   font-weight: 300;
 }
 
