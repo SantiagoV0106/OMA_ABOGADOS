@@ -1,0 +1,11 @@
+.clients-container{
+    display: grid;
+    grid-template-columns: repeat(2, 304px);
+}
+
+.clients-container .client {
+    border: 1px solid var(--golden-color);
+}
+.clients-container .client img {
+    width: 100%;
+}

@@ -1,7 +1,7 @@
 import './button.css'
 
-export function Button({ icon, name }) {
+export function Button({ icon, name, className }) {
     return (
-        <button className='secondary-btn' type='button'>{icon}{name}</button>
+        <button className={className} type='button'>{icon}{name}</button>
     )
 }

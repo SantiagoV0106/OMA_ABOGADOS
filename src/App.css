@@ -1,0 +1,76 @@
+.about-us-home-section-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 176px 157px 0 104px;
+}
+
+.about-us-home-section-container .title-container {
+    margin: 0;
+    width: auto;
+    max-width: 60%;
+}
+
+.about-us-home-section-container .title-container h1 {
+    color: var(--golden-color);
+    max-width: 470px;
+}
+
+.about-us-home-section-container .title-container h3 {
+    color: var(--dark-blue-color);
+}
+
+.about-us-home-section-container .title-container p {
+    color: var(--dark-blue-color);
+    font-size: 20px;
+}
+
+.our-services-home-section-container {
+    margin: 210px 104px 0;
+}
+
+.relevant-processes-home-section-container {
+    margin: 223px 0 0;
+    padding: 85px 104px 114px;
+    background-color: var(--dark-blue-color);
+}
+
+.relevant-processes-home-section-container .c-header-container {
+   margin-bottom: 50px;
+
+}
+.relevant-processes-home-section-container .c-header-container h1 {
+    width: 50%;
+    text-align: center;
+    color: var(--silver-color);
+
+}
+
+.relevant-processes-home-section-container h3 {
+    color: var(--silver-color);
+}
+
+.clients-home-section-container {
+    display: flex;
+    justify-content: space-between;
+   margin: 180px 104px 60px;
+}
+
+
+.clients-home-section-container .title-container {
+    margin: 0;
+    align-self: center;
+}
+
+.clients-home-section-container .title-container h1 {
+    color: var(--golden-color);
+}
+
+.clients-home-section-container .title-container h3 {
+    color: var(--dark-blue-color);
+}
+.clients-home-section-container .title-container p {
+    padding: 0 0 0 30px;
+    font-size: 20px;
+    color: var(--dark-blue-color);
+}

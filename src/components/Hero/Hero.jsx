@@ -1,8 +1,10 @@
-import { PrimaryBtn } from '../../ui'
+import { TitleSection } from '../../ui'
 import { Header } from '../Header/Header'
+
+import { sectionInfo } from '../../const/sectionInfo'
 import './hero.css'
 
-export function Hero({ imageUrl, subTitle, title, desc }) {
+export function Hero({ imageUrl }) {
 
     const styles = {
         backgroundImage: `url(${imageUrl})`
@@ -11,12 +13,14 @@ export function Hero({ imageUrl, subTitle, title, desc }) {
     return (
         <div className="hero-container" style={styles}>
             <Header />
-            <div className="hero-info-container">
-                <h3>{subTitle}</h3>
-                <h1>{title}</h1>
-                <p>{desc}</p>
-                <PrimaryBtn name='Contactanos' />
-            </div>
+            <TitleSection
+                className={sectionInfo[0].className}
+                imageUrl={sectionInfo[0].imageUrl}
+                subTitle={sectionInfo[0].subTitle}
+                title={sectionInfo[0].title}
+                desc={sectionInfo[0].desc}
+                btnClassname='primary-btn'
+                btnName='Contáctanos' />
         </div>
     )
 }

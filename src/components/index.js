@@ -1,2 +1,6 @@
 export * from './Header/Header'
 export * from './Hero/Hero'
+export * from './Statistics/Banner/Banner'
+export * from './Areas/Areas'
+export * from './Processes/Processes'
+export * from './Clients/Clients'

@@ -2,7 +2,6 @@
 import { useState } from 'react'
 
 // Componentes
-import { Button } from '../../ui'
 import { FaWhatsapp } from "react-icons/fa6";
 import { IoMenuOutline } from "react-icons/io5"
 import { IoCloseOutline } from "react-icons/io5"
@@ -12,6 +11,7 @@ import { IoCloseOutline } from "react-icons/io5"
 import './header.css'
 
 export function Header() {
+
     const [active, setActive] = useState(false)
 
     const handleActive = () => {
@@ -30,7 +30,7 @@ export function Header() {
                     <li><a href="#">Contáctanos</a></li>
                 </ul>
                 <div className={`${active? 'interaction-btn-container' : ''}`} >
-                    <Button icon={<FaWhatsapp/>} name='(+57) 310 279 1873' />
+                    <a className='terciary-btn' href="http://wa.me/3178266279"> <FaWhatsapp className='web-icon'/> (+57) 310 279 1873 </a>
                 </div>
             </div>
             </div>

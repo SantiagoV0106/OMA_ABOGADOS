@@ -1,0 +1,35 @@
+.processes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 16px;
+}
+
+.process {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 30px 20px;
+    height: 505px;
+    background-color: var(--light-blue-color);
+}
+
+.process .process-info h1 {
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+.process .process-info p {
+    max-height: 264px;
+    padding: 0 10px 0 0;
+   overflow-y: auto;
+}
+
+.process .process-extra-info{
+    display: flex;
+   flex-direction: column;
+   gap: 10px 0;
+}
+.process .process-extra-info p{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
