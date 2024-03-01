@@ -36,9 +36,10 @@
 }
 
 .relevant-processes-home-section-container .c-header-container {
-   margin-bottom: 50px;
+    margin-bottom: 50px;
 
 }
+
 .relevant-processes-home-section-container .c-header-container h1 {
     width: 50%;
     text-align: center;
@@ -53,7 +54,7 @@
 .clients-home-section-container {
     display: flex;
     justify-content: space-between;
-   margin: 180px 104px 60px;
+    margin: 180px 104px 60px;
 }
 
 
@@ -69,8 +70,34 @@
 .clients-home-section-container .title-container h3 {
     color: var(--dark-blue-color);
 }
+
 .clients-home-section-container .title-container p {
     padding: 0 0 0 30px;
     font-size: 20px;
     color: var(--dark-blue-color);
+}
+
+.areas-home-section-container {
+    background-color: var(--dark-blue-color);
+
+}
+
+.areas-home-section-container .cobertura-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 204px 0 198px;
+}
+
+.areas-home-section-container .cobertura-container img {
+    height: 623px;
+
+}
+.areas-home-section-container .c-header-container h1 {
+    color: var(--silver-color);
+}
+.areas-home-section-container .c-header-container h3 {
+    color: var(--silver-color);
+}
+.areas-home-section-container .c-header-container p {
+    display: block;
 }

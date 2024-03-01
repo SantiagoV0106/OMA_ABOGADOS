@@ -44,4 +44,13 @@ export const sectionInfo = [
         naturales y jurídicas del orden privado y
          público.`
     },
+    {
+        className: 'c-header-container',
+        subTitle: 'Cobertura',
+        title: 'Nuestra Cobertura',
+        desc: `Nuestra firma legal se enorgullece de ofrecer servicios de 
+        excelencia y calidad en una amplia gama de áreas jurídicas. 
+        Atendemos con dedicación y profesionalismo en los departamentos del Valle de la Cuaca, Cauca, Risaralda, Nariño, Quindío, Cundinamarca y Caldas. 
+        Contamos con oficinas en la ciudad de Cali y Bogotá.`
+    }
 ]
