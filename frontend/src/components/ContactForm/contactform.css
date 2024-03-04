@@ -1,0 +1,9 @@
+#contact-us-form { 
+    display: flex;
+    flex-direction: column;
+    gap: 60px 0;
+}
+#contact-us-form .primary-btn{
+  align-self: flex-start;
+  color: var(--dark-blue-color);
+}

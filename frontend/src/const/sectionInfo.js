@@ -52,5 +52,17 @@ export const sectionInfo = [
         excelencia y calidad en una amplia gama de áreas jurídicas. 
         Atendemos con dedicación y profesionalismo en los departamentos del Valle de la Cuaca, Cauca, Risaralda, Nariño, Quindío, Cundinamarca y Caldas. 
         Contamos con oficinas en la ciudad de Cali y Bogotá.`
-    }
+    },
+    {
+        className: 'title-container',
+        subTitle: 'Contacto',
+        title: 'Te ayudamos al instante',
+        desc: `Somos una firma dedicada a la defensa
+        judicial de entidades financieras y
+        aseguradoras dentro del marco del litigio
+        civil, laboral, comercial, administrativo y punitivo; OMA Abogados S.A.S. también
+        extiende sus servicios legales a personas
+        naturales y jurídicas del orden privado y
+         público.`
+    },
 ]

@@ -79,18 +79,24 @@
 
 .areas-home-section-container {
     background-color: var(--dark-blue-color);
+    padding: 50px 186px;
 
 }
 
 .areas-home-section-container .cobertura-container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    margin: 0 204px 0 198px;
+    gap: 0 100px;
+    margin: 50px 0 0;
 }
 
 .areas-home-section-container .cobertura-container img {
     height: 623px;
 
+}
+.areas-home-section-container .c-header-container {
+    text-align: center;
 }
 .areas-home-section-container .c-header-container h1 {
     color: var(--silver-color);
@@ -100,4 +106,27 @@
 }
 .areas-home-section-container .c-header-container p {
     display: block;
+    font-size: 20px;
+    width: 80%;
+}
+
+.contact-us-home-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200px 104px;
+}
+
+.contact-us-home-section #contact-us-form {
+    width: 50%;
+}
+
+.contact-us-home-section .title-container {
+    margin: 0;
+}
+.contact-us-home-section .title-container h3 {
+    color: var(--dark-blue-color);
+}
+.contact-us-home-section .title-container h1 {
+    color: var(--golden-color);
 }
