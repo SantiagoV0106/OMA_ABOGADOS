@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Home } from "../pages";
+import { AboutUsPage, Home } from "../pages";
 
 export function UserRouter() {
     return (
@@ -7,6 +7,10 @@ export function UserRouter() {
             <Route
             path="/"
             element={<Home/>}
+            />
+            <Route
+            path="/about-us"
+            element={<AboutUsPage/>}
             />
 
         </Routes>

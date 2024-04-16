@@ -1,10 +1,15 @@
 // React
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 // Componentes
 import { FaWhatsapp } from "react-icons/fa6";
 import { IoMenuOutline } from "react-icons/io5"
 import { IoCloseOutline } from "react-icons/io5"
+
+
+// Const
+import { headerLinks } from '../../const/headerLinks';
 
 
 // Styles
@@ -17,28 +22,35 @@ export function Header() {
     const handleActive = () => {
         setActive(!active)
     }
-    
+
     return (
-        <div className={`header-container ${active? 'active' : ''}`}>
+        <div className={`header-container ${active ? 'active' : ''}`}>
             <img className='logo-img' src="../src/assets/Images/OMA-Logo.svg" alt="Logo-img" />
             < div className={`header-menu-container ${active ? 'active' : ''}`}>
-            <div className={`header-interactions ${active? 'active' : ''}`}>
-                <ul>
-                    <li><a href="#">Sobre nosotros</a></li>
+                <div className={`header-interactions ${active ? 'active' : ''}`}>
+                    <ul>
+                        {
+                            headerLinks.map(({ id, name, link }) => {
+                                return (
+                                    <li key={id}> <Link to={link}> {name}</Link></li>
+                                )
+                            })
+                        }
+                        {/* <li><Link to={'/about-us'}> Sobre nosotros </Link> </li>
                     <li><a href="#">Servicios</a></li>
                     <li><a href="#">Estadísticas</a></li>
-                    <li><a href="#">Contáctanos</a></li>
-                </ul>
-                <div className={`${active? 'interaction-btn-container' : ''}`} >
-                    <a className='terciary-btn' href="http://wa.me/3178266279"> <FaWhatsapp className='web-icon'/> (+57) 310 279 1873 </a>
+                    <li><a href="#">Contáctanos</a></li> */}
+                    </ul>
+                    <div className={`${active ? 'interaction-btn-container' : ''}`} >
+                        <a className='terciary-btn' href="http://wa.me/3178266279"> <FaWhatsapp className='web-icon' /> (+57) 310 279 1873 </a>
+                    </div>
                 </div>
-            </div>
             </div>
             {
                 !active ?
-                <IoMenuOutline className='btn-menu' onClick={handleActive} />
-                :
-                <IoCloseOutline className='btn-close-menu' onClick={handleActive}/>
+                    <IoMenuOutline className='btn-menu' onClick={handleActive} />
+                    :
+                    <IoCloseOutline className='btn-close-menu' onClick={handleActive} />
             }
 
 
