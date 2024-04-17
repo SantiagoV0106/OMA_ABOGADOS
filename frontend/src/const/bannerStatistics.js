@@ -1,20 +1,26 @@
 export const bannerStatistics = [
     {
-        title: 'Fiduciaria Bancolombia',
-        percentage: '18.3%',
-        desc: 'Tasa de efectividad en procesos adscritos a Fiduciaria Bancolombia '
+        title: 'Derecho Financiero',
+        percentage: '100%',
+        desc: 'Tasa de efectividad en procesos de derecho fiduciario'
 
     },
     {
-        title: 'Bancolombia S.A',
-        percentage: '22%',
-        desc: 'Tasa de efectividad en procesos adscritos a Bancolombia S.A'
+        title: 'Derecho Fiduciario',
+        percentage: '100%',
+        desc: 'Tasa de efectividad procesos de derecho financiero'
 
     },
     {
-        title: 'Banco popular S.A',
-        percentage: '15%',
-        desc: 'Tasa de efectividad en procesos adscritos a Banco Popular S.A'
+        title: 'S.F.C',
+        percentage: '100%',
+        desc: 'Tasa de efectividad en procesos de derecho ante la S.F.C'
+
+    },
+    {
+        title: 'Procesos no corporativos',
+        percentage: '100%',
+        desc: 'Tasa de efectividad en procesos no corporativos'
 
     }
 ]

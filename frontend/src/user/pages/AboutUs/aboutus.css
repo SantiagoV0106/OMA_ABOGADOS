@@ -1,0 +1,50 @@
+.about-us {
+    margin: 280px auto 0 104px;
+}
+
+.about-us-btn {
+    margin: 40px 0;
+}
+
+.mision-vision-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 300px;
+    gap: 60px 0;
+}
+
+.oma-value h1 {
+    color: var(--golden-color);
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.oma-value p {
+    color: var(--dark-blue-color);
+}
+
+.valores-section {
+    background-color: var(--dark-blue-color);
+    margin: 151px 0 0;
+    padding: 68px 253px 72px;
+}
+
+.valores-section .c-header-container h3 {
+    color: var(--silver-color);
+}
+
+.valores-section .c-header-container h1 {
+    color: var(--silver-color);
+}
+
+.valores-container {
+    margin: 50px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.valores-container .web-icon {
+    color: var(--golden-color);
+    font-size: 64px;
+}

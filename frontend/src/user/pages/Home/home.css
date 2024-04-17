@@ -1,26 +1,26 @@
-.about-us-home-section-container {
+.about-us-section-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 176px 157px 0 104px;
 }
 
-.about-us-home-section-container .title-container {
+.about-us-section-container .title-container {
     margin: 0;
     width: auto;
     max-width: 60%;
 }
 
-.about-us-home-section-container .title-container h1 {
+.about-us-section-container .title-container h1 {
     color: var(--golden-color);
     max-width: 470px;
 }
 
-.about-us-home-section-container .title-container h3 {
+.about-us-section-container .title-container h3 {
     color: var(--dark-blue-color);
 }
 
-.about-us-home-section-container .title-container p {
+.about-us-section-container .title-container p {
     color: var(--dark-blue-color);
     font-size: 20px;
 }
@@ -77,9 +77,42 @@
     color: var(--dark-blue-color);
 }
 
+.clients-home-section-container .title-container .secondary-btn {
+    display: none;
+}
+
+
+.trayectoria-home-section-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 176px 157px 280px 104px;
+}
+
+
+.trayectoria-home-section-container .title-container {
+    margin: 0;
+    align-self: center;
+    width: auto;
+    max-width: 60%;
+}
+
+.trayectoria-home-section-container .title-container h1 {
+    color: var(--golden-color);
+}
+
+.trayectoria-home-section-container .title-container h3 {
+    color: var(--dark-blue-color);
+}
+
+.trayectoria-home-section-container .title-container p {
+    font-size: 20px;
+    color: var(--dark-blue-color);
+}
+
 .areas-home-section-container {
     background-color: var(--dark-blue-color);
-    padding: 50px 186px;
+    padding: 100px 186px;
 
 }
 
@@ -110,23 +143,23 @@
     width: 80%;
 }
 
-.contact-us-home-section {
+.contact-us-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 200px 104px;
 }
 
-.contact-us-home-section #contact-us-form {
+.contact-us-section #contact-us-form {
     width: 50%;
 }
 
-.contact-us-home-section .title-container {
+.contact-us-section .title-container {
     margin: 0;
 }
-.contact-us-home-section .title-container h3 {
+.contact-us-section .title-container h3 {
     color: var(--dark-blue-color);
 }
-.contact-us-home-section .title-container h1 {
+.contact-us-section .title-container h1 {
     color: var(--golden-color);
 }

@@ -1,19 +1,19 @@
 export const services = [
     {
         id: 1,
-        service: 'Derecho Financiero'
+        service: 'Derecho Financiero y seguros'
     },
     {
         id: 2,
-        service: 'Derecho de seguros'
+        service: 'Derecho de familia'
     },
     {
         id: 3,
-        service: 'Responsabilidad fiscal y disciplinaros'
+        service: 'Derecho laboral'
     },
     {
         id: 4,
-        service: 'Jurisdicción contencioso administrativa'
+        service: 'Derecho civil y comercial'
     },
     {
         id: 5,
@@ -21,6 +21,14 @@ export const services = [
     },
     {
         id: 6,
+        service: 'Derecho administrativo'
+    },
+    {
+        id: 7,
+        service: 'Responsabilidad fiscal y disciplinarios'
+    },
+    {
+        id: 8,
         service: 'Procesos de insolvencia'
     },
 ]

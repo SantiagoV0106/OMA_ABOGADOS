@@ -1,35 +1,51 @@
 //
-
 import {
-    Areas,
     Banner,
     Clients,
     ContactForm,
     Footer,
-    Hero,
+    Header,
     Office,
-    Processes
-  } from '../../../components'
-  
-  // Data
-  import { heroImages } from '../../../const/heroImages'
-  import { sectionInfo } from '../../../const/sectionInfo'
-  import { TitleSection } from '../../../ui'
-  import { offices } from '../../../const/offices'
-  
-  // Icons
-  import { FaAngleRight } from 'react-icons/fa6'
+    Processes,
+    Services
+} from '../../../components'
+
+// Data
+import { heroImages } from '../../../const/heroImages'
+import { sectionInfo } from '../../../const/sectionInfo'
+import { Button, ContactTitle, TitleSection } from '../../../ui'
+import { offices } from '../../../const/offices'
+
+// Icons
+import { FaAngleRight } from 'react-icons/fa6'
 
 import './home.css'
 
 export function Home() {
+
+    const bgHeroStyle = {
+        backgroundImage: `url(${heroImages[0].imageUrl})`
+    }
+
     return (
         <>
-            <Hero
-                imageUrl={heroImages[0].imageUrl}
-            />
+            <section className="hero-container" style={bgHeroStyle}>
+                <Header />
+                <div className={'title-container'}>
+                    <h3>{'Orjuela Morales'}</h3>
+                    <h1>{'Comprometidos con la excelencia'}</h1>
+                    <p>{
+                        `Bienvenido a OMA Abogados, 
+        donde nos destacamos en derecho financiero, seguros, 
+        responsabilidad fiscal, jurisdicción 
+        contencioso-administrativa, 
+        derecho penal y procesos de insolvencia.`
+                    }</p>
+                    <Button className={'primary-btn'} name={'Contáctanos'} />
+                </div>
+            </section>
             <Banner />
-            <section className='about-us-home-section-container'>
+            <section className='about-us-section-container'>
                 <TitleSection
                     className={sectionInfo[1].className}
                     subTitle={sectionInfo[1].subTitle}
@@ -50,7 +66,7 @@ export function Home() {
                     subTitle={sectionInfo[2].subTitle}
                     title={sectionInfo[2].title}
                 />
-                <Areas />
+                <Services />
             </section>
             <section className='relevant-processes-home-section-container'>
                 <TitleSection
@@ -72,12 +88,28 @@ export function Home() {
                 />
                 <Clients />
             </section>
-            <section className='areas-home-section-container'>
+            <section className='trayectoria-home-section-container'>
                 <TitleSection
                     className={sectionInfo[5].className}
                     subTitle={sectionInfo[5].subTitle}
                     title={sectionInfo[5].title}
                     desc={sectionInfo[5].desc}
+                    btnClassname='secondary-btn'
+                    btnIcon={<FaAngleRight className='web-icon' />}
+                    btnName='Conoce más'
+                />
+                <img
+                    className='image-section'
+                    src="./src/assets/Images/page/trayectoria.jpg"
+                    alt="Trayectoria-Image" />
+            </section>
+
+            <section className='areas-home-section-container'>
+                <TitleSection
+                    className={sectionInfo[6].className}
+                    subTitle={sectionInfo[6].subTitle}
+                    title={sectionInfo[6].title}
+                    desc={sectionInfo[6].desc}
                 />
                 <div className="cobertura-container">
                     <img src="../src/assets/Images/page/map.png" alt="Map" />
@@ -95,14 +127,9 @@ export function Home() {
                     </div>
                 </div>
             </section>
-            <section className='contact-us-home-section'>
+            <section className='contact-us-section'>
                 <ContactForm />
-                <TitleSection
-                    className={sectionInfo[6].className}
-                    subTitle={sectionInfo[6].subTitle}
-                    title={sectionInfo[6].title}
-                    desc={sectionInfo[6].desc}
-                />
+                <ContactTitle />
             </section>
             <Footer />
         </>

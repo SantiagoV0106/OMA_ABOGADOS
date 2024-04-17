@@ -6,7 +6,6 @@
 }
 
 .service {
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,6 +15,7 @@
 }
 
 .service h1 {
+    cursor: pointer;
     font-size: 24px;
     font-weight: 600;
     color: var(--dark-blue-color);
@@ -23,6 +23,8 @@
 }
 
 .service .web-icon {
+    cursor: pointer;
+    color: var(--dark-blue-color);
     font-size: 20px;
 
 }

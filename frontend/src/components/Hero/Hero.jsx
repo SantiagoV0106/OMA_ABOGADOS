@@ -1,10 +1,13 @@
+/* eslint-disable react/prop-types */
 import { TitleSection } from '../../ui'
 import { Header } from '../Header/Header'
 
 import { sectionInfo } from '../../const/sectionInfo'
+
 import './hero.css'
 
 export function Hero({ imageUrl }) {
+
 
     const styles = {
         backgroundImage: `url(${imageUrl})`
@@ -15,7 +18,6 @@ export function Hero({ imageUrl }) {
             <Header />
             <TitleSection
                 className={sectionInfo[0].className}
-                imageUrl={sectionInfo[0].imageUrl}
                 subTitle={sectionInfo[0].subTitle}
                 title={sectionInfo[0].title}
                 desc={sectionInfo[0].desc}

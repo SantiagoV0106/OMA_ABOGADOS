@@ -7,7 +7,7 @@ export function Banner() {
             {
                 bannerStatistics.map(({ title, percentage, desc }, i) => {
                     return (
-                        <div className={`statistic ${i < 2 ? 'deco' : ''}`} key={title}>
+                        <div className={`statistic ${i === 3 ? '' : 'deco'}`} key={title}>
                             <h3> {percentage} </h3>
                             <p> {desc} </p>
                         

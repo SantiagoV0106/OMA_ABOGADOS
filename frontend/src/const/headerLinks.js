@@ -17,7 +17,7 @@ export const headerLinks = [
     },
     {
         id : 4,
-        name : 'Contáctanos',
+        name : 'Boletines',
         link : '/contact-us'
     }
 

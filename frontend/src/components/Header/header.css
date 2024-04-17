@@ -56,6 +56,16 @@
 
 }
 
+.header-social-links{
+    display: flex;
+    align-items: center;
+
+}
+.header-social-links .web-icon {
+   cursor: pointer;
+   font-size: 26px;
+}
+
 @media screen and (max-width : 1200px) {
     .header-interactions {
         gap: 0 20px;

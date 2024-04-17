@@ -41,6 +41,17 @@ export function ContactForm() {
             </div>
 
             <div className="input-group">
+                <Input
+                    type='number'
+                    id='numero'
+                />
+                <label
+                    htmlFor='numero'>
+                    *Número
+                </label>
+            </div>
+
+            <div className="input-group">
                 <textarea
                     id='msg-area'
                     value={value}

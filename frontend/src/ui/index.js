@@ -1,3 +1,5 @@
 export * from './Button/Button'
 export * from './Input/Input'
 export * from './Title/TitleSection'
+export * from './ContactTitle/ContactTitle'
+export * from './HeroTitle/HeroTitle'
