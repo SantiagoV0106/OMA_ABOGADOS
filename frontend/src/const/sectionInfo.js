@@ -87,4 +87,21 @@ export const sectionInfo = [
         subTitle: 'Sobre Nosotros',
         title: 'Valores'
     },
+    {
+        className: 'title-container',
+        subTitle: 'Socio Fundador',
+        title: 'Luis Antonio Orjuela Morales',
+        desc: `Abogado titulado, egresado de la Universidad Militar Nueva Granada, 
+        Magister en Derecho Procesal de la Universidad Externado de Colombia, 
+        especialista en Derecho de Seguros de la Universidad del Rosario, autor del libro
+         “La Competencia Jurisdiccional entre la Justicia Penal Militar y la Justicia Ordinaria” (año 2018), 
+         Ed. Ibañez. Con diferentes cursos en derecho y diplomaturas en Insolvencia Persona Natural 
+         No Comerciante e Insolvencia Mercantil ley 1116 del 2006.`
+    },
+    {
+        className: 'c-header-container',
+        subTitle: 'Sobre Nosotros',
+        title: 'Trayectoria personal',
+        desc : ` El Dr. Luis Antonio Orjuela Morales a lo largo de su vida profesional, se ha desempeñado en los siguientes campos`
+    },
 ]

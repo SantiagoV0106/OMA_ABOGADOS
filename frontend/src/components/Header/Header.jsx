@@ -1,6 +1,7 @@
 // React
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 // Componentes
 import { FaWhatsapp } from "react-icons/fa6";
@@ -21,13 +22,23 @@ export function Header() {
 
     const [active, setActive] = useState(false)
 
+    const navigate = useNavigate()
+
     const handleActive = () => {
         setActive(!active)
     }
 
+    const handleNavigateHome = () => {
+        navigate('/')
+    }
+
     return (
         <div className={`header-container ${active ? 'active' : ''}`}>
-            <img className='logo-img' src="../src/assets/Images/OMA-Logo.svg" alt="Logo-img" />
+            <img 
+            className='logo-img' 
+            src="../src/assets/Images/OMA-Logo.svg" 
+            alt="Logo-img" 
+            onClick={handleNavigateHome}/>
             < div className={`header-menu-container ${active ? 'active' : ''}`}>
                 <div className={`header-interactions ${active ? 'active' : ''}`}>
                     <ul>

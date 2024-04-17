@@ -7,7 +7,7 @@ import { Button, ContactTitle, TitleSection } from '../../../ui'
 import { CiMedal } from "react-icons/ci";
 import { GoShieldCheck } from "react-icons/go";
 import { BsPersonCheck } from "react-icons/bs";
-import { CiHeart } from "react-icons/ci";
+import { FaRegHeart } from "react-icons/fa";
 
 
 
@@ -62,11 +62,41 @@ export function AboutUsPage() {
                     title={sectionInfo[9].title}
                 />
                 <div className="valores-container">
-                    <CiMedal className='web-icon' />
-                    <GoShieldCheck className='web-icon' />
-                    <BsPersonCheck className='web-icon' />
-                    <CiHeart className='web-icon' />
+                    <div className="value">
+                        <CiMedal className='web-icon' />
+                        <p>Excelencia</p>
+                    </div>
+                    <div className="value">
+                        <GoShieldCheck className='web-icon' />
+                        <p>Calidad</p>
+                    </div>
+                    <div className="value">
+                        <BsPersonCheck className='web-icon' />
+                        <p>Compromiso</p>
+                    </div>
+                    <div className="value">
+                        <FaRegHeart className='web-icon' />
+                        <p>Responsabilidad <br /> Social</p>
+                    </div>
                 </div>
+            </section>
+            <section className="founder-section">
+                <img src="" alt="Socio Fundador" />
+                <TitleSection
+                    className={sectionInfo[10].className}
+                    subTitle={sectionInfo[10].subTitle}
+                    title={sectionInfo[10].title}
+                    desc={sectionInfo[10].desc}
+                />
+            </section>
+            <section className="personal-resume">
+                <TitleSection
+                    className={sectionInfo[11].className}
+                    subTitle={sectionInfo[11].subTitle}
+                    title={sectionInfo[11].title}
+                    desc={sectionInfo[11].desc}
+                />
+               
             </section>
             <section className='contact-us-section'>
                 <ContactForm />
