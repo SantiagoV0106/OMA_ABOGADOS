@@ -104,4 +104,24 @@ export const sectionInfo = [
         title: 'Trayectoria personal',
         desc : ` El Dr. Luis Antonio Orjuela Morales a lo largo de su vida profesional, se ha desempeñado en los siguientes campos`
     },
+    {
+        className: 'c-header-container',
+        subTitle: 'Estadísticas',
+        title: 'Tasa de efectividad en procesos de derecho fiduciario',
+    },
+    {
+        className: 'c-header-container',
+        subTitle: 'Estadísticas',
+        title: 'Tasa de efectividad procesos de derecho financiero',
+    },
+    {
+        className: 'c-header-container',
+        subTitle: 'Estadísticas',
+        title: 'Tasa de efectividad en procesos de derecho ante la S.F.C',
+    },
+    {
+        className: 'c-header-container',
+        subTitle: 'Estadísticas',
+        title: 'Tasa de efectividad en procesos no corporativos',
+    },
 ]

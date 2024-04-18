@@ -58,3 +58,45 @@
     color: var(--golden-color);
     font-size: 64px;
 }
+
+.founder-section { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 180px 160px 220px 148px;
+}
+
+.founder-section .title-container {
+    width: 50%;
+    margin: 0;
+}
+.founder-section .title-container h3 { 
+    color: var(--dark-blue-color);
+}
+.founder-section .title-container h1 { 
+    color: var(--golden-color);
+}
+
+.founder-section .title-container p { 
+    color: var(--dark-blue-color);
+    padding: 0 0 0 30px;
+}
+
+/* .personal-resume {
+    margin: 0 0 300px;
+} */
+
+
+.personal-resume .c-header-container p {
+display: block;
+color: var(--dark-blue-color);
+}
+
+.carousel-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 150px;
+    margin: 50px 0 0;
+}
+

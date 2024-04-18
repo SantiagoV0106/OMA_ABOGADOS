@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { AboutUsPage, Home } from "../pages";
+import { AboutUsPage, Home, StatisticsPage, ServicePage } from "../pages";
 
 export function UserRouter() {
     return (
@@ -9,8 +9,16 @@ export function UserRouter() {
             element={<Home/>}
             />
             <Route
-            path="/about-us"
+            path="/sobre-nosotros"
             element={<AboutUsPage/>}
+            />
+            <Route
+            path="/estadisticas"
+            element={<StatisticsPage/>}
+            />
+            <Route
+            path="/servicios/:servicio"
+            element={<ServicePage/>}
             />
 
         </Routes>

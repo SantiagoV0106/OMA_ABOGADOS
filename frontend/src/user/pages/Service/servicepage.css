@@ -1,0 +1,40 @@
+.service-hero {
+    margin: 280px auto 0 104px;
+    width: 44%;
+}
+
+.service-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 100px 104px 180px;
+}
+
+.service-info-container .title-container {
+    margin: 0;
+}
+.service-info-container img {
+    width: 520px;
+}
+
+.service-info-container .title-container h3 {
+    color: var(--dark-blue-color);
+}
+.service-info-container .title-container h1 {
+    color: var(--golden-color);
+}
+.service-info-container .title-container p {
+    color: var(--dark-blue-color);
+    font-size: 20px;
+    padding: 0 110px 0 30px;
+}
+.service-info-container .title-container ul {
+    padding: 0 80px 0 30px;
+}
+
+.service-info-container .title-container h3::before {
+
+    width: 15%;
+
+}

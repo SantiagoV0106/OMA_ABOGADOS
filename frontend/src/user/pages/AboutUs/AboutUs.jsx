@@ -1,14 +1,16 @@
-
-import { ContactForm, Footer, Header } from '../../../components'
-import { heroImages } from '../../../const/heroImages'
-import { sectionInfo } from '../../../const/sectionInfo'
+//Components
+import { Carousel, ContactForm, Footer, Header } from '../../../components'
 import { Button, ContactTitle, TitleSection } from '../../../ui'
 
+// Data
+import { heroImages } from '../../../const/heroImages'
+import { sectionInfo } from '../../../const/sectionInfo'
+
+//Icons
 import { CiMedal } from "react-icons/ci";
 import { GoShieldCheck } from "react-icons/go";
 import { BsPersonCheck } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
-
 
 
 import './aboutus.css'
@@ -81,7 +83,10 @@ export function AboutUsPage() {
                 </div>
             </section>
             <section className="founder-section">
-                <img src="" alt="Socio Fundador" />
+                <img
+                    className='image-section'
+                    src="./src/assets/Images/page/founder.png"
+                    alt="Socio Fundador" />
                 <TitleSection
                     className={sectionInfo[10].className}
                     subTitle={sectionInfo[10].subTitle}
@@ -96,7 +101,7 @@ export function AboutUsPage() {
                     title={sectionInfo[11].title}
                     desc={sectionInfo[11].desc}
                 />
-               
+                <Carousel />
             </section>
             <section className='contact-us-section'>
                 <ContactForm />

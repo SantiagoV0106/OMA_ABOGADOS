@@ -9,10 +9,10 @@ export function Services() {
     return (
         <div className="services-container">
             {
-                services.map(({ id, service }) => {
+                services.map(({ id, service, link }) => {
                     return (
                         <Link key={id} className="service"
-                        to={'/about-us'}>
+                        to={`/servicios/${link}`}>
                             <h1>{service}</h1>
                             <FaAngleRight className="web-icon" />
                         </Link>

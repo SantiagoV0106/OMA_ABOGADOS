@@ -3,7 +3,7 @@ export const headerLinks = [
     {
         id : 1,
         name : 'Sobre Nosotros',
-        link : '/about-us'
+        link : '/sobre-nosotros'
     },
     {
         id : 2,
@@ -13,12 +13,12 @@ export const headerLinks = [
     {
         id : 3,
         name : 'Estadísticas',
-        link : '/stats'
+        link : '/estadisticas'
     },
     {
         id : 4,
         name : 'Boletines',
-        link : '/contact-us'
+        link : '/boletines'
     }
 
 ]

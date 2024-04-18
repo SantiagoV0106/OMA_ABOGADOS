@@ -147,7 +147,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 200px 104px;
+    margin: 200px 104px;
 }
 
 .contact-us-section #contact-us-form {

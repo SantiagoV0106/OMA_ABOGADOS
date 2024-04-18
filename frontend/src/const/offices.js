@@ -8,9 +8,7 @@ export const offices = [
     },
     {
         name: 'Oficina Bogotá',
-        direction: `Calle 93A #14-17
-        Oficina 608, Centro Comercial
-        Centro 93, Bogotá D.C.`,
-        directionUrl: 'https://maps.app.goo.gl/caYxUzaowmGMzTrM7'
+        direction: `Carrera 12 No. 93-78 OFICINA 305, Bogotá D.C.`,
+        directionUrl: 'https://maps.app.goo.gl/tC2oqphVSQouhGxK7'
     },
 ]

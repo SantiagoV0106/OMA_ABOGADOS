@@ -1,0 +1,54 @@
+.carousel-container {
+    width: 600px;
+    height: 600px;
+}
+
+.carousel-section .web-icon {
+    cursor: pointer;
+    color: var(--golden-color);
+    font-size: 36px;
+}
+
+.block {
+    display: none;
+    /* Oculta los bloques por defecto */
+    transition: opacity 0.5s ease;
+    /* Transición de desvanecimiento */
+}
+
+
+.block.active {
+    display: block;
+    /* Muestra el bloque activo */
+}
+
+.carousel-item {
+    background-color: #fff;
+    border: 1px solid var(--golden-color);
+
+    padding: 40px 50px 25px 42px;
+    margin: 0 0 20px;
+
+    max-width: 732px;
+}
+
+.carousel-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+}
+
+.carousel-info p {
+    color: var(--dark-blue-color);
+}
+
+.carousel-info .cargo {
+    font-weight: 500;
+    margin: 0 2px 0 0;
+}
+
+.carousel-info .date {
+    align-self: flex-end;
+    font-weight: 600;
+    margin: 20px 0 0;
+}
