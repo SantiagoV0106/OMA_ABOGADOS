@@ -138,7 +138,7 @@ export const services = [
         link: 'derecho-penal',
         service: 'Derecho penal',
         heroUrl: '../src/assets/Images/hero/derecho-penal.jpg',
-        desc: `Defensa técnica y consultoría en derecho penal y derecho penal militar, con énfasis en sistema inquisitivo. Sistema acusatorio 
+        desc: `Defensa técnica y consultoría en derecho penal y derecho penal militar, con énfasis en sistema inquisitivo y sistema acusatorio 
         en el nuevo régimen
         de las FF.MM.`,
         normativa: [
@@ -167,7 +167,6 @@ export const services = [
 
         -	Medios de control de nulidad, nulidad y restablecimiento del derecho.
         -	Reparación directa:
-        (Responsabilidad médica).
         -	Controversias contractuales. 
         -	Acciones populares.
         -	Acciones de grupo.
