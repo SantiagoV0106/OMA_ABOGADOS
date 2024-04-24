@@ -1,4 +1,5 @@
-//Imports
+//Data
+import footerImg from '../../assets/images/oma-silver-logo.png'
 import { offices } from "../../const/offices";
 import { Office } from "../Offices/Office";
 
@@ -14,8 +15,8 @@ import './footer.css'
 
 export function Footer() {
     return (
-        <div className='footer-container'>
-            <img src="../src/assets/Images/OMA-Logo.svg" alt="Logo-img" />
+        <footer className='footer-container'>
+            <img src={footerImg} alt="Logo-img" />
             <div className="footer-content-container">
                 <ul>
                     <li><IoMailOutline /> luis.orjuela@omaabogados.com.co </li>
@@ -48,6 +49,6 @@ export function Footer() {
                 </div>
             </div>
             <p className='end-footer'>© 2024 OMA Abogados. Todos los derechos reservados</p>
-        </div>
+        </footer>
     )
 }

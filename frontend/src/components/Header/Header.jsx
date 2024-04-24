@@ -11,7 +11,8 @@ import { FaLinkedin } from 'react-icons/fa6';
 import { FaInstagram } from 'react-icons/fa6';
 
 
-// Const
+// Data
+import headerLogo from '../../assets/images/oma-gold-logo.png'
 import { headerLinks } from '../../const/headerLinks';
 
 
@@ -36,7 +37,7 @@ export function Header() {
         <div className={`header-container ${active ? 'active' : ''}`}>
             <img 
             className='logo-img' 
-            src="../src/assets/Images/OMA-Logo.svg" 
+            src={headerLogo} 
             alt="Logo-img" 
             onClick={handleNavigateHome}/>
             < div className={`header-menu-container ${active ? 'active' : ''}`}>
