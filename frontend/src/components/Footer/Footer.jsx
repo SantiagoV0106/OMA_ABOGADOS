@@ -1,3 +1,5 @@
+// React
+import { useNavigate } from 'react-router';
 //Data
 import footerImg from '../../assets/images/oma-silver-logo.png'
 import { offices } from "../../const/offices";
@@ -14,9 +16,18 @@ import { IoMailOutline } from "react-icons/io5";
 import './footer.css'
 
 export function Footer() {
+
+    const navigate = useNavigate()
+
+    const handleNavigateHome = () => {
+        navigate('/')
+    }
+
     return (
         <footer className='footer-container'>
-            <img src={footerImg} alt="Logo-img" />
+            <img 
+            onClick={handleNavigateHome}
+            src={footerImg} alt="Logo-img" />
             <div className="footer-content-container">
                 <ul>
                     <li><IoMailOutline /> luis.orjuela@omaabogados.com.co </li>
