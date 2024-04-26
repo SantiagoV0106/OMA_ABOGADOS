@@ -8,7 +8,7 @@
 .about-us-section-container .title-container {
     margin: 0;
     width: auto;
-    max-width: 60%;
+    max-width:50%;
 }
 
 .about-us-section-container .title-container h1 {
@@ -128,15 +128,19 @@
     height: 623px;
 
 }
+
 .areas-home-section-container .c-header-container {
     text-align: center;
 }
+
 .areas-home-section-container .c-header-container h1 {
     color: var(--silver-color);
 }
+
 .areas-home-section-container .c-header-container h3 {
     color: var(--silver-color);
 }
+
 .areas-home-section-container .c-header-container p {
     display: block;
     font-size: 20px;
@@ -157,9 +161,23 @@
 .contact-us-section .title-container {
     margin: 0;
 }
+
 .contact-us-section .title-container h3 {
     color: var(--dark-blue-color);
 }
+
 .contact-us-section .title-container h1 {
     color: var(--golden-color);
+}
+
+@media screen and (max-width : 1280px) {
+    .about-us-section-container {
+        margin: 160px 80px 0;
+    }
+    .our-services-home-section-container {
+        margin: 160px 180px 0;
+    }
+    .relevant-processes-home-section-container {
+    padding: 85px 80px 114px;
+    }
 }

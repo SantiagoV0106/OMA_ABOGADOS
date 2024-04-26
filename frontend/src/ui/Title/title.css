@@ -2,21 +2,21 @@
     display: flex;
     flex-direction: column;
     align-items: self-start;
-    width: 40%;
-    margin: 120px auto 0 104px;
+    max-width: 520px;
+    margin: 160px auto 0 104px;
 }
 
 
 .title-container h3 {
     position: relative;
     padding: 0 0 0 60px;
-    
+
 }
 
 .title-container p {
     position: relative;
     margin: 30px 0 60px 25px;
-    padding: 0 155px 0 30px;
+    padding: 0 0 0 30px;
 }
 
 .title-container h3::before {
@@ -67,6 +67,7 @@
     background-color: var(--golden-color);
 
 }
+
 .c-header-container h3::after {
     position: absolute;
     content: '';
@@ -78,9 +79,19 @@
 
 }
 
-.c-header-container p{
-   display: none;
-}
-.c-header-container button{
+.c-header-container p {
     display: none;
+}
+
+.c-header-container button {
+    display: none;
+}
+
+@media screen and (max-width : 1280px) {
+
+    .title-container {
+        margin: 160px auto 0 60px;
+        width: 35%;
+    }
+
 }
