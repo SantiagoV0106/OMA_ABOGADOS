@@ -46,7 +46,7 @@
 
 .btn-menu {
     display: none;
-    color: var(--primary-color);
+    color: var(--silver-color);
     font-size: 36px;
     transition: all 2s;
 }
@@ -69,6 +69,7 @@
    font-size: 26px;
 }
 
+
 @media screen and (max-width : 1280px) {
     .header-container {
         margin: 0 40px ;
@@ -80,6 +81,7 @@
         padding: 0 calc(48px / 2);
     }
 }
+
 @media screen and (max-width : 1080px) {
     .header-container {
         margin: 0 73px;
@@ -136,7 +138,7 @@
     .header-interactions.active ul li a {
         font-size: 24px;
         font-weight: 500;
-        color: var(--secondary-variant-color);
+        color: var(--dark-blue-color);
     }
 
     .interaction-btn-container {
@@ -151,7 +153,7 @@
     }
 
     .interaction-btn-container .secondary-button {
-        color: var(--secondary-variant-color);
+        color: var(--dark-blue-color);
     }
 
     .logo-img {
@@ -174,7 +176,7 @@
         height: 60vh;
         top: -950px;
         left: 0;
-        background-color: var(--primary-color);
+        background-color: var(--silver-color);
         z-index: -1;
         transition: all .6s ease;
         
@@ -186,13 +188,20 @@
 }
 
 @media screen and (max-width : 430px) {
+
     .header-container {
-        margin: 50px 20px 0;
-        transition: all .6s ease;
+        margin: 0 20px 0;
+        transition: all 0.6s ease;
     }
 
+    .logo-img {
+        cursor: pointer;
+        width: 100px;
+    }
+    
+
     .header-container.active {
-        margin: 50px 20px 100vh;
+        margin: 0 20px 100vh;
     }
 
     .header-menu-container {

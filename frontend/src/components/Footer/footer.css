@@ -131,26 +131,43 @@ margin: 0 20px;
 }
 @media screen and (max-width : 430px) {
     .footer-container {
-        padding: 60px 20px 30px;
+        flex-direction: column;
+        padding: 60px 18px 30px;
         height: max-content;
+    }
+
+    .footer-container .footer-content-container {
+        flex-direction: column;
+        gap: 40px 0;
     }
     .footer-container img {
         margin: 0 0 30px;
         width: 150px;
     }
 
-    .footer-container ul {
+    .footer-container .footer-content-container ul {
+        align-self: self-start;
         margin: 0 0 30px;
     }
 
-    .footer-container ul li {
-        font-size: 25px;
+    .footer-container .footer-content-container ul li {
+        font-size: 16px;
+
     }
+
+    .footer-container .footer-offices-container {
+        width: 60%;
+    }
+
     .contact-email {
         margin: 0 0 80px;
         font-size: 18px;
     }
     .end-footer {
         font-size: 16px;
+    }
+
+    .admin-container p {
+        margin: 40px 0 10px;
     }
 }

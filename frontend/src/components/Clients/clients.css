@@ -9,3 +9,10 @@
 .clients-container .client img {
     width: 100%;
 }
+
+@media screen and (max-width : 430px) {
+    .clients-container {
+        justify-content: center;
+        grid-template-columns: repeat(1 , 80%)
+    }
+}

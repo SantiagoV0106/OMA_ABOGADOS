@@ -17,19 +17,35 @@
     font-size: 34px;
     margin-bottom: 30px;
 }
+
 .process .process-info p {
     max-height: 264px;
     padding: 0 10px 0 0;
-   overflow-y: auto;
+    overflow-y: auto;
 }
 
-.process .process-extra-info{
+.process .process-extra-info {
     display: flex;
-   flex-direction: column;
-   gap: 10px 0;
+    flex-direction: column;
+    gap: 10px 0;
 }
-.process .process-extra-info p{
+
+.process .process-extra-info p {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+@media screen and (max-width : 430px) {
+
+    .processes-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px 0;
+    }
+
+    .process .process-info p {
+        padding: 0;
+    }
+
+
 }

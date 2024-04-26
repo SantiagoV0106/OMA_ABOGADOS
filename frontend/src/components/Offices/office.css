@@ -20,3 +20,14 @@ font-weight: 400;
     cursor: pointer;
     font-size: 20px;
 }
+
+@media screen and (max-width : 430px) {
+    .office-container .web-icon {
+        font-size: 40px;
+    }
+
+    .office-container .office-title h3 {
+        font-size: 24px;
+    }
+
+}

@@ -8,7 +8,7 @@
 .about-us-section-container .title-container {
     margin: 0;
     width: auto;
-    max-width:50%;
+    max-width: 50%;
 }
 
 .about-us-section-container .title-container h1 {
@@ -72,7 +72,6 @@
 }
 
 .clients-home-section-container .title-container p {
-    padding: 0 0 0 30px;
     font-size: 20px;
     color: var(--dark-blue-color);
 }
@@ -174,10 +173,116 @@
     .about-us-section-container {
         margin: 160px 80px 0;
     }
+
     .our-services-home-section-container {
         margin: 160px 180px 0;
     }
+
     .relevant-processes-home-section-container {
-    padding: 85px 80px 114px;
+        padding: 85px 80px 114px;
     }
+}
+
+@media screen and (max-width : 430px) {
+    .about-us-section-container {
+        flex-direction: column;
+        margin: 80px 18px 0;
+    }
+
+
+    .about-us-section-container .title-container {
+        width: 90%;
+        max-width: none;
+    }
+
+    .about-us-section-container img {
+        display: none;
+    }
+
+    .about-us-section-container .title-container p {
+        font-size: 16px;
+        margin: 20px 0 40px;
+    }
+
+    .our-services-home-section-container {
+        margin: 160px 18px 0;
+    }
+
+
+    .relevant-processes-home-section-container {
+        padding: 85px 18px 114px;
+    }
+
+    .relevant-processes-home-section-container .c-header-container h1 {
+        width: auto;
+    }
+
+    .clients-home-section-container {
+        flex-direction: column;
+        margin: 180px 18px 60px;
+    }
+
+    .clients-home-section-container .title-container {
+        align-self: flex-start;
+        width: 90%;
+    }
+
+    .clients-home-section-container .title-container p {
+        font-size: 16px;
+    }
+
+    .trayectoria-home-section-container {
+        flex-direction: column;
+        margin: 160px 18px 60px;
+    }
+
+    .trayectoria-home-section-container .title-container {
+        align-self: flex-start;
+        max-width: none;
+        width: 90%;
+        
+    }
+
+    .trayectoria-home-section-container .title-container p {
+        font-size: 16px;
+
+    }
+
+    .trayectoria-home-section-container img {
+        display: none;
+    }
+
+   .areas-home-section-container {
+    flex-direction: column;
+    padding: 100px 18px;
+   }
+
+   .areas-home-section-container .c-header-container p{
+    font-size: 16px;
+    width: 90%;
+   }
+
+   .areas-home-section-container .cobertura-container {
+    flex-direction: column;
+    gap: 30px 0;
+   }
+
+   .areas-home-section-container .cobertura-container img {
+    height: 423px;
+   }
+
+   .contact-us-section {
+    flex-direction: column-reverse;
+    margin: 160px 18px;
+   }
+
+   .contact-us-section .title-container {
+    width: 90%;
+   }
+
+   .contact-us-section #contact-us-form {
+    width: 100%;
+}
+
+
 }

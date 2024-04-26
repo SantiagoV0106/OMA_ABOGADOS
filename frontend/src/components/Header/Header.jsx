@@ -12,7 +12,7 @@ import { FaInstagram } from 'react-icons/fa6';
 
 
 // Data
-// import headerLogo from '../../assets/images/oma-gold-logo.png'
+import headerLogo from '../../assets/images/oma-gold-logo.png'
 import { headerLinks } from '../../const/headerLinks';
 
 
@@ -22,8 +22,14 @@ import './header.css'
 export function Header() {
 
     const [active, setActive] = useState(false)
+    const [showDropdown, setShowDropdown] = useState(false)
 
     const navigate = useNavigate()
+
+    const handleDropdown = () => {
+        console.log(showDropdown);
+        setShowDropdown(!showDropdown)
+    }
 
     const handleActive = () => {
         setActive(!active)
@@ -35,18 +41,33 @@ export function Header() {
 
     return (
         <div className={`header-container ${active ? 'active' : ''}`}>
-            <img 
-            className='logo-img' 
-            src='' 
-            alt="Logo-img" 
-            onClick={handleNavigateHome}/>
+            <img
+                className='logo-img'
+                src={headerLogo}
+                alt="Logo-img"
+                onClick={handleNavigateHome} />
             < div className={`header-menu-container ${active ? 'active' : ''}`}>
                 <div className={`header-interactions ${active ? 'active' : ''}`}>
                     <ul>
                         {
-                            headerLinks.map(({ id, name, link }) => {
+                            headerLinks.map(({ id, name, link, dropdown }) => {
                                 return (
-                                    <li key={id}> <Link to={link}> {name}</Link></li>
+                                    <li
+                                        key={id}>
+                                        {
+                                            dropdown ?
+                                                <Link
+                                                    to={link}
+                                                    onMouseEnter={handleDropdown}
+                                                    onMouseLeave={handleDropdown}>
+                                                    {name}
+                                                </Link> :
+                                                <Link
+                                                    to={link}>
+                                                    {name}
+                                                </Link>
+                                        }
+                                    </li>
                                 )
                             })
                         }
