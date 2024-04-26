@@ -61,6 +61,23 @@ export function Header() {
                                                     onMouseEnter={handleDropdown}
                                                     onMouseLeave={handleDropdown}>
                                                     {name}
+
+                                                    {
+                                                        showDropdown && (
+                                                            <div className="dropdown">
+                                                                {
+                                                                    dropdown.map(({ id, link, service }) => (
+                                                                        <Link
+                                                                            key={id}
+                                                                            to={link}>
+                                                                            {service}
+                                                                        </Link>
+                                                                    ))
+                                                                }
+                                                            </div>
+                                                        )
+                                                    }
+
                                                 </Link> :
                                                 <Link
                                                     to={link}>
