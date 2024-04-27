@@ -1,7 +1,7 @@
 // React
 import { useNavigate } from 'react-router';
 //Data
-import footerImg from '../../assets/images/oma-silver-logo.png'
+// import footerImg from '../../assets/images/oma-silver-logo.png'
 import { offices } from "../../const/offices";
 import { Office } from "../Offices/Office";
 
@@ -23,11 +23,12 @@ export function Footer() {
         navigate('/')
     }
 
+
     return (
         <footer className='footer-container'>
             <img 
             onClick={handleNavigateHome}
-            src={footerImg} alt="Logo-img" />
+            src='/oma-silver.png' alt="Logo-img" />
             <div className="footer-content-container">
                 <ul>
                     <li><IoMailOutline /> luis.orjuela@omaabogados.com.co </li>

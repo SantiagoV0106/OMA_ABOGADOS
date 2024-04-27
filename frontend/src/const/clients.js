@@ -11,12 +11,12 @@ export const clients = [
     },
     {
         id : 3,
-        image : '../src/assets/Images/clients/mapfre.png',
-        name : 'Banco Popular'
+        image : '../src/assets/Images/clients/fidu-bancolombia.png',
+        name : 'Fiduciaria Bancolombia'
     },
     {
         id : 4,
-        image : '../src/assets/Images/clients/liberty-seguros.png',
-        name : 'Banco Popular'
+        image : '',
+        name : 'Logo por enviar'
     },
 ]

@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: self-start;
     max-width: 562px;
-    margin: 260px auto 0 104px;
+    margin: 180px auto 0 104px;
 }
 
 
@@ -15,7 +15,7 @@
 
 .title-container p {
     position: relative;
-    font-size: 20px;
+    font-size: 16px;
     margin: 30px 0 60px 25px;
     padding: 0 0 0 30px;
 }
@@ -88,19 +88,30 @@
     display: none;
 }
 
-@media screen and (max-width : 1280px) {
-
+@media screen and (max-width : 1330px) {
     .title-container {
-        margin: 260px auto 0 60px;
+        margin: 75px auto 0 60px;
         width: 35%;
     }
+    .title-container h1,
+    .c-header-container h1 {
+        font-size: 48px;
+    
+    }
+}
+
+@media screen and (max-width : 1280px) {
 
 }
+
+
+
+
 
 @media screen and (max-width : 430px) {
 
     .title-container {
-        margin: 180px auto 0 18px;
+        margin: 50px auto 0 18px;
         width: 80%;
         max-width: none;
     }

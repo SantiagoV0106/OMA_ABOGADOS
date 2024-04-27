@@ -30,7 +30,8 @@ export function StatisticsPage() {
                     subTitle={sectionInfo[12].subTitle}
                     title={sectionInfo[12].title}
                 />
-                <Stat />
+                <Stat
+                tasa='95%' />
             </section>
             <section className="stat-section">
                 <TitleSection
@@ -38,7 +39,8 @@ export function StatisticsPage() {
                     subTitle={sectionInfo[13].subTitle}
                     title={sectionInfo[13].title}
                 />
-                <Stat />
+                <Stat
+                tasa='94%' />
             </section>
             <section className="stat-section">
                 <TitleSection
@@ -46,7 +48,8 @@ export function StatisticsPage() {
                     subTitle={sectionInfo[14].subTitle}
                     title={sectionInfo[14].title}
                 />
-                <Stat />
+                <Stat
+                tasa='94%' />
             </section>
             <section className="stat-section">
                 <TitleSection
@@ -54,7 +57,8 @@ export function StatisticsPage() {
                     subTitle={sectionInfo[15].subTitle}
                     title={sectionInfo[15].title}
                 />
-                <Stat />
+                <Stat
+                tasa='93%' />
             </section>
             <Footer />
         </>

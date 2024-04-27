@@ -28,7 +28,7 @@ font-size: 20px;
     background-color: var(--golden-color);
 }
 
-@media screen and (max-width : 430px) {
+@media screen and (max-width : 1330px) {
     .title-container ul {
         
         padding: 0 0 0 20px;

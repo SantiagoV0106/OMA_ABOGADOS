@@ -121,12 +121,13 @@ margin: 0 20px;
     width: 100%;
     border-radius: 50px;
     background-color: var(--golden-color);
+
+
 }
 
-@media screen and (max-width : 1080px) {
-    .footer-container {
-        padding: 60px 73px 30px;
-        height: max-content;
+@media screen and (max-width : 1330px) {
+    .footer-container .footer-content-container ul li {
+        font-size: 16px;
     }
 }
 @media screen and (max-width : 430px) {
@@ -152,7 +153,6 @@ margin: 0 20px;
 
     .footer-container .footer-content-container ul li {
         font-size: 16px;
-
     }
 
     .footer-container .footer-offices-container {

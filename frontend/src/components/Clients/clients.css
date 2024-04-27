@@ -10,6 +10,13 @@
     width: 100%;
 }
 
+
+
+@media screen and (max-width : 1330px) {
+    .clients-container {
+        grid-template-columns: repeat(2, 264px);
+    }
+}
 @media screen and (max-width : 430px) {
     .clients-container {
         justify-content: center;

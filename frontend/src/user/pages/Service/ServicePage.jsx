@@ -63,10 +63,10 @@ export function ServicePage() {
                     title={'¿Qué hacemos?'}
                     desc={service.desc}
                 />
-                <img src={service.image1} alt={service.service} />
+                <img className='service-img'  src={service.image1} alt={service.service} />
             </section>
             <section className='service-info-container'>
-                <img src={service.image2} alt={service.service} />
+                <img className='service-img' src={service.image2} alt={service.service} />
 
                 <div className={'title-container'}>
                     <h3>{service.service}</h3>

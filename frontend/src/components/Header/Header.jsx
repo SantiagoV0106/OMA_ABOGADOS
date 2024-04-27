@@ -12,7 +12,6 @@ import { FaInstagram } from 'react-icons/fa6';
 
 
 // Data
-import headerLogo from '../../assets/images/oma-gold-logo.png'
 import { headerLinks } from '../../const/headerLinks';
 
 
@@ -26,9 +25,15 @@ export function Header() {
 
     const navigate = useNavigate()
 
+    console.log(window.innerWidth);
+
     const handleDropdown = () => {
         console.log(showDropdown);
         setShowDropdown(!showDropdown)
+    }
+
+    const handleDropdownClick = () => {
+        setShowDropdown(false)
     }
 
     const handleActive = () => {
@@ -43,7 +48,7 @@ export function Header() {
         <div className={`header-container ${active ? 'active' : ''}`}>
             <img
                 className='logo-img'
-                src={headerLogo}
+                src='/oma-gold.png'
                 alt="Logo-img"
                 onClick={handleNavigateHome} />
             < div className={`header-menu-container ${active ? 'active' : ''}`}>
@@ -57,6 +62,7 @@ export function Header() {
                                         {
                                             dropdown ?
                                                 <Link
+                                                    className='service-link'
                                                     to={link}
                                                     onMouseEnter={handleDropdown}
                                                     onMouseLeave={handleDropdown}>
@@ -68,6 +74,7 @@ export function Header() {
                                                                 {
                                                                     dropdown.map(({ id, link, service }) => (
                                                                         <Link
+                                                                            onClick={handleDropdownClick}
                                                                             key={id}
                                                                             to={link}>
                                                                             {service}

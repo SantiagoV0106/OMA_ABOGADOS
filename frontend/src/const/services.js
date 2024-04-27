@@ -2,7 +2,7 @@ export const services = [
     {
         id: 1,
         link: 'derecho-financiero-y-seguros',
-        service: 'Derecho Financiero y seguros',
+        service: 'Derecho financiero y seguros',
         heroUrl: '../src/assets/Images/hero/derecho-financiero-seguros.jpg',
         desc: `Se ofrece servicio de asesoría legal y representación judicial
          para entidades financieras, sociedades fiduciarias y 
@@ -46,13 +46,12 @@ export const services = [
 
         •	Sucesiones testada e intestada.
         
-        •	Trámites notariales en:  
+        •	Trámites notariales:  
         
         -	Declaración marital de hecho.
         -	Matrimonios. 
-        -	Capitulaciones.
-        -	Liquidación y disolución de sociedades conyugales y patrimoniales.
-        -	Adopciones.`,
+        -	Liquidación y disolución de sociedades conyugales y patrimoniales
+        -	Capitulaciones y Adopciones.`,
 
         normativa: [
             {
@@ -76,13 +75,13 @@ export const services = [
         link: 'derecho-laboral',
         service: 'Derecho laboral',
         heroUrl: '../src/assets/Images/hero/derecho-laboral.jpg',
-        desc: `Se brinda acompañamiento y servicios de consultoría jurídica por controversias surgidas del ejercicio de las relaciones laborales, tales como:
+        desc: ` Se brinda acompañamiento y servicios de consultoría jurídica por controversias surgidas del ejercicio de las relaciones laborales, tales como: 
 
-        •Traslado de Régimen Pensional.
+    - Traslado de Régimen Pensional.
         
-        •Asesoría y acompañamiento jurídico en materia de Pensión de Vejez, Sobreviviente o por Muerte y Familiar.
+        - Asesoría y acompañamiento jurídico en materia de Pensión de vejez, sobreviviente o por muerte familiar.
         
-        •Brindamos servicios de Consultoría y acompañamiento jurídico, por medio de los cuales se atienden litigios, interrogantes o problemáticas de pequeñas, medianas y grandes empresas. 
+         - Brindamos servicios de Consultoría y acompañamiento jurídico, por medio de los cuales se atienden litigios, interrogantes o problemáticas de pequeñas, medianas y grandes empresas. 
         `,
         normativa: [
             {
@@ -128,6 +127,10 @@ export const services = [
             {
                 id: crypto.randomUUID(),
                 ley: 'Ley 1564 de 2012 (Código general del proceso).'
+            },
+            {
+                id: crypto.randomUUID(),
+                ley: 'Código de Comercio.'
             }
         ],
         image1: '../src/assets/Images/services/derecho-financiero-1.jpg',
@@ -165,11 +168,10 @@ export const services = [
         heroUrl: '../src/assets/Images/hero/derecho-admin.jpg',
         desc: `Se ofrece servicios de asesoría y defensa técnica en los siguientes ámbitos:
 
-        -	Medios de control de nulidad, nulidad y restablecimiento del derecho.
+        -	Medios de control de Nulidad, Nulidad y Restablecimiento del derecho.
         -	Reparación directa:
         -	Controversias contractuales. 
-        -	Acciones populares.
-        -	Acciones de grupo.
+        -	Acciones populares y Acciones de grupo.
         `,
         normativa: [
             {
@@ -191,8 +193,8 @@ export const services = [
         heroUrl: '../src/assets/Images/hero/res-fical-admin.jpg',
         desc: `Se ofrecen servicios de asesoría y defensa técnica en procesos disciplinarios y responsabilidad fiscal adelantados ante:
 
-        - Procuraduría general de la Nación y oficinas de control disciplinario interno.
-        - Ejercito Nacional de Colombia (Oficinas de control disciplinario interno). 
+        - Procuraduría General de la Nación y oficinas de control disciplinario interno.
+        - Ejercito Nacional de Colombia (Oficinas de control disciplinario interno)
         - Contraloría General de la República.`,
         normativa: [
             {

@@ -38,3 +38,28 @@
     width: 15%;
 
 }
+
+
+@media screen and (max-width : 1330px) {
+
+    .service-hero {
+        margin: 160px auto 0 80px;
+    }
+
+    .service-info-container {
+        margin: 120px 80px 60px;
+    }
+
+    .service-info-container .title-container {
+        width: 60%;
+    }
+
+    .service-info-container .title-container p {
+        font-size: 16px;
+    }
+
+    .service-info-container .service-img {
+        width: 420px;
+    }
+    
+}

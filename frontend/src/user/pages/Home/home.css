@@ -92,8 +92,8 @@
 .trayectoria-home-section-container .title-container {
     margin: 0;
     align-self: center;
-    width: auto;
-    max-width: 60%;
+    width: 60%;
+    max-width: 612px;
 }
 
 .trayectoria-home-section-container .title-container h1 {
@@ -169,19 +169,62 @@
     color: var(--golden-color);
 }
 
-@media screen and (max-width : 1280px) {
-    .about-us-section-container {
-        margin: 160px 80px 0;
+@media screen and (max-width : 1390px) {
+
+
+    .about-us-section-container,
+    .trayectoria-home-section-container {
+        margin: 160px 80px 60px;
+    }
+
+    .about-us-section-container .image-section,
+    .trayectoria-home-section-container .image-section
+     {
+        height: 500px;
+    }
+
+    .about-us-section-container .title-container,
+    .trayectoria-home-section-container .title-container,
+    .clients-home-section-container .title-container { 
+        width: 40%;
+    }
+
+    .about-us-section-container .title-container p,
+    .areas-home-section-container .title-container p,
+    .clients-home-section-container .title-container p,
+    .cobertura-container .title-container p,
+    .contact-us-section .title-container p,
+    .our-services-home-section-container .title-container p,
+    .relevant-processes-home-section-container .title-container p,
+    .trayectoria-home-section-container .title-container p {
+        font-size: 16px;
+    }
+
+    .areas-home-section-container {
+        padding: 100px 80px 60px;
+    }
+
+    .areas-home-section-container .c-header-container p {
+        font-size: 16px;
     }
 
     .our-services-home-section-container {
-        margin: 160px 180px 0;
+        margin: 160px 80px 0;
     }
 
     .relevant-processes-home-section-container {
         padding: 85px 80px 114px;
     }
+
+    .clients-home-section-container {
+        margin: 140px 80px 30px;
+    }
+
+    .contact-us-section .title-container {
+        width: 40%;
+    }
 }
+
 
 @media screen and (max-width : 430px) {
     .about-us-section-container {
@@ -240,7 +283,7 @@
         align-self: flex-start;
         max-width: none;
         width: 90%;
-        
+
     }
 
     .trayectoria-home-section-container .title-container p {
@@ -252,37 +295,37 @@
         display: none;
     }
 
-   .areas-home-section-container {
-    flex-direction: column;
-    padding: 100px 18px;
-   }
+    .areas-home-section-container {
+        flex-direction: column;
+        padding: 100px 18px;
+    }
 
-   .areas-home-section-container .c-header-container p{
-    font-size: 16px;
-    width: 90%;
-   }
+    .areas-home-section-container .c-header-container p {
+        font-size: 16px;
+        width: 90%;
+    }
 
-   .areas-home-section-container .cobertura-container {
-    flex-direction: column;
-    gap: 30px 0;
-   }
+    .areas-home-section-container .cobertura-container {
+        flex-direction: column;
+        gap: 30px 0;
+    }
 
-   .areas-home-section-container .cobertura-container img {
-    height: 423px;
-   }
+    .areas-home-section-container .cobertura-container img {
+        height: 423px;
+    }
 
-   .contact-us-section {
-    flex-direction: column-reverse;
-    margin: 160px 18px;
-   }
+    .contact-us-section {
+        flex-direction: column-reverse;
+        margin: 160px 18px;
+    }
 
-   .contact-us-section .title-container {
-    width: 90%;
-   }
+    .contact-us-section .title-container {
+        width: 90%;
+    }
 
-   .contact-us-section #contact-us-form {
-    width: 100%;
-}
+    .contact-us-section #contact-us-form {
+        width: 100%;
+    }
 
 
 }
