@@ -59,7 +59,7 @@ export function Footer() {
                     </div>
                     <div className="admin-container">
                         <p>¿Eres administrador?</p>
-                        <Link to='/admin/login'>Inicia sesión aquí</Link>
+                        <Link to='/oma/login'>Inicia sesión aquí</Link>
                     </div>
                 </div>
             </div>

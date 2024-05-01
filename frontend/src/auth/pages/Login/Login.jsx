@@ -1,8 +1,8 @@
-// React
-import { useState } from "react";
-
 // Components
 import { Button, Input } from "../../../ui";
+
+// CustomHooks
+import { useAuth } from "../../hooks/useAuth";
 
 // Icons
 import { IoEye } from "react-icons/io5";
@@ -14,72 +14,23 @@ import loginImg from '../../../assets/images/page/login.jpg'
 // Style
 import './login.css'
 
-const initialFormState = {
-    user: '',
-    pass: ''
-}
-
 export function LoginPage() {
 
-    const [showPassword, setShowPassword] = useState(false)
-    const [formState, setFormState] = useState(initialFormState)
-
-    const handleInputChange = ({ target }) => {
-        const { name, value } = target
-
-        setFormState({
-            ...formState,
-            [name]: value
-        })
-    }
-
-    // Tester2 tester123
-
-    // Fetch y llamado al servidor
-    const handleLogin = async (e) => {
-        e.preventDefault()
-        resetInputs()
-        console.log(formState);
-
-        try {
-            const response = await fetch('http://localhost/oma/login.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formState)
-            });
-
-            if (response.ok) {
-                const data = await response.json();
-                // Manejar la respuesta del servidor
-                console.log('Respuesta del servidor:', data);
-            } else {
-                console.error('Error al iniciar sesión:', response.status);
-            }
-        } catch (error) {
-            console.error('Error de red:', error);
-        }
-
-
-    }
-
-    const resetInputs = () => {
-        setFormState(initialFormState)
-    }
-
-    const handleShowPassword = () => {
-        setShowPassword(!showPassword)
-    }
+    const {
+        handleLogin,
+        handleInputChange,
+        formState,
+        showPassword,
+        handleShowPassword
+    } = useAuth()
 
     const bgImg = {
-        backgroundImage : `url(${loginImg})`
+        backgroundImage: `url(${loginImg})`
     }
-
 
     return (
         <div className="login">
-            <div className="bg-img" style={bgImg}/>
+            <div className="bg-img" style={bgImg} />
             <section className="form">
                 <h1>Iniciar Sesión</h1>
                 <form
