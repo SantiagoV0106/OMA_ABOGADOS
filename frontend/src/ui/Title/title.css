@@ -90,7 +90,7 @@
 
 @media screen and (max-width : 1330px) {
     .title-container {
-        margin: 75px auto 0 60px;
+        margin: 160px auto 0 60px;
         width: 35%;
     }
     .title-container h1,
@@ -111,14 +111,14 @@
 @media screen and (max-width : 430px) {
 
     .title-container {
-        margin: 50px auto 0 18px;
+        margin: 120px auto 0 18px;
         width: 80%;
         max-width: none;
     }
 
     .title-container h1,
     .c-header-container h1 {
-        font-size: 40px;
+        font-size: 36px;
 
     }
 

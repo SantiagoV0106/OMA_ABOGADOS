@@ -52,3 +52,21 @@
     font-weight: 600;
     margin: 20px 0 0;
 }
+
+
+@media screen and (max-width : 430px) {
+
+    .carousel-container {
+        height: auto;
+    }
+
+    .carousel-item {
+        padding: 30px 15px;
+        margin: 0 0 30px;
+        max-width: 732px;
+    }
+
+    .carousel-info p {
+        font-size: 16px;
+    }
+}

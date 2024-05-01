@@ -36,3 +36,26 @@
     font-size: 20px;
     padding: 0 250px 0 0;
 }
+
+@media screen and (max-width : 430px) {
+    .stats-container {
+        flex-direction: column;
+    }
+
+    .stats-container h1 {
+        font-size: 68px;
+    }
+
+    .stat-container {
+        margin-top: 20px;
+        gap: 30px 0;
+    }
+
+    .stat h3 {
+        font-size: 24px;
+    }
+
+    .stat p {
+        font-size: 16px;
+    }
+}

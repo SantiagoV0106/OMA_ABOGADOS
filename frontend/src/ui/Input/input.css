@@ -28,6 +28,15 @@ textarea::-webkit-scrollbar {
     width: 100%;
 }
 
+/* Ocultar el icono de mostrar/ocultar contraseña en inputs de contraseña */
+.input-group
+input[type="password"]::-ms-reveal,
+input[type="password"]::-webkit-contacts-auto-fill-button,
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-password-toggle-button {
+    display: none !important;
+}
+
 .input-group textarea {
     color: var(--dark-blue-color);
     font-family: var(--secondary-font);

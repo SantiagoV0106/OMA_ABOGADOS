@@ -1,17 +1,11 @@
-.about-us {
-    margin: 280px auto 0 104px;
-}
-
-.about-us-btn {
-    margin: 40px 0;
-}
-
-.mision-vision-container {
+.mision-vision {
     display: flex;
     flex-direction: column;
-    padding: 0 0 0 300px;
     gap: 60px 0;
+    max-width: 700px;
 }
+
+
 
 .oma-value h1 {
     color: var(--golden-color);
@@ -21,19 +15,20 @@
 
 .oma-value p {
     color: var(--dark-blue-color);
+    font-size: 20px;
 }
 
-.valores-section {
+.valores {
     background-color: var(--dark-blue-color);
-    margin: 151px 0 0;
+    margin: 160px 0 0;
     padding: 68px 253px 72px;
 }
 
-.valores-section .c-header-container h3 {
+.valores .c-header-container h3 {
     color: var(--silver-color);
 }
 
-.valores-section .c-header-container h1 {
+.valores .c-header-container h1 {
     color: var(--silver-color);
 }
 
@@ -50,8 +45,9 @@
     align-items: center;
     gap: 20px 0;
 }
-.value p{
-  text-align: center;
+
+.value p {
+    text-align: center;
 }
 
 .valores-container .web-icon {
@@ -59,37 +55,35 @@
     font-size: 64px;
 }
 
-.founder-section { 
+.founder {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 180px 160px 220px 148px;
+    padding: 160px 0;
 }
 
-.founder-section .title-container {
+.founder .title-container {
     width: 50%;
     margin: 0;
 }
-.founder-section .title-container h3 { 
+
+.founder .title-container h3 {
     color: var(--dark-blue-color);
 }
-.founder-section .title-container h1 { 
+
+.founder .title-container h1 {
     color: var(--golden-color);
 }
 
-.founder-section .title-container p { 
+.founder .title-container p {
     color: var(--dark-blue-color);
     padding: 0 0 0 30px;
 }
 
-/* .personal-resume {
-    margin: 0 0 300px;
-} */
-
 
 .personal-resume .c-header-container p {
-display: block;
-color: var(--dark-blue-color);
+    display: block;
+    color: var(--dark-blue-color);
 }
 
 .carousel-section {
@@ -100,3 +94,41 @@ color: var(--dark-blue-color);
     margin: 50px 0 0;
 }
 
+@media screen and (max-width : 430px) {
+    .oma-value p {
+        font-size: 16px;
+    }
+
+    .valores {
+        padding: 30px 18px 50px;
+    }
+
+    .valores-container {
+        display: flex;
+        flex-direction: column;
+        gap: 60px 0;
+    }
+
+    .founder {
+        align-items: center;
+        flex-direction: column;
+        gap: 60px 0;
+    }
+
+    .founder .title-container {
+        width: 90%;
+    }
+
+    .founder .image-section {
+        height: 510px;
+    }
+
+    .personal-resume .c-header-container p {
+        font-size: 16px;
+    }
+
+    .carousel-section {
+        gap: 0 20px;
+    }
+
+}

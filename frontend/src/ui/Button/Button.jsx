@@ -5,8 +5,8 @@
 // Style
 import './button.css'
 
-export function Button({ icon, name, className }) {
+export function Button({ icon, name, className ,type }) {
     return (
-        <button className={className} type='button'>{icon}{name}</button>
+        <button className={className} type={type}>{icon}{name}</button>
     )
 }

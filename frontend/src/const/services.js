@@ -1,9 +1,18 @@
+import derechoFinImg from '../assets/images/hero/derecho-financiero-seguros.jpg'
+import derechoFamImg from '../assets/images/hero/derecho-familia.jpg'
+import derechoLabImg from '../assets/images/hero/derecho-laboral.jpg'
+import derechoCivComImg from '../assets/images/hero/derecho-civil-comercial.jpg'
+import derechoPenalImg from '../assets/images/hero/derecho-penal.jpg'
+import derechoAdmin from '../assets/images/hero/derecho-admin.jpg'
+import respFiscImg from '../assets/images/hero/res-fical-admin.jpg'
+import prosInsImg from '../assets/images/hero/pros-insolvencia.jpg'
+
 export const services = [
     {
         id: 1,
         link: 'derecho-financiero-y-seguros',
         service: 'Derecho financiero y seguros',
-        heroUrl: '../src/assets/Images/hero/derecho-financiero-seguros.jpg',
+        heroUrl: derechoFinImg,
         desc: `Se ofrece servicio de asesoría legal y representación judicial
          para entidades financieras, sociedades fiduciarias y 
          compañías de seguros ante la Superintendencia Financiera y 
@@ -33,15 +42,13 @@ export const services = [
                 id: crypto.randomUUID(),
                 ley: 'Circular Básica Jurídica 029 de 2014 y otras.'
             },
-        ],
-        image1: '../src/assets/Images/services/derecho-financiero-1.jpg',
-        image2: '../src/assets/Images/services/derecho-financiero-2.jpg'
+        ]
     },
     {
         id: 2,
         link: 'derecho-de-familia',
         service: 'Derecho de familia',
-        heroUrl: '../src/assets/Images/hero/derecho-familia.jpg',
+        heroUrl: derechoFamImg,
         desc: `Se ofrece asesoría en los siguientes ámbitos del Derecho de familia.
 
         •	Sucesiones testada e intestada.
@@ -66,15 +73,13 @@ export const services = [
                 id: crypto.randomUUID(),
                 ley: 'Ley 54 de 1990 sobre unión marital de hecho. Mod. Ley 979 de 2005'
             }
-        ],
-        image1: '../src/assets/Images/services/derecho-financiero-1.jpg',
-        image2: '../src/assets/Images/services/derecho-financiero-2.jpg'
+        ]
     },
     {
         id: 3,
         link: 'derecho-laboral',
         service: 'Derecho laboral',
-        heroUrl: '../src/assets/Images/hero/derecho-laboral.jpg',
+        heroUrl: derechoLabImg,
         desc: ` Se brinda acompañamiento y servicios de consultoría jurídica por controversias surgidas del ejercicio de las relaciones laborales, tales como: 
 
     - Traslado de Régimen Pensional.
@@ -96,15 +101,13 @@ export const services = [
                 id: crypto.randomUUID(),
                 ley: 'Ley 100 de 1993.'
             }
-        ],
-        image1: '../src/assets/Images/services/derecho-financiero-1.jpg',
-        image2: '../src/assets/Images/services/derecho-financiero-2.jpg'
+        ]
     },
     {
         id: 4,
         link: 'derecho-civil-y-comercial',
         service: 'Derecho civil y comercial',
-        heroUrl: '../src/assets/Images/hero/derecho-civil-comercial.jpg',
+        heroUrl: derechoCivComImg,
         desc: `Se ofrece asesoría y defensa técnica en procesos civiles:
 
 
@@ -132,15 +135,13 @@ export const services = [
                 id: crypto.randomUUID(),
                 ley: 'Código de Comercio.'
             }
-        ],
-        image1: '../src/assets/Images/services/derecho-financiero-1.jpg',
-        image2: '../src/assets/Images/services/derecho-financiero-2.jpg'
+        ]
     },
     {
         id: 5,
         link: 'derecho-penal',
         service: 'Derecho penal',
-        heroUrl: '../src/assets/Images/hero/derecho-penal.jpg',
+        heroUrl: derechoPenalImg,
         desc: `Defensa técnica y consultoría en derecho penal y derecho penal militar, con énfasis en sistema inquisitivo y sistema acusatorio 
         en el nuevo régimen
         de las FF.MM.`,
@@ -157,15 +158,13 @@ export const services = [
                 id: crypto.randomUUID(),
                 ley: 'Código Penal Militar. (L.1407/10).'
             }
-        ],
-        image1: '../src/assets/Images/services/derecho-financiero-1.jpg',
-        image2: '../src/assets/Images/services/derecho-financiero-2.jpg'
+        ]
     },
     {
         id: 6,
         link: 'derecho-administrativo',
         service: 'Derecho administrativo',
-        heroUrl: '../src/assets/Images/hero/derecho-admin.jpg',
+        heroUrl: derechoAdmin,
         desc: `Se ofrece servicios de asesoría y defensa técnica en los siguientes ámbitos:
 
         -	Medios de control de Nulidad, Nulidad y Restablecimiento del derecho.
@@ -182,15 +181,13 @@ export const services = [
                 id: crypto.randomUUID(),
                 ley: 'Ley 1564 DE 2012 (Código general del proceso).'
             }
-        ],
-        image1: '../src/assets/Images/services/derecho-financiero-1.jpg',
-        image2: '../src/assets/Images/services/derecho-financiero-2.jpg'
+        ]
     },
     {
         id: 7,
         link: 'responsabilidad-fiscal-y-disciplinarios',
         service: 'Responsabilidad fiscal y disciplinarios',
-        heroUrl: '../src/assets/Images/hero/res-fical-admin.jpg',
+        heroUrl: respFiscImg,
         desc: `Se ofrecen servicios de asesoría y defensa técnica en procesos disciplinarios y responsabilidad fiscal adelantados ante:
 
         - Procuraduría General de la Nación y oficinas de control disciplinario interno.
@@ -209,15 +206,13 @@ export const services = [
                 id: crypto.randomUUID(),
                 ley: 'Código de conducta del Militar Colombiano y Código Disciplinario Militar.L.1862/17).'
             }
-        ],
-        image1: '../src/assets/Images/services/derecho-financiero-1.jpg',
-        image2: '../src/assets/Images/services/derecho-financiero-2.jpg'
+        ]
     },
     {
         id: 8,
         link: 'procesos-de-insolvencia',
         service: 'Procesos de insolvencia',
-        heroUrl: '../src/assets/Images/hero/derecho-financiero-seguros.jpg',
+        heroUrl: prosInsImg,
         desc: `Defensa jurídica en procesos de Insolvencia de Persona Natural no Comerciante e Insolvencia empresarial.`,
         normativa: [
             {
@@ -228,8 +223,6 @@ export const services = [
                 id: crypto.randomUUID(),
                 ley: 'Ley 1564 de 2012 (Código general del proceso).'
             }
-        ],
-        image1: '../src/assets/Images/services/derecho-financiero-1.jpg',
-        image2: '../src/assets/Images/services/derecho-financiero-2.jpg'
+        ]
     },
 ]

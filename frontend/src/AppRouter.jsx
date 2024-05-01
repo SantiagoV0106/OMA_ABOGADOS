@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { UserRouter } from "./user/router/UserRouter";
+import { AuthRouter } from "./auth/routes/AuthRouter";
 
 export function AppRouter() {
     return (
@@ -8,6 +9,10 @@ export function AppRouter() {
                 <Route
                     path="/*"
                     element={<UserRouter />}
+                />
+                <Route
+                    path="/admin/*"
+                    element={<AuthRouter />}
                 />
             </Routes>
         </main>

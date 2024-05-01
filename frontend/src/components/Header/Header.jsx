@@ -9,6 +9,7 @@ import { IoMenuOutline } from "react-icons/io5"
 import { IoCloseOutline } from "react-icons/io5"
 import { FaLinkedin } from 'react-icons/fa6';
 import { FaInstagram } from 'react-icons/fa6';
+import { Dropdown } from '../../ui';
 
 
 // Data
@@ -25,23 +26,21 @@ export function Header() {
 
     const navigate = useNavigate()
 
-    console.log(window.innerWidth);
-
-    const handleDropdown = () => {
-        console.log(showDropdown);
-        setShowDropdown(!showDropdown)
-    }
-
-    const handleDropdownClick = () => {
-        setShowDropdown(false)
-    }
-
     const handleActive = () => {
         setActive(!active)
     }
 
     const handleNavigateHome = () => {
         navigate('/')
+    }
+
+
+    const handleDropdown = (index) => {
+        setShowDropdown(index);
+    };
+
+    const handleCloseDopdown = () => {
+        setShowDropdown(false)
     }
 
     return (
@@ -55,37 +54,30 @@ export function Header() {
                 <div className={`header-interactions ${active ? 'active' : ''}`}>
                     <ul>
                         {
-                            headerLinks.map(({ id, name, link, dropdown }) => {
+                            headerLinks.map(({ id, name, link, dropdown }, i) => {
                                 return (
                                     <li
                                         key={id}>
                                         {
                                             dropdown ?
-                                                <Link
-                                                    className='service-link'
+                                                <div
+                                                    className='dropdown-option'
                                                     to={link}
-                                                    onMouseEnter={handleDropdown}
-                                                    onMouseLeave={handleDropdown}>
+                                                    onMouseEnter={() => handleDropdown(i)}
+                                                    onMouseLeave={() => setShowDropdown(null)}>
                                                     {name}
 
                                                     {
-                                                        showDropdown && (
-                                                            <div className="dropdown">
-                                                                {
-                                                                    dropdown.map(({ id, link, service }) => (
-                                                                        <Link
-                                                                            onClick={handleDropdownClick}
-                                                                            key={id}
-                                                                            to={link}>
-                                                                            {service}
-                                                                        </Link>
-                                                                    ))
-                                                                }
-                                                            </div>
+                                                        showDropdown === i && (
+
+                                                            <Dropdown
+                                                                dropdownItem={dropdown}
+                                                                closeDropdown={handleCloseDopdown}
+                                                            />
                                                         )
                                                     }
 
-                                                </Link> :
+                                                </div> :
                                                 <Link
                                                     to={link}>
                                                     {name}

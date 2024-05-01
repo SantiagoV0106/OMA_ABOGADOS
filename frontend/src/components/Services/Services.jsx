@@ -7,7 +7,7 @@ import './services.css'
 export function Services() {
 
     return (
-        <div className="services-container">
+        <div className="services">
             {
                 services.map(({ id, service, link }) => {
                     return (

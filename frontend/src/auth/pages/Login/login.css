@@ -1,0 +1,51 @@
+.login {
+    display: flex;
+    height: 100vh;
+}
+
+.login .bg-img {
+    width: 50vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+.login .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    width: 50vw;
+    max-width: 650px;
+    margin: 0 90px;
+}
+
+.login .form h1 {
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--golden-color);
+}
+
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px 0;
+
+}
+
+.input-group .password-icon {
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 24px;
+    color: #00000038;
+
+    transform: translateY(-50%);
+}
+
+#login-form .primary-btn {
+    align-self: flex-start;
+}

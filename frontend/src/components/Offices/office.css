@@ -1,5 +1,6 @@
 .office-container {
     margin: 0 0 50px;
+    max-width: 300px;
 }
 
 .office-container .web-icon {

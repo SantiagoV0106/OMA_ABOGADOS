@@ -4,7 +4,9 @@ import { Button, ContactTitle, TitleSection } from '../../../ui'
 
 // Data
 import { heroImages } from '../../../const/heroImages'
-import { sectionInfo } from '../../../const/sectionInfo'
+
+// Images
+import founderImg from '../../../assets/images/page/founder.png'
 
 //Icons
 import { CiMedal } from "react-icons/ci";
@@ -21,22 +23,22 @@ export function AboutUsPage() {
     }
     return (
         <>
-            <section className="hero-container" style={bgHeroStyle}>
+            <section className="hero" style={bgHeroStyle}>
                 <Header />
-                <div className={'title-container about-us'}>
+                <div className={'title-container'}>
                     <h3>{'Sobre Nosotros'}</h3>
                     <h1>{'OMA ABOGADOS'}</h1>
                     <Button className={'primary-btn about-us-btn'} name={'Contáctanos'} />
                 </div>
             </section>
 
-            <section className='about-us-section-container'>
+            <section className='about-us section'>
                 <TitleSection
-                    className={sectionInfo[8].className}
-                    subTitle={sectionInfo[8].subTitle}
-                    title={sectionInfo[8].title}
+                    className='title-container'
+                    subTitle='Sobre Nosotros'
+                    title='Lo más importante'
                 />
-                <div className="mision-vision-container">
+                <div className="mision-vision">
                     <div className="oma-value">
                         <h1>Misión</h1>
                         <p>Asesorar y representar tanto judicial como extrajudicialmente a nuestros
@@ -57,11 +59,11 @@ export function AboutUsPage() {
                 </div>
             </section>
 
-            <section className="valores-section">
+            <section className="valores">
                 <TitleSection
-                    className={sectionInfo[9].className}
-                    subTitle={sectionInfo[9].subTitle}
-                    title={sectionInfo[9].title}
+                    className='c-header-container'
+                    subTitle='Sobre Nosotros'
+                    title='Valores'
                 />
                 <div className="valores-container">
                     <div className="value">
@@ -82,28 +84,35 @@ export function AboutUsPage() {
                     </div>
                 </div>
             </section>
-            <section className="founder-section">
+            <section className="founder section">
                 <img
                     className='image-section'
-                    src="./src/assets/Images/page/founder.png"
+                    src={founderImg}
                     alt="Socio Fundador" />
                 <TitleSection
-                    className={sectionInfo[10].className}
-                    subTitle={sectionInfo[10].subTitle}
-                    title={sectionInfo[10].title}
-                    desc={sectionInfo[10].desc}
+                    className='title-container'
+                    subTitle='Socio Fundador'
+                    title='Luis Antonio Orjuela Morales'
+                    desc={`Abogado titulado, egresado de la Universidad Militar Nueva Granada, 
+                    Magister en Derecho Procesal de la Universidad Externado de Colombia, 
+                    especialista en Derecho de Seguros de la Universidad del Rosario, autor del libro
+                     “La Competencia Jurisdiccional entre la Justicia Penal Militar y la Justicia Ordinaria” (año 2018), 
+                     Ed. Ibañez. Con diferentes cursos en derecho y diplomaturas en Insolvencia Persona Natural 
+                     No Comerciante e Insolvencia Mercantil ley 1116 del 2006.`}
                 />
             </section>
-            <section className="personal-resume">
+            <section className="personal-resume section">
                 <TitleSection
-                    className={sectionInfo[11].className}
-                    subTitle={sectionInfo[11].subTitle}
-                    title={sectionInfo[11].title}
-                    desc={sectionInfo[11].desc}
+                    className='c-header-container'
+                    subTitle='Sobre Nosotros'
+                    title='Trayectoria personal'
+                    desc={` El Dr. Luis Antonio Orjuela Morales 
+                    a lo largo de su vida profesional, 
+                    se ha desempeñado en los siguientes campos`}
                 />
                 <Carousel />
             </section>
-            <section className='contact-us-section'>
+            <section className='contact-us section'>
                 <ContactForm />
                 <ContactTitle />
             </section>

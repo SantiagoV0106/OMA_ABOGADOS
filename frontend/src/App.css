@@ -1,0 +1,35 @@
+.hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+.section {
+    margin: 0 124px;
+}
+
+@media screen and (max-width : 1440px) {
+    .section {
+        margin: 0 104px;
+    }
+
+}
+
+@media screen and (max-width : 1360px) {
+    .section {
+        margin: 0 80px;
+    }
+}
+
+@media screen and (max-width : 1330px) {
+    .hero {
+        height: 80vh;
+    }
+}
+@media screen and (max-width : 430px) {
+   .section {
+    margin: 0 18px;
+   }
+}

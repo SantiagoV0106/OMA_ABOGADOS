@@ -12,42 +12,42 @@ export const headerLinks = [
             {
                 id: crypto.randomUUID(),
                 link: '/servicios/derecho-financiero-y-seguros',
-                service: 'Derecho Financiero y seguros'
+                name: 'Derecho Financiero y seguros'
             },
             {
                 id: crypto.randomUUID(),
                 link: '/servicios/derecho-de-familia',
-                service: 'Derecho de familia',
+                name: 'Derecho de familia',
             },
             {
                 id: crypto.randomUUID(),
                 link: '/servicios/derecho-laboral',
-                service: 'Derecho laboral',
+                name: 'Derecho laboral',
             },
             {
                 id: crypto.randomUUID(),
                 link: '/servicios/derecho-civil-y-comercial',
-                service: 'Derecho civil y comercial',
+                name: 'Derecho civil y comercial',
             },
             {
                 id: crypto.randomUUID(),
                 link: '/servicios/derecho-penal',
-                service: 'Derecho penal',
+                name: 'Derecho penal',
             },
             {
                 id: crypto.randomUUID(),
                 link: '/servicios/derecho-administrativo',
-                service: 'Derecho administrativo',
+                name: 'Derecho administrativo',
             },
             {
                 id: crypto.randomUUID(),
                 link: '/servicios/responsabilidad-fiscal-y-disciplinarios',
-                service: 'Responsabilidad fiscal y disciplinarios',
+                name: 'Responsabilidad fiscal y disciplinarios',
             },
             {
                 id: crypto.randomUUID(),
                 link: '/servicios/procesos-de-insolvencia',
-                service: 'Procesos de insolvencia',
+                name: 'Procesos de insolvencia',
             },
 
         ]
@@ -60,7 +60,20 @@ export const headerLinks = [
     {
         id: 4,
         name: 'Boletines',
-        link: '/boletines'
+        link: '/boletines',
+        dropdown: [
+            {
+                id: crypto.randomUUID(),
+                link: '/boletines/boletin-juridico',
+                name: 'Boletin jurídico'
+            },
+            {
+                id: crypto.randomUUID(),
+                link: '/boletines/noticias',
+                name: 'Noticias',
+            }
+
+        ]
     }
 
 ]

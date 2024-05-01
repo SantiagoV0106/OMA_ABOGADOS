@@ -1,5 +1,8 @@
 // React
 import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
+
+
 //Data
 // import footerImg from '../../assets/images/oma-silver-logo.png'
 import { offices } from "../../const/offices";
@@ -56,7 +59,7 @@ export function Footer() {
                     </div>
                     <div className="admin-container">
                         <p>¿Eres administrador?</p>
-                        <a href="#">Inicia sesión aquí</a>
+                        <Link to='/admin/login'>Inicia sesión aquí</Link>
                     </div>
                 </div>
             </div>

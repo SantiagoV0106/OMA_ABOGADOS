@@ -1,24 +1,21 @@
-// React
-import { Link } from 'react-router-dom'
+// Eslint
+/* eslint-disable react/prop-types */
 
-// Style
-import { services } from '../../const/services'
-import './dropdown.css'
+import { Link } from "react-router-dom"
 
-export function DropDown() {
+export function Dropdown({dropdownItem, closeDropdown}) {
     return (
-        <div>
-            <ul>
-                {
-                    services.map(({ id, service, link }) => {
-                        return (
-                            <Link key={id}
-                                to={`/servicios/${link}`}
-                            >{service}</Link>
-                        )
-                    })
-                }
-            </ul>
+        <div className="dropdown">
+            {
+                dropdownItem.map(({ id, link, name }) => (
+                    <Link
+                        onClick={closeDropdown}
+                        key={id}
+                        to={link}>
+                        {name}
+                    </Link>
+                ))
+            }
         </div>
     )
 }

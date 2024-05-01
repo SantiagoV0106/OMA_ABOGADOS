@@ -53,7 +53,7 @@ h3 {
 p {
   font-family: var(--secondary-font);
   color: var(--silver-color);
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
   text-align: justify;
 }
@@ -75,9 +75,17 @@ a {
   height: 600px;
 }
 
-@media screen and (max-width : 1280px) {
+
+
+@media screen and (max-width : 1330px) {
   h1 {
     font-size: 48px;
+  }
+
+}
+@media screen and (max-width : 430px) {
+  h1 {
+    font-size: 36px;
   }
 
 }

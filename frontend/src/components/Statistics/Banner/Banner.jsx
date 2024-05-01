@@ -3,7 +3,7 @@ import { bannerStatistics } from '../../../const/bannerStatistics'
 export function Banner() {
 
     return (
-        <div className="banner-container">
+        <div className="banner section">
             {
                 bannerStatistics.map(({ title, percentage, desc }, i) => {
                     return (

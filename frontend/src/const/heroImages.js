@@ -1,11 +1,15 @@
+import homeImg from '../../src/assets/images/hero/hero-landing-img.jpg'
+import aboutusImg from '../../src/assets/images/hero/hero-aboutus-img.jpg'
+import statsImg from '../../src/assets/images/hero/hero-stats-img.jpg'
+
 export const heroImages = [
     {
-    imageUrl: '../src/assets/Images/hero/hero-landing-img.jpg'
-},
+        imageUrl: homeImg
+    },
     {
-    imageUrl: '../src/assets/Images/hero/hero-aboutus-img.jpg'
-},
+        imageUrl: aboutusImg
+    },
     {
-    imageUrl: '../src/assets/Images/hero/hero-stats-img.jpg'
-}
+        imageUrl: statsImg
+    }
 ]

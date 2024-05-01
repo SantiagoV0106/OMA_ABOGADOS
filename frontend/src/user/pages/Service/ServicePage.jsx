@@ -8,6 +8,10 @@ import { Button, TitleSection } from '../../../ui';
 // Data
 import { services } from '../../../const/services'
 
+// Images
+import service1Img from '../../../assets/images/services/servicios-1.jpg'
+import service2Img from  '../../../assets/images/services/servicios-2.jpg'
+
 // Style
 import './servicepage.css'
 
@@ -17,14 +21,10 @@ export function ServicePage() {
     const [isLoading, setLoading] = useState(true)
 
     const location = useLocation()
-    console.log(location);
 
-    console.log(services);
 
     useEffect(() => {
         const serviceLink = location.pathname.split('/').pop()
-
-        console.log(serviceLink);
 
         const foundService = services.find(item => item.link === serviceLink)
 
@@ -44,29 +44,27 @@ export function ServicePage() {
         backgroundImage: `url(${service.heroUrl})`
     }
 
-    console.log(service.normativa);
-
     return (
         <>
-            <section className="hero-container" style={bgHeroStyle}>
+            <section className="hero servicePage" style={bgHeroStyle}>
                 <Header />
-                <div className={'title-container service-hero'}>
+                <div className={'title-container'}>
                     <h3>Servicios</h3>
                     <h1>{service.service}</h1>
                     <Button className={'primary-btn about-us-btn'} name={'Contáctanos'} />
                 </div>
             </section>
-            <section className='service-info-container'>
+            <section className='service-info section'>
                 <TitleSection
-                    className={'title-container'}
+                    className='title-container'
                     subTitle={service.service}
                     title={'¿Qué hacemos?'}
                     desc={service.desc}
                 />
-                <img className='service-img'  src={service.image1} alt={service.service} />
+                <img src={service1Img} alt={service.service} />
             </section>
-            <section className='service-info-container'>
-                <img className='service-img' src={service.image2} alt={service.service} />
+            <section className='service-info section'>
+                <img src={service2Img} alt={service.service} />
 
                 <div className={'title-container'}>
                     <h3>{service.service}</h3>

@@ -12,9 +12,13 @@ import {
 
 // Data
 import { heroImages } from '../../../const/heroImages'
-import { sectionInfo } from '../../../const/sectionInfo'
 import { Button, ContactTitle, TitleSection } from '../../../ui'
 import { offices } from '../../../const/offices'
+
+// Images
+import statueImg from '../../../assets/images/page/justice-statue.jpg'
+import trayectoriaImg from '../../../assets/images/page/trayectoria.jpg'
+import mapImg from '../../../assets/images/page/map.png'
 
 // Icons
 import { FaAngleRight } from 'react-icons/fa6'
@@ -29,90 +33,111 @@ export function Home() {
 
     return (
         <>
-            <section className="hero-container" style={bgHeroStyle}>
+            <section className="hero" style={bgHeroStyle}>
                 <Header />
                 <div className={'title-container'}>
                     <h3>{'Orjuela Morales'}</h3>
                     <h1>{'Comprometidos con la excelencia'}</h1>
                     <p>{
                         `Bienvenido a OMA Abogados, 
-        donde nos destacamos en derecho financiero, seguros, 
-        responsabilidad fiscal, jurisdicción 
-        contencioso-administrativa, 
-        derecho penal y procesos de insolvencia.`
+                        donde nos destacamos en derecho financiero, seguros, 
+                        responsabilidad fiscal, jurisdicción 
+                        contencioso-administrativa, 
+                        derecho penal y procesos de insolvencia.`
                     }</p>
                     <Button className={'primary-btn'} name={'Contáctanos'} />
                 </div>
             </section>
             <Banner />
-            <section className='about-us-section-container'>
+            <section className='about-us section'>
                 <TitleSection
-                    className={sectionInfo[1].className}
-                    subTitle={sectionInfo[1].subTitle}
-                    title={sectionInfo[1].title}
-                    desc={sectionInfo[1].desc}
+                    className='title-container'
+                    subTitle='Sobre Nosotros'
+                    title='Bienvenidos a OMA Abogados'
+                    desc={`Somos una firma dedicada a la defensa
+                    judicial de entidades financieras y
+                    aseguradoras dentro del marco del litigio
+                    civil, laboral, comercial, administrativo y punitivo; OMA Abogados S.A.S. también
+                    extiende sus servicios legales a personas
+                    naturales y jurídicas del orden privado y
+                    público.`}
                     btnClassname='secondary-btn'
                     btnIcon={<FaAngleRight className='web-icon' />}
                     btnName='Conoce más'
                 />
                 <img
                     className='image-section'
-                    src="./src/assets/Images/page/justice-statue.jpg"
+                    src={statueImg}
                     alt="Justice-Statue-Image" />
             </section>
-            <section className='our-services-home-section-container'>
+            <section className='our-services section'>
                 <TitleSection
-                    className={sectionInfo[2].className}
-                    subTitle={sectionInfo[2].subTitle}
-                    title={sectionInfo[2].title}
+                    className='c-header-container'
+                    subTitle='Servicios'
+                    title='Nuestras  Áreas'
                 />
                 <Services />
             </section>
-            <section className='relevant-processes-home-section-container'>
+            <section className='relevant-processes'>
                 <TitleSection
-                    className={sectionInfo[3].className}
-                    subTitle={sectionInfo[3].subTitle}
-                    title={sectionInfo[3].title}
+                    className='c-header-container'
+                    subTitle='Estadísticas'
+                    title='Procesos de interés'
                 />
                 <Processes />
             </section>
-            <section className='clients-home-section-container'>
+            <section className='clients-home section'>
                 <TitleSection
-                    className={sectionInfo[4].className}
-                    subTitle={sectionInfo[4].subTitle}
-                    title={sectionInfo[4].title}
-                    desc={sectionInfo[4].desc}
+                    className='title-container'
+                    subTitle='Nuestros clientes'
+                    title='Clientes'
+                    desc={`Somos una firma dedicada a la defensa
+                    judicial de entidades financieras y
+                    aseguradoras dentro del marco del litigio
+                    civil, laboral, comercial, administrativo y punitivo; OMA Abogados S.A.S. también
+                    extiende sus servicios legales a personas
+                    naturales y jurídicas del orden privado y
+                     público.`}
                     btnClassname='secondary-btn'
                     btnIcon={<FaAngleRight className='web-icon' />}
                     btnName='Conoce más'
                 />
                 <Clients />
             </section>
-            <section className='trayectoria-home-section-container'>
+            <section className='trayectoria section'>
                 <TitleSection
-                    className={sectionInfo[5].className}
-                    subTitle={sectionInfo[5].subTitle}
-                    title={sectionInfo[5].title}
-                    desc={sectionInfo[5].desc}
+                    className='title-container'
+                    subTitle='Sobre Nosotros'
+                    title='Trayectoria'
+                    desc={`Alrededor de 12 años de experiencia profesional 
+                    en la Rama Judicial, Superintendencia 
+                    Financiera de Colombia - Delegatura para Funciones 
+                    Jurisdiccionales- y defensa en litigios corporativos 
+                    para entidades financieras y compañías de seguros. Para cobertura de sus servicios, 
+                    la firma cuenta con un equipo de abogados de amplia experiencia profesional y académica.`}
                     btnClassname='secondary-btn'
                     btnIcon={<FaAngleRight className='web-icon' />}
                     btnName='Conoce más'
                 />
                 <img
                     className='image-section'
-                    src="./src/assets/Images/page/trayectoria.jpg"
+                    src={trayectoriaImg}
                     alt="Trayectoria-Image" />
             </section>
 
-            <section className='areas-home-section-container'>
+            <section className='areas'>
                 <TitleSection
-                    className={sectionInfo[6].className}
-                    subTitle={sectionInfo[6].subTitle}
-                    title={sectionInfo[6].title}
-                    desc={sectionInfo[6].desc}
+                    className='c-header-container'
+                    subTitle='Cobertura'
+                    title='Nuestra Cobertura'
+                    desc={`Nuestra firma legal se enorgullece de ofrecer servicios de 
+                    excelencia y calidad en una amplia gama de áreas jurídicas. 
+                    Atendemos con dedicación y profesionalismo en los departamentos 
+                    del Valle de la Cuaca, Cauca, Risaralda, Nariño, Quindío, Cundinamarca y Caldas. 
+                    Contamos con oficinas en la ciudad de Cali y Bogotá.`}
                 />
                 <div className="cobertura-container">
-                    <img src="../src/assets/Images/page/map.png" alt="Map" />
+                    <img src={mapImg} alt="Map" />
                     <div className="office-container">
                         <Office
                             name={offices[0].name}
@@ -127,7 +152,7 @@ export function Home() {
                     </div>
                 </div>
             </section>
-            <section className='contact-us-section'>
+            <section className='contact-us section'>
                 <ContactForm />
                 <ContactTitle />
             </section>

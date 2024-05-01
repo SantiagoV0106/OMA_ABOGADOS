@@ -57,6 +57,17 @@
     
         font-size: 16px;
     }
+
+    .terciary-btn {
+        gap: 0 4px;
+        padding: 9px 36px;
+        width: max-content;
+        align-self: center;
+        color: var(--golden-color);
+        font-size: 16px;
+        border: 1px solid var(--golden-color);
+        border-radius: 33px;
+    }
     
 
 }

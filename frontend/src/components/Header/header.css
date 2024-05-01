@@ -59,22 +59,28 @@
 
 }
 
-.header-social-links{
+.header-social-links {
     display: flex;
     align-items: center;
 
 }
+
 .header-social-links .web-icon {
-   cursor: pointer;
-   font-size: 26px;
+    cursor: pointer;
+    font-size: 26px;
 }
 
 
-.service-link {
+.dropdown-option {
+    font-size: 16px;
+    font-weight: 300;
+    font-family: var(--secondary-font);
+    color: var(--silver-color);
     position: relative;
+    cursor: pointer;
 }
 
-.service-link .dropdown {
+.dropdown-option .dropdown {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -94,18 +100,20 @@
     color: var(--dark-blue-color);
     border-radius: 4px;
     transition: all 0.2s ease;
+
 }
 
 .dropdown a:hover {
     color: var(--silver-color);
     background-color: var(--light-blue-variant-2-color);
+    text-decoration: none;
 }
 
 
 
 @media screen and (max-width : 1330px) {
     .header-container {
-        margin: 0 60px ;
+        margin: 0 60px;
     }
 
     .logo-img {
@@ -116,6 +124,7 @@
     .header-interactions {
         gap: 0 20px;
     }
+
     .header-container ul li {
         padding: 0 calc(48px / 2);
     }
@@ -126,13 +135,16 @@
         margin: 0 73px;
         padding: 18px 0 0;
     }
+
     .header-container ul li {
         padding: 0 calc(38px / 2);
     }
+
     .header-container .action-button {
         padding: 10px 42px;
         font-size: 14px;
     }
+
     .secondary-button {
         padding: 10px 36px;
         font-size: 14PX;
@@ -144,7 +156,7 @@
 @media screen and (max-width : 1030px) {
 
     .header-container {
-        margin: 18px 50px;
+        margin: 0 50px;
         transition: all .6s ease;
     }
 
@@ -171,20 +183,13 @@
 
     .header-interactions.active ul li {
         padding: 0;
-        margin: 20px auto;
+        margin: 30px auto;
     }
 
     .header-interactions.active ul li a {
         font-size: 24px;
         font-weight: 500;
         color: var(--dark-blue-color);
-    }
-
-    .interaction-btn-container {
-        display: flex;
-        width: 40%;
-        flex-direction: column;
-        gap: 35px;
     }
 
     .interaction-btn-container .action-button {
@@ -215,10 +220,10 @@
         height: 60vh;
         top: -950px;
         left: 0;
-        background-color: var(--silver-color);
+        background-color: var(--background-color);
         z-index: -1;
         transition: all .6s ease;
-        
+
     }
 
     .header-menu-container.active {
@@ -237,10 +242,11 @@
         cursor: pointer;
         width: 100px;
     }
-    
+
 
     .header-container.active {
-        margin: 0 20px 100vh;
+        margin: 0;
+        z-index: 2;
     }
 
     .header-menu-container {
