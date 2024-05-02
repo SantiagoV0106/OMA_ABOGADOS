@@ -19,7 +19,7 @@ textarea::-webkit-scrollbar {
     color: var(--dark-blue-color);
     font-family: var(--secondary-font);
     cursor: pointer;
-    font-size: 20px;
+    font-size: 16px;
     padding: 28px 33px;
     outline: none;
     border: none;
@@ -29,19 +29,19 @@ textarea::-webkit-scrollbar {
 }
 
 /* Ocultar el icono de mostrar/ocultar contraseña en inputs de contraseña */
-.input-group
-input[type="password"]::-ms-reveal,
+.input-group input[type="password"]::-ms-reveal,
 input[type="password"]::-webkit-contacts-auto-fill-button,
 input[type="password"]::-webkit-credentials-auto-fill-button,
 input[type="password"]::-webkit-password-toggle-button {
     display: none !important;
 }
 
+
 .input-group textarea {
     color: var(--dark-blue-color);
     font-family: var(--secondary-font);
     cursor: pointer;
-    font-size: 20px;
+    font-size: 16px;
     padding: 28px 33px;
     outline: none;
     border: 1px solid var(--golden-color);
@@ -72,17 +72,19 @@ input[type="password"]::-webkit-password-toggle-button {
 
 .input-group :is(input:focus, input:valid, textarea:focus, textarea:valid) {
     border-color: var(--dark-blue-color);
-  }
+}
 
 
-  @media screen and (max-width : 1330px) {
-        .input-group input,
-        .input-group textarea {
-            padding: 15px 20px;
-            font-size: 16px;
-        }
-        .input-group label {
-            padding: 15px 0;
-            font-size: 16px;
-        }
-  }
+@media screen and (max-width : 1330px) {
+
+    .input-group input,
+    .input-group textarea {
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+    .input-group label {
+        padding: 15px 0;
+        font-size: 16px;
+    }
+}

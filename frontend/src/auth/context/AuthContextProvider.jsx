@@ -19,9 +19,11 @@ const initialFormState = {
 
 export function AuthContextProvider({ children }) {
 
-    const [showPassword, setShowPassword] = useState(false)
     const [formState, setFormState] = useState(initialFormState)
     const [isLogged, setIsLogged] = useState(initialLogState)
+    const [loginError, setLoginError] = useState(false)
+    const [userNotFound, setUserNotFound] = useState(false)
+    const [showPassword, setShowPassword] = useState(false)
 
     const navigate = useNavigate()
 
@@ -38,12 +40,13 @@ export function AuthContextProvider({ children }) {
 
     // Fetch y llamado al servidor
     const handleLogin = async (e) => {
-
         e.preventDefault()
-        resetInputs()
+
+        setLoginError(false)
+        setUserNotFound(false)
 
         try {
-            
+
             const response = await fetch('http://localhost/oma/login.php', {
                 method: 'POST',
                 headers: {
@@ -54,25 +57,34 @@ export function AuthContextProvider({ children }) {
 
             if (response.ok) {
                 const data = await response.json();
-                // Manejar la respuesta del servidor
-                console.log('Respuesta del servidor:', data);
 
-                if (data[0].result === 'Login exitoso') {
-                    setIsLogged(!initialLogState)
+                if (data.status === 'success') {
+                    setIsLogged(true)
                     localStorage.setItem('isLogged', JSON.stringify(true))
+                    resetInputs()
+
                     navigate('/admin/dashboard')
+                    // Manejar la respuesta del servidor
+                    console.log('Respuesta del servidor:', data);
+                }
+
+                if (data.status === 'error') {
+                    setLoginError(true)
+                    console.log(data.message);
                 }
 
             } else {
+                setUserNotFound(true)
                 console.error('Error al iniciar sesión:', response.status);
             }
+
         } catch (error) {
             console.error('Error de red:', error);
         }
     }
 
     const handleLogOut = () => {
-        setIsLogged(!initialLogState)
+        setIsLogged(false)
         localStorage.setItem('isLogged', JSON.stringify(false))
     }
 
@@ -93,6 +105,9 @@ export function AuthContextProvider({ children }) {
             showPassword,
             formState,
             isLogged,
+            loginError,
+            userNotFound,
+            navigate
         }}>
             {children}
         </AuthContext.Provider>

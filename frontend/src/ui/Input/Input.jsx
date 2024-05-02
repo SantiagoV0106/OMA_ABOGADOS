@@ -2,6 +2,7 @@
 import './input.css'
 
 export function Input({
+    style,
     type,
     id,
     inputChange,
@@ -10,6 +11,7 @@ export function Input({
 
     return (
         <input
+            style={style}
             type={type}
             id={id}
             onChange={inputChange}

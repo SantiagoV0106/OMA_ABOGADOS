@@ -16,6 +16,9 @@ export const useAuth = () => {
         showPassword,
         formState,
         isLogged,
+        loginError,
+        userNotFound,
+        navigate
     } = context
 
     return {
@@ -26,6 +29,9 @@ export const useAuth = () => {
         showPassword,
         formState,
         isLogged,
+        loginError,
+        userNotFound,
+        navigate
     }
 
 }
