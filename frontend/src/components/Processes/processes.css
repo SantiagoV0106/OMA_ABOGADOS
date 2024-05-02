@@ -1,7 +1,7 @@
 .processes-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0 16px;
+    gap: 16px;
 }
 
 .loading-msg-container {

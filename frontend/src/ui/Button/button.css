@@ -40,13 +40,69 @@
     border-radius: 20px;
 }
 
+.edit-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    color: var(--background-color);
+    font-size: 20px;
+    background-color: transparent;
+    border: 1px solid var(--golden-color);
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+
+}
+
+.save-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    color: var(--background-color);
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid var(--golden-color);
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+
+}
+
+.delete-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    color: var(--background-color);
+    font-size: 20px;
+    background-color: transparent;
+    border: 1px solid #f73131;
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+}
+
+.edit-btn:hover {
+    background-color: var(--golden-color);
+}
+
+.save-btn:hover {
+    background-color: var(--golden-color);
+}
+
+.delete-btn:hover {
+    background-color: #f73131;
+}
+
 
 @media screen and (max-width : 430px) {
 
     .primary-btn {
         gap: 0 4px;
         padding: 9px 36px;
-    
+
         font-size: 16px;
         border-radius: 33px;
     }
@@ -54,7 +110,7 @@
     .secondary-btn {
         gap: 0 4px;
         padding: 9px 20px;
-    
+
         font-size: 16px;
     }
 
@@ -68,6 +124,6 @@
         border: 1px solid var(--golden-color);
         border-radius: 33px;
     }
-    
+
 
 }

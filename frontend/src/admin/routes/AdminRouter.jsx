@@ -4,15 +4,17 @@ import { PrivateRoute } from '../../auth/routes/PrivateRoute'
 
 export function AdminRouter() {
     return (
-        <Routes>
-            <Route
-                path='/dashboard'
-                element={
-                    <PrivateRoute>
-                        <DashboardPage />
-                    </PrivateRoute>
-                }
-            />
-        </Routes>
+        <main>
+            <Routes>
+                <Route
+                    path='/dashboard'
+                    element={
+                        <PrivateRoute>
+                            <DashboardPage />
+                        </PrivateRoute>
+                    }
+                />
+            </Routes>
+        </main>
     )
 }
