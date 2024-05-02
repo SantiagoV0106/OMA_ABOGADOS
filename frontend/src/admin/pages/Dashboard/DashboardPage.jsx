@@ -14,13 +14,15 @@ import { IoMdTrash } from "react-icons/io";
 
 // Styles
 import { Button } from '../../../ui'
+import { processes } from '../../../const/processes';
 
 // Url
-const URL = 'http://localhost/oma/get_processes.php'
+const URL = 'http://localhost/oma/processes.php'
 
 export function DashboardPage() {
 
     const [edit, setEdit] = useState(null)
+    const [editData, setEditData] = useState({})
 
     const { handleLogOut } = useAuth()
 
@@ -30,21 +32,30 @@ export function DashboardPage() {
         error,
         fetchData } = useFetch(URL)
 
-    useEffect(() => {
-        fetchData()
+    // useEffect(() => {
+    //     fetchData()
 
-    }, [])
+    // }, [])
+
 
     const handleEdit = (id) => {
+        const processData = processes.find(process => process.id === id)
         setEdit(id)
-    }
-    const handleSave = () => {
-        setEdit(null)
+        setEditData(processData)
     }
 
-    const handleInputChange = () => {
-  
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setEditData(prevData => ({ ...prevData, [name]: value }))
     }
+
+    const handleSave = () => {
+        console.log('Datos actualizados', editData);
+        setEdit(null)
+        setEdit({})
+    }
+
+
 
     return (
         <>
@@ -62,7 +73,7 @@ export function DashboardPage() {
                     <p>Edita, agrega o elimina</p>
                 </div>
                 {
-                    loading ?
+                    !loading ?
                         <div className="loading-msg-container">
                             <p>Cargando los procesos</p>
                             <span className="loader"></span>
@@ -72,10 +83,10 @@ export function DashboardPage() {
                             :
                             <div className="processes-container">
                                 {
-                                    data.map(({
+                                    processes.map(({
                                         id,
                                         tema,
-                                        descripcion,
+                                        desc,
                                         radicado,
                                         juzgado }) => {
 
@@ -87,7 +98,7 @@ export function DashboardPage() {
                                                     {
                                                         isEditign ?
                                                             <Button
-                                                                onClick={handleSave}
+                                                                onClick={() => handleSave(id)}
                                                                 className='save-btn'
                                                                 type='button'
                                                                 name='Guardar' /> :
@@ -109,13 +120,21 @@ export function DashboardPage() {
                                                         {
                                                             isEditign ?
                                                                 <>
-                                                                    <input type="text" name='tema' value={tema} onChange={handleInputChange} />
-                                                                    <textarea value={descripcion} />
+                                                                    <input
+                                                                        type="text"
+                                                                        name='tema'
+                                                                        value={editData.tema || ''}
+                                                                        onChange={handleInputChange} />
+                                                                    <textarea
+                                                                        name='desc'
+                                                                        value={editData.desc || ''}
+                                                                        onChange={handleInputChange}
+                                                                    />
                                                                 </>
                                                                 :
                                                                 <>
                                                                     <h1>{tema}</h1>
-                                                                    <p>{descripcion}</p>
+                                                                    <p>{desc}</p>
                                                                 </>
                                                         }
                                                     </div>
