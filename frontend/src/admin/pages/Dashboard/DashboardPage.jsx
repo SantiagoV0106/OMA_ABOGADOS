@@ -8,27 +8,23 @@ import { useFetch } from '../../../user/hooks/useFetch'
 // Components
 import './dashboard.css'
 
-// Icons
-import { MdEdit } from "react-icons/md";
-import { IoMdTrash } from "react-icons/io";
-
 // Styles
-import { Button } from '../../../ui'
+import { Button, Input } from '../../../ui'
+import { Modal, Table } from '../../components';
 
 // Url
 const URL = 'http://localhost/oma/processes.php'
 
 export function DashboardPage() {
 
-    const [edit, setEdit] = useState(null)
     const [editData, setEditData] = useState({})
+    const [openModal, setOpenModal] = useState(false)
 
     const { handleLogOut } = useAuth()
 
     const {
         data,
         loading,
-        error,
         fetchData } = useFetch(URL)
 
     useEffect(() => {
@@ -38,8 +34,9 @@ export function DashboardPage() {
 
     const handleEdit = (id) => {
         const processData = data.find(process => process.id === id)
-        setEdit(id)
         setEditData(processData)
+        setOpenModal(true)
+
     }
 
     const handleInputChange = (e) => {
@@ -60,9 +57,9 @@ export function DashboardPage() {
                     throw new Error('No se pudo actualizar el proceso')
                 }
                 console.log('Datos actualizados', editData);
-                setEdit(null)
-                setEdit({})
-
+                setEditData({})
+                setOpenModal(false)
+                fetchData()
             })
             .catch(error => {
                 console.error('Error al actualizar el proceso', error);
@@ -81,113 +78,91 @@ export function DashboardPage() {
                     type='button'
                     name='Cerrar Sesión' />
             </header>
-            <div className="dashboard-processes">
-                <div className="dashboard-title-section">
-                    <h1>Procesos</h1>
-                    <p>Edita, agrega o elimina</p>
-                </div>
-                {
-                    loading ?
-                        <div className="loading-msg-container">
-                            <p>Cargando los procesos</p>
-                            <span className="loader"></span>
-                        </div>
-                        : error ?
-                            <p>No se encontraron procesos</p>
-                            :
-                            <div className="processes-container">
-                                {
-                                    data.map(({
-                                        id,
-                                        tema,
-                                        descripcion,
-                                        radicado,
-                                        juzgado }) => {
-
-                                        const isEditign = edit === id
-
-                                        return (
-                                            <div key={id}>
-                                                <div className="action-btns">
-                                                    {
-                                                        isEditign ?
-                                                            <Button
-                                                                onClick={() => handleSave(id)}
-                                                                className='save-btn'
-                                                                type='button'
-                                                                name='Guardar' /> :
-                                                            <Button
-                                                                onClick={() => handleEdit(id)}
-                                                                className='edit-btn'
-                                                                type='button'
-                                                                name={<MdEdit />} />
-                                                    }
-                                                    <Button
-                                                        onClick={handleLogOut}
-                                                        className='delete-btn'
-                                                        type='button'
-                                                        name={<IoMdTrash />} />
-                                                </div>
-                                                <div
-                                                    className="process">
-                                                    {
-                                                        isEditign ?
-                                                            <>
-                                                                <div className="process-info">
-                                                                    <input
-                                                                        type="text"
-                                                                        name='tema'
-                                                                        value={editData.tema || ''}
-                                                                        onChange={handleInputChange} />
-                                                                    <textarea
-                                                                        name='descripcion'
-                                                                        value={editData.descripcion || ''}
-                                                                        onChange={handleInputChange}
-                                                                    />
-                                                                </div>
-
-                                                                <div className="process-extra-info">
-                                                                    <p >Radicado</p>
-                                                                    <input
-                                                                        type="number"
-                                                                        name='radicado'
-                                                                        value={editData.radicado || ''}
-                                                                        onChange={handleInputChange} />
-                                                                    <p >Juzgado</p>
-                                                                    <input
-                                                                        type="text"
-                                                                        name='juzgado'
-                                                                        value={editData.juzgado || ''}
-                                                                        onChange={handleInputChange} />
-                                                                </div>
-                                                            </>
-
-                                                            :
-                                                            <>
-                                                                <div className="process-info">
-                                                                    <h1>{tema}</h1>
-                                                                    <p>{descripcion}</p>
-                                                                </div>
-                                                                <div className="process-extra-info">
-                                                                    <p >Radicado <span>{radicado}</span></p>
-                                                                    <p >Juzgado <span>{juzgado}</span></p>
-                                                                </div>
-                                                            </>
-
-                                                    }
-
-                                                </div>
-
-                                            </div>
-
-                                        )
-
-                                    })
-                                }
+            {
+                loading ?
+                    <p>Cargando</p>
+                    :
+                    <>
+                        <h1>Procesos</h1>
+                        <Table
+                            edit={handleEdit}
+                            data={data} />
+                        <Modal
+                            isOpen={openModal}
+                            onClose={() => setOpenModal(false)}
+                        >
+                            <div className="modal-header">
+                                <h3>Edita este proceso</h3>
+                                <Button
+                                    type="button"
+                                    className='close-btn'
+                                    name='X'
+                                    onClick={() => setOpenModal(false)}
+                                />
                             </div>
-                }
+                            <div className="input-group">
+                                <Input
+                                    type='text'
+                                    id='tema'
+                                    name='tema'
+                                    value={editData.tema || ''}
+                                    inputChange={handleInputChange}
+                                />
+                                <label
+                                    htmlFor='tema'>
+                                    Tema
+                                </label>
+                            </div>
+                            <div className="input-group">
+                                <textarea
+                                    rows={10}
+                                    cols={50}
+                                    id='descripcion'
+                                    name='descripcion'
+                                    value={editData.descripcion || ''}
+                                    onChange={handleInputChange}
+                                />
+                                <label
+                                    htmlFor='descripcion'>
+                                    Descripción
+                                </label>
+                            </div>
+                            <div className="input-group">
+                                <Input
+                                    type='number'
+                                    id='radicado'
+                                    name='radicado'
+                                    value={editData.radicado || ''}
+                                    inputChange={handleInputChange}
+                                />
+                                <label
+                                    htmlFor='radicado'>
+                                    Radicado
+                                </label>
+                            </div>
+                            <div className="input-group">
+                                <Input
+                                    type='text'
+                                    id='juzgado'
+                                    name='juzgado'
+                                    value={editData.juzgado || ''}
+                                    inputChange={handleInputChange}
+                                />
+                                <label
+                                    htmlFor='juzgado'>
+                                    Juzgado
+                                </label>
+                            </div>
+                            <Button
+                                className='primary-btn'
+                                onClick={handleSave}
+                                name='Guardar'
+                            />
+                        </Modal>
 
-            </div >
+                    </>
+
+            }
 
         </>
 

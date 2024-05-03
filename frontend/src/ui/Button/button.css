@@ -42,16 +42,14 @@
 
 .action-btn {
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    padding: 8px 12px;
+    align-content: center;
+    padding: 8px 12px 6px;
     color: var(--background-color);
     font-size: 20px;
-    background-color: transparent;
-    border: 1px solid var(--golden-color);
+    background-color: var(--golden-color);
+    border: none;
     border-radius: 10px;
-
-    transition: all 0.3s ease;
+    margin-right: 10px;
 
 }
 
@@ -59,42 +57,39 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    padding: 8px 12px;
+    padding: 8px;
     color: var(--background-color);
     font-size: 16px;
     background-color: transparent;
     border: 1px solid var(--golden-color);
     border-radius: 10px;
 
-    transition: all 0.3s ease;
-
 }
 
 .delete-btn {
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    padding: 8px 12px;
+    padding: 8px 12px 6px;
     color: var(--background-color);
     font-size: 20px;
-    background-color: transparent;
-    border: 1px solid #f73131;
+    background-color: #f73131;
+    border: none;
     border-radius: 10px;
-
-    transition: all 0.3s ease;
 }
 
-.action-btn:hover {
-    background-color: var(--golden-color);
+.close-btn {
+    cursor: pointer;
+    padding: 8px 12px;
+
+    color: var(--background-color);
+    background-color: var(--dark-blue-color);
+    border: none;
+    border-radius: 8px;
 }
 
 .save-btn:hover {
     background-color: var(--golden-color);
 }
 
-.delete-btn:hover {
-    background-color: #f73131;
-}
 
 
 @media screen and (max-width : 430px) {

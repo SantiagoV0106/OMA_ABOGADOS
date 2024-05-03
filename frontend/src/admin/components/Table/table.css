@@ -1,0 +1,43 @@
+.table {
+    height: 650px;
+    overflow: auto;
+    margin: 80px 104px;
+
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-family: var(--secondary-font);
+    border: 1px solid var(--golden-color);
+}
+
+table th {
+    position: sticky;
+    top: 0;
+
+    color: var(--background-color);
+    background-color: var(--light-blue-color);
+    font-size: 16px;
+}
+
+td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+th,
+td {
+    border-bottom: 1px solid var(--golden-color);
+    padding: 20px 22px;
+    word-break: break-all;
+    text-align: center;
+}
+
+tr:hover td {
+    color: var(--light-blue-color);
+    cursor: pointer;
+    background-color: #9b9b9b22;
+}
