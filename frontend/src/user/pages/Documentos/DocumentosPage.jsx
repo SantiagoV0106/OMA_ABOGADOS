@@ -30,14 +30,13 @@ export function DocumentosPage() {
                         estos archivos PDF han sido elegidos para brindarte 
                         información valiosa y útil.`
                     }</p>
-                    <Button className={'primary-btn'} name={'Contáctanos'} />
                 </div>
             </section>
             <section className='documentos-de-interes'>
                 <TitleSection
                     className='title-container'
                     subTitle='Boletín Jurídico'
-                    title='Dcoumentos de interés'
+                    title='Documentos de interés'
                 />
 
                 <div className="documentos">

@@ -24,6 +24,7 @@
 .modal-header {
     display: flex;
     align-items: center;
+    gap: 0 40px;
     justify-content: space-between;
 }
 
@@ -31,6 +32,12 @@
     font-size: 26px;
     font-weight: 500;
     color: var(--golden-color);
+}
+
+.delete-actions {
+    display: flex;
+    align-items: center;
+    gap: 0 40px;
 }
 
 .modal-content .primary-btn {

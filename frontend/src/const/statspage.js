@@ -2,7 +2,7 @@ export const statssoma = [
     {
         id: 1,
         titulo: 'Tasa de efectividad en procesos de derecho fiduciario',
-        tasaGlobal: '93%',
+        tasaGlobal: '92%',
         tasasAsociadas: [
             {
                 id: 1,
@@ -18,8 +18,8 @@ export const statssoma = [
     },
     {
         id: 2,
-        titulo: 'Tasa de efectividad procesos de derecho financiero',
-        tasaGlobal: '94%',
+        titulo: 'Tasa de efectividad de procesos en jurisdicción ordinaria',
+        tasaGlobal: '93%',
         tasasAsociadas: [
             {
                 id: 1,
@@ -58,7 +58,7 @@ export const statssoma = [
     {
         id: 4,
         titulo: 'Tasa de efectividad en procesos no corporativos',
-        tasaGlobal: '94%',
+        tasaGlobal: '90%',
         tasasAsociadas: [
             {
                 id: 1,

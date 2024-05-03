@@ -1,14 +1,14 @@
 export const bannerStatistics = [
     {
         title: 'Derecho Financiero',
-        percentage: '95%',
+        percentage: '92%',
         desc: 'Tasa de efectividad en procesos de derecho fiduciario'
 
     },
     {
-        title: 'Derecho Fiduciario',
-        percentage: '94%',
-        desc: 'Tasa de efectividad procesos de derecho financiero'
+        title: 'Jurisdicción ordinaria',
+        percentage: '93%',
+        desc: 'Tasa de efectividad de procesos en jurisdicción ordinaria'
 
     },
     {
@@ -19,7 +19,7 @@ export const bannerStatistics = [
     },
     {
         title: 'Procesos no corporativos',
-        percentage: '93%',
+        percentage: '90%',
         desc: 'Tasa de efectividad en procesos no corporativos'
 
     }

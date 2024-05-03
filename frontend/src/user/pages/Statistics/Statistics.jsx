@@ -4,7 +4,6 @@ import { TitleSection } from '../../../ui'
 
 // Data
 import { heroImages } from '../../../const/heroImages'
-import { sectionInfo } from '../../../const/sectionInfo'
 import { statssoma } from '../../../const/statspage'
 
 //Style

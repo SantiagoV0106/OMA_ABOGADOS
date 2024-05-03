@@ -1,18 +1,36 @@
 // Components
 import { Footer, Header } from '../../../components'
-import { Button, TitleSection } from '../../../ui'
+import { TitleSection } from '../../../ui'
 
 // Images
 import heroImage from '../../../assets/images/hero/noticias.jpg'
 
 // Style
 import './noticiaspage.css'
+import { useFetch } from '../../hooks/useFetch'
+import { useEffect } from 'react'
+import { Link, } from 'react-router-dom'
+
+const URL = 'http://localhost/oma/noticias.php'
 
 export function NoticiasPage() {
+
+    const {
+        data,
+        loading,
+        fetchData
+    } = useFetch(URL)
 
     const heroImg = {
         backgroundImage: `url(${heroImage})`
     }
+
+    useEffect(() => {
+        fetchData()
+    }, [])
+
+
+    console.log(data);
 
     return (
         <>
@@ -22,15 +40,12 @@ export function NoticiasPage() {
                     <h3>{'Boletín Jurídico'}</h3>
                     <h1>{'Noticias de interés'}</h1>
                     <p>{
-                        `En esta sección de nuestro boletín jurídico, 
-                        ofrecemos una cuidadosa selección de 
-                        documentos que pueden resultar de gran 
-                        interés para ti. Como firma de abogados 
-                        comprometida con la excelencia en nuestro campo, 
-                        estos archivos PDF han sido elegidos para brindarte 
-                        información valiosa y útil.`
+                        `
+                        En nuestra sección de noticias del boletín jurídico, 
+                        te mantenemos al día con las últimas novedades y acontecimientos relevantes en el mundo legal. Como firma de abogados líder, 
+                        nos comprometemos a mantenerte informado sobre los cambios en la legislación, 
+                        los casos judiciales destacados y las tendencias emergentes en el ámbito legal. `
                     }</p>
-                    <Button className={'primary-btn'} name={'Contáctanos'} />
                 </div>
             </section>
             <section className='documentos-de-interes'>
@@ -39,89 +54,41 @@ export function NoticiasPage() {
                     subTitle='Boletín Jurídico'
                     title='Noticias de interés'
                 />
+                {
+                    loading ?
+                        <p>Cargando noticias</p>
+                        :
+                        <div className="documentos">
+                            {
+                                data.map(({
+                                    id,
+                                    titulo,
+                                    descripcion,
+                                    enlace
+                                }) => {
+                                    return (
+                                        <div
+                                            key={id}
+                                            className="documento">
+                                            <div className="document-info">
+                                                <h1> {titulo} </h1>
+                                                <p className='document-desc'>
+                                                    {descripcion}
+                                                </p>
+                                            </div>
+                                            <Link
+                                                className='action-btn'
+                                                to={enlace}
+                                            >
+                                                Leer más
+                                            </Link>
+                                        </div>
+                                    )
+                                })
+                            }
 
-                <div className="documentos">
-                    <div className="documento">
-                        <div className="document-info">
-                            <h1>Titulo de la noticias</h1>
-                            <p className='document-desc'>
-                                {` Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop`}
-                            </p>
                         </div>
-
-                        <div className="acciones">
-                            <Button
-                                className='action-btn'
-                                type='button'
-                                name='Leer más'
-                            />
-                        </div>
-                    </div>
-                    <div className="documento">
-                        <div className="document-info">
-                            <h1>Titulo de la noticias</h1>
-                            <p className='document-desc'>
-                                Breve descripcion
-                            </p>
-                        </div>
-
-                        <div className="acciones">
-                            <Button
-                                className='action-btn'
-                                type='button'
-                                name='Leer más'
-                            />
-                        </div>
-                    </div>
-                    <div className="documento">
-                        <div className="document-info">
-                            <h1>Titulo de la noticias</h1>
-                            <p className='document-desc'>
-                                Breve descripcion
-                            </p>
-                        </div>
-
-                        <div className="acciones">
-                            <Button
-                                className='action-btn'
-                                type='button'
-                                name='Leer más'
-                            />
-                        </div>
-                    </div>
-                    <div className="documento">
-                        <div className="document-info">
-                            <h1>Titulo de la noticias</h1>
-                            <p className='document-desc'>
-                                Breve descripcion
-                            </p>
-                        </div>
-
-                        <div className="acciones">
-                            <Button
-                                className='action-btn'
-                                type='button'
-                                name='Leer más'
-                            />
-                        </div>
-                    </div>
-                    <div className="documento">
-                        <div className="document-info">
-                            <h1>Titulo de la noticias</h1>
-                            <p className='document-desc'>
-                                {` Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop`}
-                            </p>
-                        </div>
-
-                        <div className="acciones">
-                            <Button
-                                className='action-btn'
-                                type='button'
-                                name='Leer más'
-                            />
-                        </div>
-                    </div>
-                </div>
+                }
             </section>
             <Footer />
         </>

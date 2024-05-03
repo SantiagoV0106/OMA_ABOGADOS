@@ -11,7 +11,7 @@ import { IoMdTrash } from "react-icons/io";
 import { Button } from '../../../ui'
 import './table.css'
 
-export function Table({ data, edit }) {
+export function Table({ data, edit, deleteP }) {
 
 
 
@@ -23,9 +23,8 @@ export function Table({ data, edit }) {
 
     const columns = Object.keys(data[0])
 
-    const handleOnClick = (id) => {
-        edit(id)
-    }
+
+
 
     return (
         <div className="table">
@@ -60,12 +59,14 @@ export function Table({ data, edit }) {
                                         className='action-btn'
                                         type='button'
                                         name={<MdEdit />}
-                                        onClick={() => handleOnClick(item.id)}
+                                        onClick={() => edit(item.id)}
                                     />
                                     <Button
                                         className='delete-btn'
                                         type='button'
-                                        name={<IoMdTrash cursor={'pointer'} />}
+                                        name={<IoMdTrash />}
+                                        onClick={() => deleteP(item.id)}
+
                                     />
                                 </td>
                             </tr>
