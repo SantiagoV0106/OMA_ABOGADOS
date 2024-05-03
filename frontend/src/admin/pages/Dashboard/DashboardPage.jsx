@@ -14,7 +14,6 @@ import { IoMdTrash } from "react-icons/io";
 
 // Styles
 import { Button } from '../../../ui'
-import { processes } from '../../../const/processes';
 
 // Url
 const URL = 'http://localhost/oma/processes.php'
@@ -32,14 +31,13 @@ export function DashboardPage() {
         error,
         fetchData } = useFetch(URL)
 
-    // useEffect(() => {
-    //     fetchData()
+    useEffect(() => {
+        fetchData()
 
-    // }, [])
-
+    }, [])
 
     const handleEdit = (id) => {
-        const processData = processes.find(process => process.id === id)
+        const processData = data.find(process => process.id === id)
         setEdit(id)
         setEditData(processData)
     }
@@ -49,10 +47,26 @@ export function DashboardPage() {
         setEditData(prevData => ({ ...prevData, [name]: value }))
     }
 
-    const handleSave = () => {
-        console.log('Datos actualizados', editData);
-        setEdit(null)
-        setEdit({})
+    const handleSave = (id) => {
+        fetch(`${URL}/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(editData)
+        })
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('No se pudo actualizar el proceso')
+                }
+                console.log('Datos actualizados', editData);
+                setEdit(null)
+                setEdit({})
+
+            })
+            .catch(error => {
+                console.error('Error al actualizar el proceso', error);
+            })
     }
 
 
@@ -73,7 +87,7 @@ export function DashboardPage() {
                     <p>Edita, agrega o elimina</p>
                 </div>
                 {
-                    !loading ?
+                    loading ?
                         <div className="loading-msg-container">
                             <p>Cargando los procesos</p>
                             <span className="loader"></span>
@@ -83,10 +97,10 @@ export function DashboardPage() {
                             :
                             <div className="processes-container">
                                 {
-                                    processes.map(({
+                                    data.map(({
                                         id,
                                         tema,
-                                        desc,
+                                        descripcion,
                                         radicado,
                                         juzgado }) => {
 
@@ -116,32 +130,51 @@ export function DashboardPage() {
                                                 </div>
                                                 <div
                                                     className="process">
-                                                    <div className="process-info">
-                                                        {
-                                                            isEditign ?
-                                                                <>
+                                                    {
+                                                        isEditign ?
+                                                            <>
+                                                                <div className="process-info">
                                                                     <input
                                                                         type="text"
                                                                         name='tema'
                                                                         value={editData.tema || ''}
                                                                         onChange={handleInputChange} />
                                                                     <textarea
-                                                                        name='desc'
-                                                                        value={editData.desc || ''}
+                                                                        name='descripcion'
+                                                                        value={editData.descripcion || ''}
                                                                         onChange={handleInputChange}
                                                                     />
-                                                                </>
-                                                                :
-                                                                <>
+                                                                </div>
+
+                                                                <div className="process-extra-info">
+                                                                    <p >Radicado</p>
+                                                                    <input
+                                                                        type="number"
+                                                                        name='radicado'
+                                                                        value={editData.radicado || ''}
+                                                                        onChange={handleInputChange} />
+                                                                    <p >Juzgado</p>
+                                                                    <input
+                                                                        type="text"
+                                                                        name='juzgado'
+                                                                        value={editData.juzgado || ''}
+                                                                        onChange={handleInputChange} />
+                                                                </div>
+                                                            </>
+
+                                                            :
+                                                            <>
+                                                                <div className="process-info">
                                                                     <h1>{tema}</h1>
-                                                                    <p>{desc}</p>
-                                                                </>
-                                                        }
-                                                    </div>
-                                                    <div className="process-extra-info">
-                                                        <p >Radicado <span>{radicado}</span></p>
-                                                        <p >Juzgado <span>{juzgado}</span></p>
-                                                    </div>
+                                                                    <p>{descripcion}</p>
+                                                                </div>
+                                                                <div className="process-extra-info">
+                                                                    <p >Radicado <span>{radicado}</span></p>
+                                                                    <p >Juzgado <span>{juzgado}</span></p>
+                                                                </div>
+                                                            </>
+
+                                                    }
 
                                                 </div>
 
@@ -154,7 +187,7 @@ export function DashboardPage() {
                             </div>
                 }
 
-            </div>
+            </div >
 
         </>
 

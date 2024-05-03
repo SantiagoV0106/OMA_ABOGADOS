@@ -1,0 +1,50 @@
+.documentos-de-interes .title-container h1 {
+    color: var(--golden-color);
+}
+
+.documentos-de-interes .title-container h3 {
+    color: var(--dark-blue-color);
+}
+
+.documentos-de-interes .documentos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 16px;
+    margin: 0 0 140px;
+    padding: 0 104px;
+}
+
+.documento {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--dark-blue-color);
+    border-radius: 8px;
+    padding: 20px 18px;
+    transition: all 0.6s ease;
+}
+
+.documento h1 {
+    font-size: 32px;
+}
+
+.documento p {
+    font-size: 16px;
+}
+
+.documento .document-desc {
+    margin: 10px 0;
+}
+
+.documento .acciones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 30px;
+    margin: 40px 0 0;
+}
+
+
+.documento:hover {
+    transform: scale(1.02);
+}

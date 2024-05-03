@@ -2,13 +2,31 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    margin: 150px 0 0;
+    gap: 40px 0;
+    margin: 100px 0 0;
 }
 
-.stats-container h1 {
+.global-stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+    border: 25px solid var(--light-blue-variant-color);
+    border-radius: 50%;
+}
+
+.global-stat h1 {
     color: var(--golden-color);
     font-size: 100px;
+    margin: 80px 50px;
+}
+
+.stats-asociadas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    max-width: 50%;
 }
 
 .stat-container {
@@ -21,7 +39,8 @@
 .stat {
     background-color: #fff;
     border-left: 5px solid var(--light-blue-variant-color);
-
+    width: 100%;
+    max-width: 600px;
     padding: 18px 28px;
 }
 
@@ -34,7 +53,6 @@
 .stat p {
     color: var(--dark-blue-color);
     font-size: 20px;
-    padding: 0 250px 0 0;
 }
 
 @media screen and (max-width : 430px) {

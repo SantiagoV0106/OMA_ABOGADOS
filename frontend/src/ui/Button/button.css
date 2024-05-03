@@ -40,7 +40,7 @@
     border-radius: 20px;
 }
 
-.edit-btn {
+.action-btn {
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -84,7 +84,7 @@
     transition: all 0.3s ease;
 }
 
-.edit-btn:hover {
+.action-btn:hover {
     background-color: var(--golden-color);
 }
 

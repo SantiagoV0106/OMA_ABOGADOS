@@ -1,6 +1,10 @@
 .stat-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 160px 0;
 }
 .stat-page .c-header-container {
     text-align: center;
+    max-width: 60%;
 }

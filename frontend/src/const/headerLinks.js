@@ -59,20 +59,19 @@ export const headerLinks = [
     },
     {
         id: 4,
-        name: 'Boletines',
-        link: '/boletines',
+        name: 'Boletín Jurídico',
         dropdown: [
-            {
-                id: crypto.randomUUID(),
-                link: '/boletines/boletin-juridico',
-                name: 'Boletin jurídico'
-            },
             {
                 id: crypto.randomUUID(),
                 link: '/boletines/noticias',
                 name: 'Noticias',
+            },
+            {
+                id: crypto.randomUUID(),
+                link: '/boletines/documentos',
+                name: 'Documentos de interés'
             }
-
+            
         ]
     }
 
