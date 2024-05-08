@@ -53,20 +53,25 @@
     gap: 10px 0;
     width: 45%;
 }
+
 .footer-container .office-container {
     margin: 0 0 10px;
 }
-.footer-container .office-container .office-title  {
+
+.footer-container .office-container .office-title {
     gap: 0 20px;
 }
+
 .footer-container .office-container .office-title h3 {
     font-size: 20px;
-   color: var(--golden-color);
+    color: var(--golden-color);
 }
+
 .footer-container .office-container .office-title .web-icon {
     font-size: 24px;
     color: var(--silver-color);
 }
+
 .footer-container .office-container a {
     font-size: 16px;
 }
@@ -76,6 +81,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
 .footer-container .social-media-container h3 {
     margin: 0 0 10px;
 
@@ -84,17 +90,20 @@
     font-weight: 500;
     color: var(--golden-color);
 }
+
 .footer-container .social-media-container .web-icon {
     font-size: 24px;
     color: var(--silver-color);
 }
+
 .footer-container .social-media-container .web-icon:nth-child(3) {
-margin: 0 20px;
+    margin: 0 20px;
 }
 
 .admin-container p {
     margin: 0 0 10px;
 }
+
 .admin-container a {
     cursor: pointer;
     text-decoration: underline;
@@ -130,10 +139,17 @@ margin: 0 20px;
         font-size: 16px;
     }
 }
-@media screen and (max-width : 430px) {
+
+@media screen and (max-width : 1033px) {
+    .footer-container {
+     padding: 70px 30px 60px;
+    }
+}
+
+@media screen and (max-width : 768px) {
     .footer-container {
         flex-direction: column;
-        padding: 60px 18px 30px;
+        padding: 60px 30px 30px;
         height: max-content;
     }
 
@@ -141,6 +157,44 @@ margin: 0 20px;
         flex-direction: column;
         gap: 40px 0;
     }
+
+    .footer-container img {
+        margin: 0 0 30px;
+        width: 160px;
+    }
+
+    .footer-container .footer-content-container ul {
+        align-self: self-start;
+        margin: 0 0 30px;
+    }
+
+    .footer-container .footer-content-container ul li {
+        font-size: 16px;
+    }
+
+    .footer-container .footer-offices-container {
+        width: 60%;
+    }
+
+    .contact-email {
+        margin: 0 0 80px;
+        font-size: 18px;
+    }
+
+    .end-footer {
+        font-size: 16px;
+    }
+
+    .admin-container p {
+        margin: 40px 0 10px;
+    }
+}
+
+@media screen and (max-width : 480px) {
+    .footer-container {
+        padding: 60px 18px 30px;
+    }
+
     .footer-container img {
         margin: 0 0 30px;
         width: 150px;
@@ -163,6 +217,7 @@ margin: 0 20px;
         margin: 0 0 80px;
         font-size: 18px;
     }
+
     .end-footer {
         font-size: 16px;
     }

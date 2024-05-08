@@ -89,7 +89,7 @@
 .trayectoria .title-container {
     margin: 0;
     align-self: center;
-  
+
 }
 
 .trayectoria .title-container h1 {
@@ -168,15 +168,8 @@
 @media screen and (max-width : 1390px) {
 
     .about-us .image-section,
-    .trayectoria .image-section
-     {
+    .trayectoria .image-section {
         height: 500px;
-    }
-
-    .about-us .title-container,
-    .trayectoria .title-container,
-    .clients-home .title-container { 
-        width: 40%;
     }
 
     .about-us .title-container p,
@@ -194,10 +187,118 @@
     .contact-us .title-container {
         width: 40%;
     }
+
+    .areas {
+        padding: 50px 80px;
+    }
+
+    .areas .cobertura-container {
+        gap: 0 120px;
+    }
 }
 
+@media screen and (max-width : 1033px) {
 
-@media screen and (max-width : 430px) {
+    .areas {
+        padding: 50px 30px;
+    }
+
+    .areas .cobertura-container img {
+        height: 500px;
+    }
+
+}
+
+@media screen and (max-width : 880px) {
+    .about-us {
+        flex-direction: column;
+    }
+
+    .about-us .title-container {
+        align-self: flex-start;
+        width: 60%;
+    }
+
+    .about-us img {
+        display: none;
+    }
+
+    .relevant-processes {
+        padding: 85px 18px 114px;
+    }
+
+    .relevant-processes .c-header-container h1 {
+        width: auto;
+    }
+
+    .areas {
+        flex-direction: column;
+        padding: 100px 18px;
+    }
+
+    .areas .c-header-container p {
+        font-size: 16px;
+        width: 90%;
+    }
+
+    .areas .cobertura-container {
+        flex-direction: column;
+        gap: 30px 0;
+    }
+
+    .areas .cobertura-container img {
+        height: 423px;
+    }
+
+    .clients-home {
+        padding: 160px 0 40px;
+    }
+
+    .clients-home {
+        flex-direction: column;
+    }
+
+    .clients-home .title-container {
+        align-self: flex-start;
+        width: 60%;
+    }
+
+
+    .trayectoria {
+        flex-direction: column;
+    }
+
+    .trayectoria .title-container {
+        align-self: flex-start;
+        width: 60%;
+    }
+
+    .trayectoria img {
+        display: none;
+    }
+
+    .contact-us {
+        flex-direction: column-reverse;
+    }
+
+    .contact-us .title-container {
+        width: 90%;
+        margin-bottom: 60px;
+    }
+
+    .contact-us .title-container ul {
+        padding: 0 5px;
+        margin: 5px 0 10px;
+    }
+
+    .contact-us #contact-us-form {
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width : 480px) {
     .about-us {
         flex-direction: column;
     }
@@ -275,7 +376,7 @@
     }
 
     .areas .cobertura-container img {
-        height: 423px;
+        height: 403px;
     }
 
     .contact-us {
@@ -284,6 +385,12 @@
 
     .contact-us .title-container {
         width: 90%;
+        margin-bottom: 60px;
+    }
+
+    .contact-us .title-container ul {
+        padding: 0 5px;
+        margin: 5px 0 10px;
     }
 
     .contact-us #contact-us-form {

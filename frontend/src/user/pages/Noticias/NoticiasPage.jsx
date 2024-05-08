@@ -11,7 +11,7 @@ import { useFetch } from '../../hooks/useFetch'
 import { useEffect } from 'react'
 import { Link, } from 'react-router-dom'
 
-const URL = 'http://localhost/oma/noticias.php'
+const URL = 'backend.omaabogados.com.co/noticias.php'
 
 export function NoticiasPage() {
 
@@ -25,9 +25,9 @@ export function NoticiasPage() {
         backgroundImage: `url(${heroImage})`
     }
 
-    useEffect(() => {
-        fetchData()
-    }, [])
+    // useEffect(() => {
+    //     fetchData()
+    // }, [])
 
 
     console.log(data);
@@ -54,43 +54,55 @@ export function NoticiasPage() {
                     subTitle='Boletín Jurídico'
                     title='Noticias de interés'
                 />
-                {
-                    loading ?
-                        <p>Cargando noticias</p>
-                        :
-                        <div className="documentos">
-                            {
-                                data.map(({
-                                    id,
-                                    titulo,
-                                    descripcion,
-                                    enlace
-                                }) => {
-                                    return (
-                                        <div
-                                            key={id}
-                                            className="documento">
-                                            <div className="document-info">
-                                                <h1> {titulo} </h1>
-                                                <p className='document-desc'>
-                                                    {descripcion}
-                                                </p>
-                                            </div>
-                                            <Link
-                                                className='action-btn'
-                                                to={enlace}
-                                            >
-                                                Leer más
-                                            </Link>
-                                        </div>
-                                    )
-                                })
-                            }
 
+                <div className="documentos">
+                    <div
+                        className="documento">
+                        <div className="document-info">
+                            <h1> titulo </h1>
+                            <p className='document-desc'>
+                                descripcion
+                            </p>
                         </div>
-                }
+                        <Link
+                            className='action-btn'
+                            to='enlace'
+                        >
+                            Leer más
+                        </Link>
+                    </div>
+
+                </div>
+
             </section>
             <Footer />
         </>
     )
 }
+// {
+//     data.map(({
+//         id,
+//         titulo,
+//         descripcion,
+//         enlace
+//     }) => {
+//         return (
+//             <div
+//                 key={id}
+//                 className="documento">
+//                 <div className="document-info">
+//                     <h1> {titulo} </h1>
+//                     <p className='document-desc'>
+//                         {descripcion}
+//                     </p>
+//                 </div>
+//                 <Link
+//                     className='action-btn'
+//                     to={enlace}
+//                 >
+//                     Leer más
+//                 </Link>
+//             </div>
+//         )
+//     })
+// }

@@ -33,7 +33,7 @@
 
 }
 
-@media screen and (max-width : 430px) {
+@media screen and (max-width : 480px) {
     .office-container .web-icon {
         font-size: 40px;
     }

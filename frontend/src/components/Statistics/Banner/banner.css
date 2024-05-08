@@ -24,6 +24,7 @@
     color: var(--golden-color);
     font-size: 55px;
 }
+
 .statistic p {
     font-size: 16px;
 }
@@ -33,15 +34,25 @@
     .banner {
         margin: -1px 80px 0;
     }
-    
+
 }
-@media screen and (max-width : 430px) {
+
+@media screen and (max-width : 1033px) {
+
+
+    .statistic h3 {
+        font-size: 46px;
+    }
+
+
+}
+
+@media screen and (max-width : 880px) {
 
     .banner {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        margin: -1px 18px 0;
-        padding: 18px;
+
     }
 
     .statistic {
@@ -53,11 +64,28 @@
     }
 
     .statistic h3 {
-        font-size: 40px;
+        font-size: 42px;
     }
 
     .statistic p {
         text-align: center;
     }
-    
+
+}
+
+@media screen and (max-width : 480px) {
+
+    .banner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: -1px 18px 0;
+        padding: 18px;
+    }
+
+
+    .statistic h3 {
+        font-size: 40px;
+    }
+
+
 }

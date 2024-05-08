@@ -23,13 +23,14 @@
     }
 }
 
-@media screen and (max-width : 1330px) {
-    .hero {
-        height: 80vh;
+@media screen and (max-width : 1033px) {
+    .section {
+        margin: 0 30px;
     }
 }
-@media screen and (max-width : 430px) {
-   .section {
-    margin: 0 18px;
-   }
+
+@media screen and (max-width : 480px) {
+    .section {
+        margin: 0 18px;
+    }
 }

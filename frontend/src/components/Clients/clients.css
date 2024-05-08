@@ -1,4 +1,4 @@
-.clients-container{
+.clients-container {
     display: grid;
     grid-template-columns: repeat(2, 304px);
 }
@@ -6,20 +6,35 @@
 .clients-container .client {
     border: 1px solid var(--golden-color);
 }
+
 .clients-container .client img {
     width: 100%;
 }
 
 
 
-@media screen and (max-width : 1330px) {
+@media screen and (max-width : 1390px) {
     .clients-container {
         grid-template-columns: repeat(2, 264px);
     }
 }
-@media screen and (max-width : 430px) {
+
+@media screen and (max-width : 1140px) {
+    .clients-container {
+        grid-template-columns: repeat(2, 230px);
+    }
+}
+
+@media screen and (max-width : 880px) {
     .clients-container {
         justify-content: center;
-        grid-template-columns: repeat(1 , 80%)
+    }
+}
+
+
+@media screen and (max-width : 480px) {
+    .clients-container {
+        justify-content: center;
+        grid-template-columns: repeat(1, 70%)
     }
 }

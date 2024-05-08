@@ -105,7 +105,7 @@ export function AboutUsPage() {
                 <TitleSection
                     className='c-header-container'
                     subTitle='Sobre Nosotros'
-                    title='Trayectoria personal'
+                    title='Trayectoria profesional'
                     desc={` El Dr. Luis Antonio Orjuela Morales 
                     a lo largo de su vida profesional, 
                     se ha desempeñado en los siguientes campos`}

@@ -36,7 +36,7 @@ export function Home() {
             <section className="hero" style={bgHeroStyle}>
                 <Header />
                 <div className={'title-container'}>
-                    <h3>{'Orjuela Morales'}</h3>
+                    <h3>{'Firma de abogados'}</h3>
                     <h1>{'Comprometidos con la excelencia'}</h1>
                     <p>{
                         `Bienvenido a OMA Abogados, 

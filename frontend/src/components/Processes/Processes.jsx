@@ -8,7 +8,7 @@ import { useFetch } from '../../user/hooks/useFetch'
 import './processes.css'
 
 // Url
-const URL = 'http://localhost/oma/processes.php'
+const URL = 'backend.omaabogados.com.co/processes.php'
 
 export function Processes() {
 
@@ -23,6 +23,7 @@ export function Processes() {
     }, [])
 
 
+    const hasData = data.length > 0
 
     return (
         <>
@@ -35,6 +36,7 @@ export function Processes() {
                     : error ?
                         <p>No se encontraron procesos</p>
                         :
+                        hasData ? 
                         <div className="processes-container">
                             {
                                 data.map(({
@@ -61,7 +63,8 @@ export function Processes() {
 
                                 })
                             }
-                        </div>
+                        </div> :
+                        <p>No hay procesos para mostrar</p>
             }
         </>
     )

@@ -55,7 +55,7 @@
     font-size: 20px;
 }
 
-@media screen and (max-width : 430px) {
+@media screen and (max-width : 880px) {
     .stats-container {
         flex-direction: column;
     }
@@ -64,9 +64,32 @@
         font-size: 68px;
     }
 
+    .stats-asociadas {
+        max-width: none;
+    }
+
     .stat-container {
         margin-top: 20px;
         gap: 30px 0;
+    }
+
+    .global-stat h1 {
+        margin: 80px 55px;
+    }
+
+    .stat h3 {
+        font-size: 32px;
+    }
+
+    .stat p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width : 480px) {
+
+    .stats-container h1 {
+        font-size: 58px;
     }
 
     .stat h3 {

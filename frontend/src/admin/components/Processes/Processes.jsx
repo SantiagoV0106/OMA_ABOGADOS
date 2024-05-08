@@ -9,8 +9,7 @@ import { Modal, Table } from '../../components';
 import { Button, Input } from '../../../ui'
 
 // Url
-const URL = 'http://localhost/oma/processes.php'
-
+const URL = 'backend.omaabogados.com.co/processes.php'
 
 export function Processes() {
 

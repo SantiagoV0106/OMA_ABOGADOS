@@ -15,7 +15,6 @@
 
 .oma-value p {
     color: var(--dark-blue-color);
-    font-size: 20px;
 }
 
 .valores {
@@ -94,9 +93,31 @@
     margin: 50px 0 0;
 }
 
-@media screen and (max-width : 430px) {
+@media screen and (max-width : 1360px) {
     .oma-value p {
         font-size: 16px;
+    }
+
+    .valores {
+        padding: 68px 153px 72px;
+    }
+}
+
+@media screen and (max-width : 1330px) {
+    .mision-vision {
+        max-width: 50%;
+    }
+}
+
+
+
+@media screen and (max-width : 880px) {
+    .mision-vision {
+        max-width: 80%;
+    }
+
+    .oma-value p {
+        font-size: 18px;
     }
 
     .valores {
@@ -105,8 +126,11 @@
 
     .valores-container {
         display: flex;
-        flex-direction: column;
         gap: 60px 0;
+    }
+
+    .value .web-icon {
+        font-size: 50px;
     }
 
     .founder {
@@ -129,6 +153,43 @@
 
     .carousel-section {
         gap: 0 20px;
+    }
+
+}
+
+@media screen and (max-width : 480px) {
+
+    .valores .c-header-container h3::after,
+    .valores .c-header-container h3::before {
+        width: 60%;
+    }
+    .personal-resume .c-header-container h3::after,
+    .personal-resume .c-header-container h3::before {
+        width: 60%;
+    }
+
+    .founder .image-section {
+        height: 410px;
+    }
+
+    .oma-value p {
+        font-size: 16px;
+    }
+
+    .valores {
+        padding: 30px 18px 50px;
+    }
+
+    .valores-container {
+        display: flex;
+        flex-direction: column;
+        gap: 60px 0;
+    }
+
+    .founder {
+        align-items: center;
+        flex-direction: column;
+        gap: 60px 0;
     }
 
 }

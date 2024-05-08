@@ -62,7 +62,6 @@ export function Header() {
                                             dropdown ?
                                                 <div
                                                     className='dropdown-option'
-                                                    to={link}
                                                     onMouseEnter={() => handleDropdown(i)}
                                                     onMouseLeave={() => setShowDropdown(null)}>
                                                     {name}
