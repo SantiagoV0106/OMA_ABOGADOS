@@ -3,14 +3,14 @@ import { useLocation } from 'react-router';
 
 // Components
 import { Footer, Header } from '../../../components';
-import { Button, TitleSection } from '../../../ui';
+import { TitleSection } from '../../../ui';
 
 // Data
 import { services } from '../../../const/services'
 
 // Images
 import service1Img from '../../../assets/images/services/servicios-1.jpg'
-import service2Img from  '../../../assets/images/services/servicios-2.jpg'
+import service2Img from '../../../assets/images/services/servicios-2.jpg'
 
 // Style
 import './servicepage.css'
@@ -51,7 +51,6 @@ export function ServicePage() {
                 <div className={'title-container'}>
                     <h3>Servicios</h3>
                     <h1>{service.service}</h1>
-                    <Button className={'primary-btn about-us-btn'} name={'Contáctanos'} />
                 </div>
             </section>
             <section className='service-info section'>
@@ -70,18 +69,18 @@ export function ServicePage() {
                     <h3>{service.service}</h3>
                     <h1>Normativa</h1>
                     <ul>
-                       {
-                        service.normativa.map(({id,ley}) => {
-                            return(
-                                <li key={id}>{ley}</li>
+                        {
+                            service.normativa.map(({ id, ley }) => {
+                                return (
+                                    <li key={id}>{ley}</li>
 
-                            )
-                        })
-                       }
+                                )
+                            })
+                        }
                     </ul>
                 </div>
             </section>
-            <Footer/>
+            <Footer />
         </>
     )
 }

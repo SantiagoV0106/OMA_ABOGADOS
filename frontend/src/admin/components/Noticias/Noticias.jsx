@@ -9,7 +9,7 @@ import { Modal, Table } from '../../components';
 import { Button, Input } from '../../../ui'
 
 // Url
-const URL = 'backend.omaabogados.com.co/noticias.php'
+const URL = 'http://localhost/oma/noticias.php'
 
 export function Noticias() {
     const [editData, setEditData] = useState({})

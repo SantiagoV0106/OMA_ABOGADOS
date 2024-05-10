@@ -8,7 +8,7 @@ import { useFetch } from '../../user/hooks/useFetch'
 import './processes.css'
 
 // Url
-const URL = 'backend.omaabogados.com.co/processes.php'
+const URL = 'http://localhost/oma/processes.php'
 
 export function Processes() {
 

@@ -9,7 +9,7 @@ import { Modal, Table } from '../../components';
 import { Button, Input } from '../../../ui'
 
 // Url
-const URL = 'backend.omaabogados.com.co/processes.php'
+const URL = 'http://localhost/oma/processes.php'
 
 export function Processes() {
 
@@ -122,123 +122,126 @@ export function Processes() {
             });
     }
 
+    const hasData = data.length > 0
+
     return (
         <>
             {
                 loading ?
                     <p>Cargando</p>
                     :
-                    <>
-                        <div className="page-title">
-                            <h1>Procesos</h1>
-                            <Button
-                                type='button'
-                                className='action-btn'
-                                name='Añadir proceso'
-                                onClick={handlePost}
-                            />
-                        </div>
-                        <Table
-                            edit={handleEdit}
-                            deleteP={handleDelete}
-                            data={data} />
-                        <Modal
-                            isOpen={openModal}
-                            onClose={() => setOpenModal(false)}
-                        >
-                            <div className="modal-header">
-                                <h3>{isAdding ? 'Añadir nueva sentencia' : isDeleting ? '¿Eliminar este proceso?' : 'Editar este proceso'}</h3>
+                    hasData ?
+                        <>
+                            <div className="page-title">
+                                <h1>Procesos</h1>
                                 <Button
-                                    type="button"
-                                    className='close-btn'
-                                    name='X'
-                                    onClick={() => setOpenModal(false)}
+                                    type='button'
+                                    className='action-btn'
+                                    name='Añadir proceso'
+                                    onClick={handlePost}
                                 />
                             </div>
-                            {
-                                isDeleting ? (
-                                    <div className='delete-actions'>
-                                        <Button
-                                            type='button'
-                                            className='primary-delete-btn'
-                                            name='Eliminar'
-                                            onClick={() => deleteProcess(editData.id)}
-                                        />
-                                        <Button
-                                            type='button'
-                                            className='secondary-action-btn'
-                                            name='Cancelar'
-                                            onClick={() => setOpenModal(false)}
-                                        />
-                                    </div>
-                                ) : (
-                                    <>
-                                        <div className="input-group">
-                                            <Input
-                                                type='text'
-                                                id='tema'
-                                                name='tema'
-                                                value={editData.tema || ''}
-                                                inputChange={handleInputChange}
+                            <Table
+                                edit={handleEdit}
+                                deleteP={handleDelete}
+                                data={data} />
+                            <Modal
+                                isOpen={openModal}
+                                onClose={() => setOpenModal(false)}
+                            >
+                                <div className="modal-header">
+                                    <h3>{isAdding ? 'Añadir nueva sentencia' : isDeleting ? '¿Eliminar este proceso?' : 'Editar este proceso'}</h3>
+                                    <Button
+                                        type="button"
+                                        className='close-btn'
+                                        name='X'
+                                        onClick={() => setOpenModal(false)}
+                                    />
+                                </div>
+                                {
+                                    isDeleting ? (
+                                        <div className='delete-actions'>
+                                            <Button
+                                                type='button'
+                                                className='primary-delete-btn'
+                                                name='Eliminar'
+                                                onClick={() => deleteProcess(editData.id)}
                                             />
-                                            <label
-                                                htmlFor='tema'>
-                                                Tema
-                                            </label>
-                                        </div>
-                                        <div className="input-group">
-                                            <textarea
-                                                rows={10}
-                                                cols={50}
-                                                id='descripcion'
-                                                name='descripcion'
-                                                value={editData.descripcion || ''}
-                                                onChange={handleInputChange}
+                                            <Button
+                                                type='button'
+                                                className='secondary-action-btn'
+                                                name='Cancelar'
+                                                onClick={() => setOpenModal(false)}
                                             />
-                                            <label
-                                                htmlFor='descripcion'>
-                                                Descripción
-                                            </label>
                                         </div>
-                                        <div className="input-group">
-                                            <Input
-                                                type='number'
-                                                id='radicado'
-                                                name='radicado'
-                                                value={editData.radicado || ''}
-                                                inputChange={handleInputChange}
+                                    ) : (
+                                        <>
+                                            <div className="input-group">
+                                                <Input
+                                                    type='text'
+                                                    id='tema'
+                                                    name='tema'
+                                                    value={editData.tema || ''}
+                                                    inputChange={handleInputChange}
+                                                />
+                                                <label
+                                                    htmlFor='tema'>
+                                                    Tema
+                                                </label>
+                                            </div>
+                                            <div className="input-group">
+                                                <textarea
+                                                    rows={10}
+                                                    cols={50}
+                                                    id='descripcion'
+                                                    name='descripcion'
+                                                    value={editData.descripcion || ''}
+                                                    onChange={handleInputChange}
+                                                />
+                                                <label
+                                                    htmlFor='descripcion'>
+                                                    Descripción
+                                                </label>
+                                            </div>
+                                            <div className="input-group">
+                                                <Input
+                                                    type='number'
+                                                    id='radicado'
+                                                    name='radicado'
+                                                    value={editData.radicado || ''}
+                                                    inputChange={handleInputChange}
+                                                />
+                                                <label
+                                                    htmlFor='radicado'>
+                                                    Radicado
+                                                </label>
+                                            </div>
+                                            <div className="input-group">
+                                                <Input
+                                                    type='text'
+                                                    id='juzgado'
+                                                    name='juzgado'
+                                                    value={editData.juzgado || ''}
+                                                    inputChange={handleInputChange}
+                                                />
+                                                <label
+                                                    htmlFor='juzgado'>
+                                                    Juzgado
+                                                </label>
+                                            </div>
+                                            <Button
+                                                className='primary-btn'
+                                                onClick={isAdding ? addProcess : handleSave}
+                                                name={isAdding ? 'Añadir' : 'Guardar'}
                                             />
-                                            <label
-                                                htmlFor='radicado'>
-                                                Radicado
-                                            </label>
-                                        </div>
-                                        <div className="input-group">
-                                            <Input
-                                                type='text'
-                                                id='juzgado'
-                                                name='juzgado'
-                                                value={editData.juzgado || ''}
-                                                inputChange={handleInputChange}
-                                            />
-                                            <label
-                                                htmlFor='juzgado'>
-                                                Juzgado
-                                            </label>
-                                        </div>
-                                        <Button
-                                            className='primary-btn'
-                                            onClick={isAdding ? addProcess : handleSave}
-                                            name={isAdding ? 'Añadir' : 'Guardar'}
-                                        />
-                                    </>
+                                        </>
 
-                                )}
+                                    )}
 
-                        </Modal >
+                            </Modal >
 
-                    </>
-
+                        </> :
+                        <p>No hay procesos para mostrar</p>
             }
         </>
 

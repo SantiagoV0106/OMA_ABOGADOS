@@ -195,6 +195,10 @@
     .areas .cobertura-container {
         gap: 0 120px;
     }
+
+    .relevant-processes {
+        padding: 50px 80px;
+    }
 }
 
 @media screen and (max-width : 1033px) {
@@ -205,6 +209,9 @@
 
     .areas .cobertura-container img {
         height: 500px;
+    }
+    .relevant-processes {
+        padding: 50px 30px;
     }
 
 }
@@ -398,4 +405,10 @@
     }
 
 
+}
+
+@media screen and (max-width : 440px) {
+    .contact-us .title-container ul li svg {
+       display: none;
+    }
 }

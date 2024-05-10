@@ -1,9 +1,47 @@
-#contact-us-form { 
-    display: flex;
-    flex-direction: column;
-    gap: 60px 0;
+#contact-us-form {
+  display: flex;
+  flex-direction: column;
+  gap: 60px 0;
 }
-#contact-us-form .primary-btn{
+
+#contact-us-form .primary-btn {
   align-self: flex-start;
-  color: var(--dark-blue-color);
+  transition: all 0.3s ease;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.checkbox-container a {
+  color: var(--light-blue-variant-2-color);
+}
+
+.checkbox-container a:hover {
+  text-decoration: underline;
+}
+
+.contact-msg-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-msg-status p {
+  color: var(--dark-blue-color)
+}
+
+.contact-msg-status svg {
+  color: #00BF6F;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .checkbox-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
 }

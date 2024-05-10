@@ -47,7 +47,7 @@ export function AuthContextProvider({ children }) {
 
         try {
 
-            const response = await fetch('backend.omaabogados.com.co/login.php', {
+            const response = await fetch('http://localhost/oma/login.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

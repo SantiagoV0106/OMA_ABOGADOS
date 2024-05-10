@@ -13,6 +13,16 @@
     border-radius: 33px;
 }
 
+.primary-btn:disabled {
+    cursor: default;
+    color: rgb(113, 113, 113);
+    font-size: 16px;
+    background-color: rgb(188, 188, 188);
+    border-radius: 33px;
+    border: 1px solid rgb(188, 188, 188);
+
+}
+
 .primary-delete-btn {
     display: flex;
     align-items: center;

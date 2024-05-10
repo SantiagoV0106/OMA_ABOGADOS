@@ -44,16 +44,29 @@
     justify-content: space-between;
 }
 
-@media screen and (max-width : 480px) {
+@media screen and (max-width: 1260px) {
 
     .processes-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+}
+
+@media screen and (max-width : 880px) {
+    .processes-container {
         grid-template-columns: repeat(1, 1fr);
-        gap: 40px 0;
+        gap: 20px;
     }
 
-    .process .process-info p {
-        padding: 0;
+    .process .process-info h1 {
+        font-size: 26px;
     }
 
+    .process .process-info p,
+    .process .process-extra-info p {
+       font-size: 16px;
+    }
+   
 
 }

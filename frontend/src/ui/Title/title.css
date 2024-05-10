@@ -91,7 +91,7 @@
 @media screen and (max-width : 1330px) {
     .title-container {
         margin: 140px auto 0 60px;
-        width: 41%;
+        width: 45%;
     }
 
     .title-container h1,
@@ -129,7 +129,7 @@
 }
 
 
-@media screen and (max-width : 768px) {
+@media screen and (max-width : 880px) {
 
     .title-container {
         align-self: flex-start;

@@ -14,9 +14,9 @@ export function Input({
             style={style}
             type={type}
             id={id}
-            onChange={inputChange}
-            value={value}
             name={name}
+            value={value}
+            onChange={inputChange}
             required />
     )
 }
