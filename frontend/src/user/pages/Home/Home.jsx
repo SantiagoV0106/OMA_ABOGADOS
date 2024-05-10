@@ -39,11 +39,12 @@ export function Home() {
                     <h3>{'Firma de abogados'}</h3>
                     <h1>{'Comprometidos con la excelencia'}</h1>
                     <p>{
-                        `Bienvenido a OMA Abogados, 
-                        donde nos destacamos en derecho financiero, seguros, 
-                        responsabilidad fiscal, jurisdicción 
-                        contencioso-administrativa, 
-                        derecho penal y procesos de insolvencia.`
+                        `Bienvenido a OMA ABOGADOS S.A.S. 
+                        Somos una firma dedicada a la defensa judicial de entidades financieras 
+                        y aseguradoras dentro del marco del litigio civil, laboral, 
+                        comercial, administrativo y derecho de consumo;
+                        también extendemos nuestros servicios legales a personas naturales
+                        y jurídicas del orden público y privado.`
                     }</p>
                     <Button className={'primary-btn'} name={'Contáctanos'} />
                 </div>
@@ -53,14 +54,18 @@ export function Home() {
                 <TitleSection
                     className='title-container'
                     subTitle='Sobre Nosotros'
-                    title='Bienvenidos a OMA Abogados'
-                    desc={`Somos una firma dedicada a la defensa
-                    judicial de entidades financieras y
-                    aseguradoras dentro del marco del litigio
-                    civil, laboral, comercial, administrativo y punitivo; OMA Abogados S.A.S. también
-                    extiende sus servicios legales a personas
-                    naturales y jurídicas del orden privado y
-                    público.`}
+                    title='Bienvenidos a OMA ABOGADOS S.A.S'
+                    desc={`En OMA ABOGADOS S.A.S.
+                     nos especializamos en la defensa 
+                     judicial de entidades financieras y 
+                     aseguradoras en diversas áreas legales. 
+                     También ofrecemos servicios a personas 
+                     naturales y jurídicas, tanto del sector
+                      público como privado. 
+                      Con un equipo altamente capacitado, 
+                      proporcionamos asesoramiento integral 
+                      y soluciones efectivas para proteger
+                       los intereses de nuestros clientes.`}
                     btnClassname='secondary-btn'
                     btnIcon={<FaAngleRight className='web-icon' />}
                     btnName='Conoce más'
@@ -91,13 +96,15 @@ export function Home() {
                     className='title-container'
                     subTitle='Nuestros clientes'
                     title='Clientes'
-                    desc={`Somos una firma dedicada a la defensa
-                    judicial de entidades financieras y
-                    aseguradoras dentro del marco del litigio
-                    civil, laboral, comercial, administrativo y punitivo; OMA Abogados S.A.S. también
-                    extiende sus servicios legales a personas
-                    naturales y jurídicas del orden privado y
-                     público.`}
+                    desc={`OMA ABOGADOS S.A.S. 
+                    se enorgullece de haber prestado sus servicios 
+                    legales a una amplia gama de clientes, 
+                    entre los cuales se encuentran destacadas instituciones 
+                    financieras como Banco Popular, Grupo Bancolombia, 
+                    Fiduciaria Bancolombia y Renting Colombia. 
+                    Nuestra firma se compromete a brindar asesoramiento 
+                    jurídico especializado y soluciones efectivas para proteger 
+                    los intereses de nuestros clientes en cada caso.`}
                     btnClassname='secondary-btn'
                     btnIcon={<FaAngleRight className='web-icon' />}
                     btnName='Conoce más'

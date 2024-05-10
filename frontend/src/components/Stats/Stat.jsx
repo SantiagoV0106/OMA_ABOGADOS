@@ -13,14 +13,14 @@ export function Stat({ tasa, tasasAsociadas }) {
             </div>
             <div className="stats-asociadas">
                 {
-                    tasasAsociadas.map(({ descripcion, porcentaje }) => {
+                    tasasAsociadas.map(({ titulo, tasa }) => {
                         return (
                             <div
                                 key={crypto.randomUUID()}
                                 className="stat-container">
                                 <div className="stat">
-                                    <h3>{porcentaje}</h3>
-                                    <p>{descripcion}</p>
+                                    <h3>{tasa}</h3>
+                                    <p>{titulo}</p>
                                 </div>
                             </div>
 

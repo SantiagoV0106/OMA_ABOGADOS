@@ -2,6 +2,7 @@ import './banner.css'
 import { useFetch } from '../../../user/hooks/useFetch'
 import { useEffect } from 'react'
 import { Loader } from '../../../ui'
+import { bannerStatistics } from '../../../const/bannerStatistics'
 
 
 const URL = 'http://localhost/oma/stats.php'
@@ -23,7 +24,7 @@ export function Banner() {
 
     console.log(data);
     return (
-        <div className="banner section">
+        <div className={loading? 'banner-loading section' : "banner section"}>
             {
                 loading ?
                     <Loader /> :
@@ -40,7 +41,15 @@ export function Banner() {
                                 )
                             })
                             :
-                            <p>No hay estadísticas para mostrar</p>
+                            bannerStatistics.map(({ title, percentage, desc }, i) => {
+                                return (
+                                    <div className={`statistic ${i === 3 ? '' : 'deco'}`} key={title}>
+                                        <h3> {percentage} </h3>
+                                        <p> {desc} </p>
+
+                                    </div>
+                                )
+                            })
             }
         </div>
 

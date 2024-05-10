@@ -8,6 +8,7 @@ import { Loader, TitleSection } from '../../../ui'
 import { heroImages } from '../../../const/heroImages'
 //Style
 import './statistics.css'
+import { statssoma } from '../../../const/statspage'
 
 const URL = 'http://localhost/oma/stats.php'
 
@@ -74,7 +75,29 @@ export function StatisticsPage() {
                                 )
                             })
                             :
-                            <p>No hay estadísticas para mostrar</p>
+                            statssoma.map(({
+                                id,
+                                titulo,
+                                tasaGlobal,
+                                tasasAsociadas
+                            }) => {
+                                return (
+                                    <section
+                                        key={id}
+                                        className="stat-page section">
+                                        <TitleSection
+                                            className='c-header-container'
+                                            subTitle='Estadísticas'
+                                            title={titulo}
+                                        />
+                                        <Stat
+                                            id={id}
+                                            tasa={tasaGlobal}
+                                            tasasAsociadas={tasasAsociadas}
+                                        />
+                                    </section>
+                                )
+                            })
             }
 
             <Footer />

@@ -4,6 +4,15 @@
     background-color: var(--dark-blue-color);
 }
 
+.banner-loading {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    background-color: var(--background-color);
+}
+
+
+
 .statistic {
     display: flex;
     flex-direction: column;
