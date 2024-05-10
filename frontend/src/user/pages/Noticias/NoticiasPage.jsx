@@ -1,6 +1,6 @@
 // Components
 import { Footer, Header } from '../../../components'
-import { TitleSection } from '../../../ui'
+import { Loader, TitleSection } from '../../../ui'
 
 // Images
 import heroImage from '../../../assets/images/hero/noticias.jpg'
@@ -11,7 +11,7 @@ import { useFetch } from '../../hooks/useFetch'
 import { useEffect } from 'react'
 import { Link, } from 'react-router-dom'
 
-const URL = 'backend.omaabogados.com.co/noticias.php'
+const URL = 'http://localhost/oma/noticias.php'
 
 export function NoticiasPage() {
 
@@ -25,12 +25,14 @@ export function NoticiasPage() {
         backgroundImage: `url(${heroImage})`
     }
 
-    // useEffect(() => {
-    //     fetchData()
-    // }, [])
+    useEffect(() => {
+        fetchData()
+    }, [])
 
 
     console.log(data);
+
+    const hasData = data.length > 0
 
     return (
         <>
@@ -54,25 +56,41 @@ export function NoticiasPage() {
                     subTitle='Boletín Jurídico'
                     title='Noticias de interés'
                 />
+                {loading ?
+                    <Loader /> :
+                    hasData ?
+                        <div className="documentos">
+                            {
+                                data.map(({
+                                    id,
+                                    titulo,
+                                    descripcion,
+                                    enlace
+                                }) => {
+                                    return (
+                                        <div
+                                            key={id}
+                                            className="documento">
+                                            <div className="document-info">
+                                                <h1> {titulo} </h1>
+                                                <p className='document-desc'>
+                                                    {descripcion}
+                                                </p>
+                                            </div>
+                                            <Link
+                                                className='action-btn'
+                                                to={enlace}
+                                            >
+                                                Leer más
+                                            </Link>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div> :
 
-                <div className="documentos">
-                    <div
-                        className="documento">
-                        <div className="document-info">
-                            <h1> titulo </h1>
-                            <p className='document-desc'>
-                                descripcion
-                            </p>
-                        </div>
-                        <Link
-                            className='action-btn'
-                            to='enlace'
-                        >
-                            Leer más
-                        </Link>
-                    </div>
-
-                </div>
+                        <p>No hay noticas para mostrar</p>
+                }
 
             </section>
             <Footer />
