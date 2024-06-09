@@ -47,7 +47,7 @@ export function AuthContextProvider({ children }) {
 
         try {
 
-            const response = await fetch('http://localhost/oma/login.php', {
+            const response = await fetch('https://omaabogados.com.co/oma/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -65,12 +65,10 @@ export function AuthContextProvider({ children }) {
 
                     navigate('/admin/dashboard')
                     // Manejar la respuesta del servidor
-                    console.log('Respuesta del servidor:', data);
                 }
 
                 if (data.status === 'error') {
                     setLoginError(true)
-                    console.log(data.message);
                 }
 
             } else {

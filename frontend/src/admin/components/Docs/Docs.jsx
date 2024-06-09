@@ -1,22 +1,21 @@
 import { useEffect, useState } from 'react';
-import { useFetch } from '../../../user/hooks/useFetch';
-import { Modal, Table } from '../../components';
 import { Button, Input, Loader } from '../../../ui';
+import { Modal, Table } from '../../components';
+import { useFetch } from '../../../user/hooks/useFetch';
 
-const URL = 'https://omaabogados.com.co/oma/processes.php';
+const URL = 'https://omaabogados.com.co/oma/file-manager.php';
+
 const initialEditData = {
-    tema: '',
-    descripcion: '',
-    radicado: '',
-    juzgado: ''
+    fileName: '',
+    description: '',
+    id: null
 };
 
-export function Processes() {
+export function Docs() {
     const [editData, setEditData] = useState(initialEditData);
     const [isDeleting, setIsDeleting] = useState(false);
     const [isAdding, setIsAdding] = useState(false);
     const [openModal, setOpenModal] = useState(false);
-
     const {
         data,
         loading,
@@ -29,19 +28,23 @@ export function Processes() {
 
     const handleEdit = (id) => {
         const processData = data.find(process => process.id === id);
-        setEditData(processData || initialEditData);
+        setEditData({
+            fileName: processData.archivo, 
+            description: processData.descripcion,
+            id: processData.id
+        });
         setOpenModal(true);
     };
 
     const handleDelete = (id) => {
-        const processData = data.find(process => process.id === id);
-        setEditData(processData || initialEditData);
+        const document = data.find(doc => doc.id === id);
+        setEditData(document || initialEditData);
         setIsDeleting(true);
         setOpenModal(true);
     };
 
-    const deleteProcess = (id) => {
-        fetch(`${URL}`, {
+    const deleteDocument = (id) => {
+        fetch(URL, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -50,7 +53,7 @@ export function Processes() {
         })
             .then(res => {
                 if (!res.ok) {
-                    throw new Error('No se pudo eliminar el proceso');
+                    throw new Error('No se pudo eliminar el documento');
                 }
                 setEditData(initialEditData);
                 setOpenModal(false);
@@ -58,7 +61,7 @@ export function Processes() {
                 fetchData();
             })
             .catch(error => {
-                console.error('Error al eliminar el proceso', error);
+                console.error('Error al eliminar el documento', error);
             });
     };
 
@@ -68,7 +71,7 @@ export function Processes() {
     };
 
     const handleSave = () => {
-        fetch(`${URL}`, {
+        fetch(URL, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -77,14 +80,14 @@ export function Processes() {
         })
             .then(res => {
                 if (!res.ok) {
-                    throw new Error('No se pudo actualizar el proceso');
+                    throw new Error('No se pudo actualizar el documento');
                 }
                 setEditData(initialEditData);
                 setOpenModal(false);
                 fetchData();
             })
             .catch(error => {
-                console.error('Error al actualizar el proceso', error);
+                console.error('Error al actualizar el documento', error);
             });
     };
 
@@ -94,7 +97,7 @@ export function Processes() {
         setOpenModal(true);
     };
 
-    const addProcess = () => {
+    const addDocument = () => {
         fetch(URL, {
             method: 'POST',
             headers: {
@@ -104,7 +107,7 @@ export function Processes() {
         })
             .then(res => {
                 if (!res.ok) {
-                    throw new Error('No se pudo crear el proceso');
+                    throw new Error('No se pudo crear el documento');
                 }
                 setIsAdding(false);
                 setEditData(initialEditData);
@@ -112,7 +115,7 @@ export function Processes() {
                 fetchData();
             })
             .catch(error => {
-                console.error('Error al crear el proceso', error);
+                console.error('Error al crear el documento', error);
             });
     };
 
@@ -128,11 +131,11 @@ export function Processes() {
     return (
         <>
             <div className="page-title">
-                <h1>Procesos</h1>
+                <h1>Documentos</h1>
                 <Button
                     type='button'
                     className='action-btn'
-                    name='Añadir proceso'
+                    name='Añadir documento'
                     onClick={handlePost}
                 />
             </div>
@@ -150,7 +153,7 @@ export function Processes() {
                                 data={data} />
                         </> :
                         <section className="no-data">
-                            <p>No hay procesos para mostrar</p>
+                            <p>No hay documentos para mostrar</p>
                         </section>
             }
             <Modal
@@ -158,7 +161,7 @@ export function Processes() {
                 onClose={handleCloseModal}
             >
                 <div className="modal-header">
-                    <h3>{isAdding ? 'Añadir nuevo proceso' : isDeleting ? '¿Eliminar este proceso?' : 'Editar este proceso'}</h3>
+                    <h3>{isAdding ? 'Añadir nuevo documento' : isDeleting ? '¿Eliminar este documento?' : 'Editar este documento'}</h3>
                     <Button
                         type="button"
                         className='close-btn'
@@ -173,7 +176,7 @@ export function Processes() {
                                 type='button'
                                 className='primary-delete-btn'
                                 name='Eliminar'
-                                onClick={() => deleteProcess(editData.id)}
+                                onClick={() => deleteDocument(editData.id)}
                             />
                             <Button
                                 type='button'
@@ -187,59 +190,33 @@ export function Processes() {
                             <div className="input-group">
                                 <Input
                                     type='text'
-                                    id='tema'
-                                    name='tema'
-                                    value={editData.tema}
+                                    id='fileName'
+                                    name='fileName'
+                                    value={editData.fileName}
                                     inputChange={handleInputChange}
                                 />
                                 <label
-                                    htmlFor='tema'>
-                                    Tema
+                                    htmlFor='fileName'>
+                                    Nombre del archivo
                                 </label>
                             </div>
                             <div className="input-group">
                                 <textarea
                                     rows={5}
                                     cols={50}
-                                    id='descripcion'
-                                    name='descripcion'
-                                    value={editData.descripcion || ''}
+                                    id='description'
+                                    name='description'
+                                    value={editData.description || ''}
                                     onChange={handleInputChange}
                                 />
                                 <label
-                                    htmlFor='descripcion'>
+                                    htmlFor='description'>
                                     Descripción
-                                </label>
-                            </div>
-                            <div className="input-group">
-                                <Input
-                                    type='number'
-                                    id='radicado'
-                                    name='radicado'
-                                    value={editData.radicado}
-                                    inputChange={handleInputChange}
-                                />
-                                <label
-                                    htmlFor='radicado'>
-                                    Radicado
-                                </label>
-                            </div>
-                            <div className="input-group">
-                                <Input
-                                    type='text'
-                                    id='juzgado'
-                                    name='juzgado'
-                                    value={editData.juzgado}
-                                    inputChange={handleInputChange}
-                                />
-                                <label
-                                    htmlFor='juzgado'>
-                                    Juzgado
                                 </label>
                             </div>
                             <Button
                                 className='primary-btn'
-                                onClick={isAdding ? addProcess : handleSave}
+                                onClick={isAdding ? addDocument : handleSave}
                                 name={isAdding ? 'Añadir' : 'Guardar'}
                             />
                         </>

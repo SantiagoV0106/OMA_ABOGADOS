@@ -1,0 +1,90 @@
+.dash-stats {
+    margin: 20px 104px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.dash-stat {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    gap: 20px;
+    border: 1px solid var(--golden-color);
+}
+
+.dash-stat h3 {
+    color: var(--background-color);
+    border-radius: 8px 8px 0 0;
+    padding: 20px;
+    background-color: var(--light-blue-color);
+}
+
+.dash-stat p {
+    font-weight: 500;
+    color: var(--dark-blue-color);
+}
+
+.dash-stat .tasa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px 20px;
+    font-weight: 500;
+    color: var(--dark-blue-color);
+}
+
+.dash-stat span {
+    font-size: 1.25rem;
+    color: var(--golden-color);
+}
+
+.dash-stat .tasas-asocidas-dash {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 20px;
+}
+
+.dash-stat .tasa-asociada {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #9b9b9b22;
+
+}
+
+.dash-stat .tasa-asociada p {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--dark-blue-color);
+    max-width: 60%;
+}
+
+.dash-stat .action-btns {
+    padding: 20px 20px 20px 0;
+    background-color: transparent;
+}
+
+@media screen and (max-width : 1440px) {
+    .dash-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width : 1024px) {
+    .dash-stats {
+        margin: 20px;
+    }
+}
+@media screen and (max-width : 880px) {
+    .dash-stats {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    }
+}

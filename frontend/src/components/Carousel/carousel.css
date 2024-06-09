@@ -4,9 +4,9 @@
 }
 
 .carousel-section .web-icon {
+    font-size: 2rem;
     cursor: pointer;
     color: var(--golden-color);
-    font-size: 36px;
 }
 
 .block {
@@ -66,9 +66,6 @@
         max-width: 732px;
     }
 
-    .carousel-info p {
-        font-size: 16px;
-    }
 }
 @media screen and (max-width : 480px) {
     .carousel-container {
@@ -79,9 +76,5 @@
         padding: 30px 15px;
         margin: 0 0 30px;
         max-width: 732px;
-    }
-
-    .carousel-info p {
-        font-size: 16px;
     }
 }

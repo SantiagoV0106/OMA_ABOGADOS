@@ -4,6 +4,7 @@ import { Button } from '../Button/Button'
 import './title.css'
 
 export function TitleSection({
+    btnOnClick,
     className,
     subTitle,
     title,
@@ -17,7 +18,12 @@ export function TitleSection({
             <h3>{subTitle}</h3>
             <h1>{title}</h1>
             <p>{desc}</p>
-            <Button className={btnClassname} icon={btnIcon} name={btnName} />
+            <Button
+            type='button' 
+            className={btnClassname} 
+            icon={btnIcon} 
+            name={btnName}
+            onClick={btnOnClick} />
         </div>
     )
 }

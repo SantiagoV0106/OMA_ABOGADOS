@@ -5,17 +5,16 @@
     padding: 0 0 0 20px;
 }
 
-.title-container ul .web-icon {
-font-size: 20px;
-}
+
 .title-container ul li {
     font-family: var(--secondary-font);
     display: flex;
     align-items: center;
     gap: 0 10px;
     margin: 30px 0;
-    font-size: 20px;
-    font-weight: 300;
+}
+.title-container ul li .web-icon {
+    font-size: 1.25rem;
 }
 
 .title-container ul::before {
@@ -26,12 +25,4 @@ font-size: 20px;
     height: 100%;
     width: 1px;
     background-color: var(--golden-color);
-}
-
-@media screen and (max-width : 1330px) {
-
-    .title-container ul li {
-        font-size: 16px;
-    }
-
 }

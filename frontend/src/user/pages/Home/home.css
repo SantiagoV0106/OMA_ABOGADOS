@@ -1,25 +1,24 @@
-.about-us {
+.home-about-us {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 180px 0 0;
 }
 
-.about-us .title-container {
+.home-about-us .title-container {
     margin: 0;
 }
 
-.about-us .title-container h1 {
+.home-about-us .title-container h1 {
     color: var(--golden-color);
 }
 
-.about-us .title-container h3 {
+.home-about-us .title-container h3 {
     color: var(--dark-blue-color);
 }
 
-.about-us .title-container p {
+.home-about-us .title-container p {
     color: var(--dark-blue-color);
-    font-size: 20px;
 }
 
 .our-services {
@@ -68,7 +67,6 @@
 }
 
 .clients-home .title-container p {
-    font-size: 20px;
     color: var(--dark-blue-color);
 }
 
@@ -100,7 +98,6 @@
 }
 
 .trayectoria .title-container p {
-    font-size: 20px;
     color: var(--dark-blue-color);
 }
 
@@ -137,13 +134,13 @@
 
 .areas .c-header-container p {
     display: block;
-    font-size: 20px;
     width: 60%;
 }
 
 .contact-us {
     display: flex;
     align-items: center;
+    gap: 30px 60px;
     justify-content: space-between;
     padding: 160px 0;
 }
@@ -166,21 +163,9 @@
 
 @media screen and (max-width : 1390px) {
 
-    .about-us .image-section,
+    .home-about-us .image-section,
     .trayectoria .image-section {
         height: 500px;
-    }
-
-    .about-us .title-container p,
-    .areas .title-container p,
-    .clients-home .title-container p,
-    .contact-us .title-container p,
-    .trayectoria .title-container p {
-        font-size: 16px;
-    }
-
-    .areas .c-header-container p {
-        font-size: 16px;
     }
 
     .contact-us .title-container {
@@ -207,8 +192,9 @@
     }
 
     .areas .cobertura-container img {
-        height: 500px;
+        height: 430px;
     }
+
     .relevant-processes {
         padding: 50px 30px;
     }
@@ -216,16 +202,11 @@
 }
 
 @media screen and (max-width : 880px) {
-    .about-us {
+    .home-about-us {
         flex-direction: column;
     }
 
-    .about-us .title-container {
-        align-self: flex-start;
-        width: 60%;
-    }
-
-    .about-us img {
+    .home-about-us img {
         display: none;
     }
 
@@ -243,7 +224,6 @@
     }
 
     .areas .c-header-container p {
-        font-size: 16px;
         width: 90%;
     }
 
@@ -264,19 +244,8 @@
         flex-direction: column;
     }
 
-    .clients-home .title-container {
-        align-self: flex-start;
-        width: 60%;
-    }
-
-
     .trayectoria {
         flex-direction: column;
-    }
-
-    .trayectoria .title-container {
-        align-self: flex-start;
-        width: 60%;
     }
 
     .trayectoria img {
@@ -305,22 +274,17 @@
 }
 
 @media screen and (max-width : 480px) {
-    .about-us {
-        flex-direction: column;
-    }
 
-
-    .about-us .title-container {
+    .home-about-us .title-container {
         width: 90%;
         max-width: none;
     }
 
-    .about-us img {
+    .home-about-us img {
         display: none;
     }
 
-    .about-us .title-container p {
-        font-size: 16px;
+    .home-about-us .title-container p {
         margin: 20px 0 40px;
     }
 
@@ -342,10 +306,6 @@
         width: 90%;
     }
 
-    .clients-home .title-container p {
-        font-size: 16px;
-    }
-
     .trayectoria {
         flex-direction: column;
     }
@@ -357,10 +317,7 @@
 
     }
 
-    .trayectoria .title-container p {
-        font-size: 16px;
 
-    }
 
     .trayectoria img {
         display: none;
@@ -372,7 +329,6 @@
     }
 
     .areas .c-header-container p {
-        font-size: 16px;
         width: 90%;
     }
 
@@ -408,6 +364,6 @@
 
 @media screen and (max-width : 440px) {
     .contact-us .title-container ul li svg {
-       display: none;
+        display: none;
     }
 }

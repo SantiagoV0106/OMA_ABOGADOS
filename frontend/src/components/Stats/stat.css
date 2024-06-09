@@ -18,8 +18,7 @@
 
 .global-stat h1 {
     color: var(--golden-color);
-    font-size: 100px;
-    margin: 80px 50px;
+    margin: 70px 50px;
 }
 
 .stats-asociadas {
@@ -45,23 +44,18 @@
 }
 
 .stat h3 {
+    font-size: 2rem;
     font-family: var(--primary-font);
     color: var(--golden-color);
-    font-size: 30px;
 }
 
 .stat p {
     color: var(--dark-blue-color);
-    font-size: 20px;
 }
 
 @media screen and (max-width : 880px) {
     .stats-container {
         flex-direction: column;
-    }
-
-    .stats-container h1 {
-        font-size: 68px;
     }
 
     .stats-asociadas {
@@ -74,15 +68,7 @@
     }
 
     .global-stat h1 {
-        margin: 80px 55px;
-    }
-
-    .stat h3 {
-        font-size: 32px;
-    }
-
-    .stat p {
-        font-size: 20px;
+        margin: 60px 50px;
     }
 }
 
@@ -92,11 +78,4 @@
         font-size: 58px;
     }
 
-    .stat h3 {
-        font-size: 24px;
-    }
-
-    .stat p {
-        font-size: 16px;
-    }
 }

@@ -12,10 +12,12 @@
 }
 
 .modal-content {
-
     display: flex;
     flex-direction: column;
     gap: 45px 0;
+    width: 650px;
+    max-height: 550px;
+    overflow: auto;
     padding: 18px 24px;
     border-radius: 8px;
     background-color: var(--background-color);
@@ -29,7 +31,6 @@
 }
 
 .modal-header h3 {
-    font-size: 26px;
     font-weight: 500;
     color: var(--golden-color);
 }
@@ -37,9 +38,63 @@
 .delete-actions {
     display: flex;
     align-items: center;
-    gap: 0 40px;
+    justify-content: space-evenly;
 }
 
 .modal-content .primary-btn {
     align-self: flex-start;
+}
+
+.tasas-asociadas {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.tasas-asociadas h3 {
+    color: var(--golden-color);
+}
+
+.tasa-asociada-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.docs-form {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+@media screen and (max-width: 1440px) {
+
+    .modal-content {
+        gap: 30px;
+    }
+
+    .modal-content .primary-btn {
+        padding: 12px 40px;
+    }
+
+    .modal-content .delete-actions .primary-delete-btn,
+    .modal-content .delete-actions .secondary-action-btn {
+        padding: 12px 40px;
+    }
+}
+@media screen and (max-height: 620px) {
+
+    .modal-content {
+        
+        gap: 25px;
+    }
+
+    .modal-content .primary-btn {
+        padding: 12px 40px;
+    }
+
+    .modal-content .delete-actions .primary-delete-btn,
+    .modal-content .delete-actions .secondary-action-btn {
+        padding: 12px 40px;
+    }
 }

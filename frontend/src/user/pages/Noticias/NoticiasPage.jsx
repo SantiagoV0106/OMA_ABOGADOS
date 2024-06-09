@@ -1,3 +1,8 @@
+// React
+import { useFetch } from '../../hooks/useFetch'
+import { useEffect } from 'react'
+import { Link, } from 'react-router-dom'
+
 // Components
 import { Footer, Header } from '../../../components'
 import { Loader, TitleSection } from '../../../ui'
@@ -7,11 +12,8 @@ import heroImage from '../../../assets/images/hero/noticias.jpg'
 
 // Style
 import './noticiaspage.css'
-import { useFetch } from '../../hooks/useFetch'
-import { useEffect } from 'react'
-import { Link, } from 'react-router-dom'
 
-const URL = 'http://localhost/oma/noticias.php'
+const URL = 'https://omaabogados.com.co/oma/noticias'
 
 export function NoticiasPage() {
 
@@ -21,16 +23,14 @@ export function NoticiasPage() {
         fetchData
     } = useFetch(URL)
 
-    const heroImg = {
-        backgroundImage: `url(${heroImage})`
-    }
-
+    
     useEffect(() => {
         fetchData()
     }, [])
-
-
-    console.log(data);
+    
+    const heroImg = {
+        backgroundImage: `url(${heroImage})`
+    }
 
     const hasData = data.length > 0
 
@@ -57,7 +57,10 @@ export function NoticiasPage() {
                     title='Noticias de interés'
                 />
                 {loading ?
-                    <Loader /> :
+                    <section className="no-data">
+                        <Loader />
+                    </section>
+                    :
                     hasData ?
                         <div className="documentos">
                             {
@@ -88,8 +91,9 @@ export function NoticiasPage() {
                                 })
                             }
                         </div> :
-
-                        <p>No hay noticas para mostrar</p>
+                        <section className="no-data">
+                            <p>No hay noticas para mostrar</p>
+                        </section>
                 }
 
             </section>

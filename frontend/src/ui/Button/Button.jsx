@@ -4,7 +4,13 @@
 // Style
 import './button.css'
 
-export function Button({ icon, name, className, type, onClick, disabled }) {
+export function Button({
+    icon,
+    name,
+    className,
+    type,
+    onClick,
+    disabled }) {
     return (
         <button
             onClick={onClick}

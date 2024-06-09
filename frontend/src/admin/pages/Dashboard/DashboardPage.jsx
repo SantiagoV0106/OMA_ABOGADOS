@@ -1,6 +1,7 @@
 import { useAuth } from '../../..//auth/hooks/useAuth'
 import { Button } from '../../../ui'
-import { Noticias, Processes } from '../../components'
+import { Noticias, Processes, Docs } from '../../components'
+import { Stats } from '../../components/Stats/Stats'
 
 // Styles
 import './dashboard.css'
@@ -22,7 +23,9 @@ export function DashboardPage() {
                     name='Cerrar Sesión' />
             </header>
             <Processes />
+            <Stats />
             <Noticias />
+            <Docs />
         </>
 
     )

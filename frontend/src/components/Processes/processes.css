@@ -12,6 +12,11 @@
     gap: 20px;
 }
 
+.loading-msg-container .loader {
+    border: 5px solid var(--background-color);
+    border-bottom-color: transparent;
+}
+
 .process {
     display: flex;
     flex-direction: column;
@@ -22,8 +27,8 @@
 }
 
 .process .process-info h1 {
-    font-size: 34px;
     margin-bottom: 30px;
+    font-size: 2rem;
 }
 
 .process .process-info p {
@@ -53,20 +58,10 @@
 
 }
 
-@media screen and (max-width : 880px) {
+@media screen and (max-width : 625px) {
     .processes-container {
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
-    }
-
-    .process .process-info h1 {
-        font-size: 26px;
-    }
-
-    .process .process-info p,
-    .process .process-extra-info p {
-       font-size: 16px;
-    }
-   
+    }   
 
 }

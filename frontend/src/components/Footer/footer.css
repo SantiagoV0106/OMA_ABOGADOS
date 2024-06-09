@@ -6,8 +6,6 @@
     flex-direction: column;
     justify-content: space-between;
 
-    height: 455px;
-
     color: var(--silver-color);
     background-color: var(--dark-blue-color);
 }
@@ -41,10 +39,12 @@
     display: flex;
     align-items: center;
     font-family: var(--secondary-font);
-    font-size: 20px;
     font-weight: 300;
     gap: 0 10px;
     color: var(--silver-color);
+}
+.footer-container .footer-content-container ul li svg {
+   font-size: 1.25rem;
 }
 
 .footer-container .footer-offices-container {
@@ -63,18 +63,18 @@
 }
 
 .footer-container .office-container .office-title h3 {
-    font-size: 20px;
+    font-size: 1.5rem;
     color: var(--golden-color);
+}
+.footer-container .office-container  p {
+    font-size: 1rem;
 }
 
 .footer-container .office-container .office-title .web-icon {
-    font-size: 24px;
+    font-size: 2rem;
     color: var(--silver-color);
 }
 
-.footer-container .office-container a {
-    font-size: 16px;
-}
 
 .footer-container .footer-extra-container {
     display: flex;
@@ -83,16 +83,16 @@
 }
 
 .footer-container .social-media-container h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
     margin: 0 0 10px;
-
     font-family: var(--primary-font);
-    font-size: 24px;
-    font-weight: 500;
     color: var(--golden-color);
 }
 
 .footer-container .social-media-container .web-icon {
-    font-size: 24px;
+    cursor: pointer;
+    font-size: 1.5rem;
     color: var(--silver-color);
 }
 
@@ -101,10 +101,12 @@
 }
 
 .admin-container p {
+    font-size: 1rem;
     margin: 0 0 10px;
 }
 
 .admin-container a {
+    font-size: 1rem;
     cursor: pointer;
     text-decoration: underline;
 }
@@ -114,7 +116,6 @@
     position: relative;
 
     font-family: var(--secondary-font);
-    font-size: 16px;
     font-weight: 300;
     text-align: end;
     color: var(--silver-color);
@@ -135,9 +136,7 @@
 }
 
 @media screen and (max-width : 1330px) {
-    .footer-container .footer-content-container ul li {
-        font-size: 16px;
-    }
+   
 }
 
 @media screen and (max-width : 1033px) {
@@ -146,7 +145,7 @@
     }
 }
 
-@media screen and (max-width : 768px) {
+@media screen and (max-width : 880px) {
     .footer-container {
         flex-direction: column;
         padding: 60px 30px 30px;
@@ -168,21 +167,12 @@
         margin: 0 0 30px;
     }
 
-    .footer-container .footer-content-container ul li {
-        font-size: 16px;
-    }
-
     .footer-container .footer-offices-container {
         width: 60%;
     }
 
     .contact-email {
         margin: 0 0 80px;
-        font-size: 18px;
-    }
-
-    .end-footer {
-        font-size: 16px;
     }
 
     .admin-container p {
@@ -205,21 +195,12 @@
         margin: 0 0 30px;
     }
 
-    .footer-container .footer-content-container ul li {
-        font-size: 16px;
-    }
-
     .footer-container .footer-offices-container {
         width: 60%;
     }
 
     .contact-email {
         margin: 0 0 80px;
-        font-size: 18px;
-    }
-
-    .end-footer {
-        font-size: 16px;
     }
 
     .admin-container p {

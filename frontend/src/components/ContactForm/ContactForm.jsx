@@ -42,7 +42,7 @@ export function ContactForm() {
         e.preventDefault();
         setIsLoading(true)
         try {
-            const response = await fetch('http://localhost/oma/send-email.php', {
+            const response = await fetch('https://omaabogados.com.co/oma/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -71,7 +71,7 @@ export function ContactForm() {
     }
 
     const handleViewPDF = () => {
-        fetch('http://localhost/oma/tyc.php', {
+        fetch('https://omaabogados.com.co/oma/tyc.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -83,7 +83,7 @@ export function ContactForm() {
             if (!response.ok) {
                 throw new Error('Error al abrir el PDF');
             }
-            const pdfURL = 'http://localhost/pdf/' + 'POLITICA DE TRATAMIENTO DE DATOS PERSONALES.pdf'; // Ruta relativa al directorio htdocs
+            const pdfURL = 'https://omaabogados.com.co/pdfs/' + 'POLITICA DE TRATAMIENTO DE DATOS PERSONALES.pdf'; // Ruta relativa al directorio htdocs
             // Abrir el archivo PDF en una nueva pestaña del navegador
             window.open(pdfURL, '_blank');
         }).catch(error => {

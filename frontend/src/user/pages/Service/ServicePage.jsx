@@ -3,7 +3,7 @@ import { useLocation } from 'react-router';
 
 // Components
 import { Footer, Header } from '../../../components';
-import { TitleSection } from '../../../ui';
+import { Loader, TitleSection } from '../../../ui';
 
 // Data
 import { services } from '../../../const/services'
@@ -34,12 +34,6 @@ export function ServicePage() {
     }, [location])
 
 
-    if (isLoading) {
-        return (
-            <h1> Cargando </h1>
-        )
-    }
-
     const bgHeroStyle = {
         backgroundImage: `url(${service.heroUrl})`
     }
@@ -53,33 +47,42 @@ export function ServicePage() {
                     <h1>{service.service}</h1>
                 </div>
             </section>
-            <section className='service-info section'>
-                <TitleSection
-                    className='title-container'
-                    subTitle={service.service}
-                    title={'¿Qué hacemos?'}
-                    desc={service.desc}
-                />
-                <img src={service1Img} alt={service.service} />
-            </section>
-            <section className='service-info section'>
-                <img src={service2Img} alt={service.service} />
+            {
+                isLoading ?
+                    <section className="no-data">
+                        <Loader />
+                    </section> :
+                    <>
+                        <section className='service-info section'>
+                            <TitleSection
+                                className='title-container'
+                                subTitle={service.service}
+                                title={'¿Qué hacemos?'}
+                                desc={service.desc}
+                            />
+                            <img src={service1Img} alt={service.service} />
+                        </section>
+                        <section className='service-info section'>
+                            <img src={service2Img} alt={service.service} />
 
-                <div className={'title-container'}>
-                    <h3>{service.service}</h3>
-                    <h1>Normativa</h1>
-                    <ul>
-                        {
-                            service.normativa.map(({ id, ley }) => {
-                                return (
-                                    <li key={id}>{ley}</li>
+                            <div className={'title-container'}>
+                                <h3>{service.service}</h3>
+                                <h1>Normativa</h1>
+                                <ul>
+                                    {
+                                        service.normativa.map(({ id, ley }) => {
+                                            return (
+                                                <li key={id}>{ley}</li>
 
-                                )
-                            })
-                        }
-                    </ul>
-                </div>
-            </section>
+                                            )
+                                        })
+                                    }
+                                </ul>
+                            </div>
+                        </section>
+                    </>
+
+            }
             <Footer />
         </>
     )

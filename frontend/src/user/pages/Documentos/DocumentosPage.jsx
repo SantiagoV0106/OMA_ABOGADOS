@@ -1,6 +1,9 @@
+import { useEffect } from 'react'
+import { useFetch } from '../../hooks/useFetch'
+
 // Components
 import { Footer, Header } from '../../../components'
-import { Button, TitleSection } from '../../../ui'
+import { Button, Loader, TitleSection } from '../../../ui'
 
 //Images
 import heroImage from '../../../assets/images/hero/documentos-interes.jpg'
@@ -8,11 +11,26 @@ import heroImage from '../../../assets/images/hero/documentos-interes.jpg'
 // Style
 import './documentospage.css'
 
+const URL = 'https://omaabogados.com.co/oma/file-manager'
+
+
 export function DocumentosPage() {
+
+    const {
+        data,
+        loading,
+        fetchData
+    } = useFetch(URL)
 
     const heroImg = {
         backgroundImage: `url(${heroImage})`
     }
+
+    useEffect(() => {
+        fetchData()
+    }, [])
+
+    const hasData = data.length > 0
 
     return (
         <>
@@ -39,95 +57,119 @@ export function DocumentosPage() {
                     title='Documentos de interés'
                 />
 
-                <div className="documentos">
-                    <div className="documento">
-                        <div className="document-info">
-                            <h1>Titulo del documento</h1>
-                            <p className='document-desc'>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,
-                            </p>
-                        </div>
+                {
+                    loading ?
 
-                        <div className="acciones">
-                            <p>Nombre del documento</p>
-                            <Button
-                                className='action-btn'
-                                type='button'
-                                name='Descargar'
-                            />
-                        </div>
-                    </div>
-                    <div className="documento">
-                        <div className="document-info">
-                            <h1>Titulo del documento</h1>
-                            <p className='document-desc'>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,
-                            </p>
-                        </div>
+                        <section className="no-data">
+                            <Loader />
+                        </section>
+                        :
 
-                        <div className="acciones">
-                            <p>Nombre del documento</p>
-                            <Button
-                                className='action-btn'
-                                type='button'
-                                name='Descargar'
-                            />
-                        </div>
-                    </div>
-                    <div className="documento">
-                        <div className="document-info">
-                            <h1>Titulo del documento</h1>
-                            <p className='document-desc'>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,
-                            </p>
-                        </div>
+                        hasData ?
+                            <div className="documentos">
+                                {
+                                    data.map(({
+                                        id,
+                                        archivo,
+                                        descripcion }) => (
+                                        <div
+                                            key={id}
+                                            className="documento">
+                                            <div className="document-info">
+                                                <h1>{archivo}</h1>
+                                                <p className='document-desc'>
+                                                    {descripcion}
+                                                </p>
+                                            </div>
 
-                        <div className="acciones">
-                            <p>Nombre del documento</p>
-                            <Button
-                                className='action-btn'
-                                type='button'
-                                name='Descargar'
-                            />
-                        </div>
-                    </div>
-                    <div className="documento">
-                        <div className="document-info">
-                            <h1>Titulo del documento</h1>
-                            <p className='document-desc'>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,
-                            </p>
-                        </div>
+                                            <div className="acciones">
+                                                <Button
+                                                    className='action-btn'
+                                                    type='button'
+                                                    name='Descargar'
+                                                    onClick={() => window.open(`https://omaabogados.com.co/pdfs/${archivo}.pdf`, '_blank')}
+                                                />
+                                            </div>
+                                        </div>
 
-                        <div className="acciones">
-                            <p>Nombre del documento</p>
-                            <Button
-                                className='action-btn'
-                                type='button'
-                                name='Descargar'
-                            />
-                        </div>
-                    </div>
-                    <div className="documento">
-                        <div className="document-info">
-                            <h1>Titulo del documento</h1>
-                            <p className='document-desc'>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,
-                            </p>
-                        </div>
-
-                        <div className="acciones">
-                            <p>Nombre del documento</p>
-                            <Button
-                                className='action-btn'
-                                type='button'
-                                name='Descargar'
-                            />
-                        </div>
-                    </div>
-                </div>
+                                    ))
+                                }
+                            </div>
+                            :
+                            <section className="no-data">
+                                <p>No hay documentos para mostrar</p>
+                            </section>
+                }
             </section>
             <Footer />
         </>
     )
 }
+{/* <div className="documento">
+    <div className="document-info">
+        <h1>Titulo del documento</h1>
+        <p className='document-desc'>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,
+        </p>
+    </div>
+
+    <div className="acciones">
+        <p>Nombre del documento</p>
+        <Button
+            className='action-btn'
+            type='button'
+            name='Descargar'
+        />
+    </div>
+</div>
+<div className="documento">
+    <div className="document-info">
+        <h1>Titulo del documento</h1>
+        <p className='document-desc'>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,
+        </p>
+    </div>
+
+    <div className="acciones">
+        <p>Nombre del documento</p>
+        <Button
+            className='action-btn'
+            type='button'
+            name='Descargar'
+        />
+    </div>
+</div>
+<div className="documento">
+    <div className="document-info">
+        <h1>Titulo del documento</h1>
+        <p className='document-desc'>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,
+        </p>
+    </div>
+
+    <div className="acciones">
+        <p>Nombre del documento</p>
+        <Button
+            className='action-btn'
+            type='button'
+            name='Descargar'
+        />
+    </div>
+</div>
+<div className="documento">
+    <div className="document-info">
+        <h1>Titulo del documento</h1>
+        <p className='document-desc'>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,
+        </p>
+    </div>
+
+    <div className="acciones">
+        <p>Nombre del documento</p>
+        <Button
+            className='action-btn'
+            type='button'
+            name='Descargar'
+        />
+    </div>
+</div> */}

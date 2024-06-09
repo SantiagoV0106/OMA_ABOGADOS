@@ -43,6 +43,10 @@ export function Header() {
         setShowDropdown(false)
     }
 
+    const handleSocialLinks = (link) => {
+        window.open(link, '_blank');
+    }
+
     return (
         <div className={`header-container ${active ? 'active' : ''}`}>
             <img
@@ -88,18 +92,16 @@ export function Header() {
                         }
                     </ul>
                     <div className={`${active ? 'interaction-btn-container' : ''}`} >
-                        <a className='terciary-btn' href="http://wa.me/3178266279"> <FaWhatsapp className='web-icon' /> (+57) 310 279 1873 </a>
+                        <a className='terciary-btn' href="http://wa.me/3102791873"> <FaWhatsapp className='web-icon' /> (+57) 310 279 1873 </a>
                     </div>
-                    <Link
-                        className='header-social-links'
-                        to={"http://wa.me/3178266279"}>
-                        <FaLinkedin className="web-icon" />
-                    </Link>
-                    <Link
-                        className='header-social-links'
-                        to={"http://wa.me/3178266279"}>
-                        <FaInstagram className="web-icon" />
-                    </Link>
+                    <div className='header-social-links'>
+                        <FaLinkedin
+                            onClick={() => handleSocialLinks('https://www.linkedin.com/in/oma-abogados-s-a-s-a54197309')}
+                            className='social-link' />
+                        <FaInstagram
+                            onClick={() => handleSocialLinks('https://www.instagram.com/omaabogados/')}
+                            className='social-link' />
+                    </div>
                 </div>
             </div>
             {

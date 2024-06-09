@@ -6,7 +6,7 @@ import { Button, ContactTitle, TitleSection } from '../../../ui'
 import { heroImages } from '../../../const/heroImages'
 
 // Images
-import founderImg from '../../../assets/images/page/founder.png'
+import founderImg from '../../../assets/images/page/founder.webp'
 
 //Icons
 import { CiMedal } from "react-icons/ci";
@@ -16,19 +16,25 @@ import { FaRegHeart } from "react-icons/fa";
 
 
 import './aboutus.css'
+import { useScroll } from '../../hooks/useScroll';
 
 export function AboutUsPage() {
     const bgHeroStyle = {
         backgroundImage: `url(${heroImages[1].imageUrl})`
     }
+    const { scrollTo } = useScroll()
     return (
         <>
-            <section className="hero" style={bgHeroStyle}>
+            <section className="about-us-page hero" style={bgHeroStyle}>
                 <Header />
                 <div className={'title-container'}>
                     <h3>{'Sobre Nosotros'}</h3>
-                    <h1>{'OMA ABOGADOS'}</h1>
-                    <Button className={'primary-btn about-us-btn'} name={'Contáctanos'} />
+                    <h1>{'OMA ABOGADOS S.A.S'}</h1>
+                    <Button
+                        onClick={scrollTo}
+                        type='button'
+                        className={'primary-btn about-us-btn'}
+                        name={'Contáctanos'} />
                 </div>
             </section>
 
@@ -49,8 +55,8 @@ export function AboutUsPage() {
                     </div>
                     <div className="oma-value">
                         <h1>Visión</h1>
-                        <p>Para el año 2026, OMA Abogados S.A.S se consolidará en las zonas
-                            que integra Valle del Cauca, Cauca, Eje cafetero, Bogotá D.C y
+                        <p>Para el año 2026, OMA ABOGADOS S.A.S se consolidará en las zonas
+                            que integra Valle del Cauca, Cauca, Eje cafetero, Bogotá D.C. y
                             Cundinamarca; liderando, con ahínco los intereses jurídicos de nuestros
                             clientes a través de la excelencia en la prestación de los servicios
                             jurídicos.
@@ -94,11 +100,11 @@ export function AboutUsPage() {
                     subTitle='Socio Fundador'
                     title='Luis Antonio Orjuela Morales'
                     desc={`Abogado titulado, egresado de la Universidad Militar Nueva Granada, 
-                    Magister en Derecho Procesal de la Universidad Externado de Colombia, 
+                    Magíster en Derecho Procesal de la Universidad Externado de Colombia, 
                     especialista en Derecho de Seguros de la Universidad del Rosario, autor del libro
                      “La Competencia Jurisdiccional entre la Justicia Penal Militar y la Justicia Ordinaria” (año 2018), 
                      Ed. Ibañez. Con diferentes cursos en derecho y diplomaturas en Insolvencia Persona Natural 
-                     No Comerciante e Insolvencia Mercantil ley 1116 del 2006.`}
+                     No Comerciante e Insolvencia Mercantil ley 1116 del 2006, entre otros.`}
                 />
             </section>
             <section className="personal-resume section">
@@ -112,7 +118,9 @@ export function AboutUsPage() {
                 />
                 <Carousel />
             </section>
-            <section className='contact-us section'>
+            <section
+                id='contact-us'
+                className='contact-us section'>
                 <ContactForm />
                 <ContactTitle />
             </section>

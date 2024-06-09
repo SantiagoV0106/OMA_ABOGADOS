@@ -13,7 +13,7 @@
 
  .service-info .title-container {
      margin: 0;
-     max-width: 700px;
+     max-width: 50%;
  }
 
  .service-info img {
@@ -30,7 +30,6 @@
 
  .service-info .title-container p {
      color: var(--dark-blue-color);
-     font-size: 20px;
      padding: 0 110px 0 30px;
  }
 
@@ -47,10 +46,6 @@
 
  @media screen and (max-width : 1330px) {
 
-     .service-info .title-container p {
-         font-size: 16px;
-     }
-
      .service-info img {
          width: 420px;
      }
@@ -58,12 +53,19 @@
         padding: 0 0 0 30px;
     }
  }
+ @media screen and (max-width : 1090px) {
+
+     .service-info img {
+         width: 365px;
+     }
+ }
 
  @media screen and (max-width : 880px) {
 
      .service-info .title-container {
          align-self: flex-start;
-         width: 60%;
+         max-width: none;
+         width: 90%;
      }
 
      .service-info {

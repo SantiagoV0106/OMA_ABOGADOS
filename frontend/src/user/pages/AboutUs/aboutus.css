@@ -1,13 +1,41 @@
+ .about-us-page .title-container {
+    max-width: none;
+}
+
+.about-us {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 180px 0 0;
+}
+
+.about-us .title-container {
+    margin: 0;
+    max-width: 30%;
+}
+
+.about-us .title-container h1 {
+    color: var(--golden-color);
+}
+
+.about-us .title-container h3 {
+    color: var(--dark-blue-color);
+}
+
+.about-us .title-container p {
+    color: var(--dark-blue-color);
+}
+
+
 .mision-vision {
     display: flex;
     flex-direction: column;
     gap: 60px 0;
-    max-width: 700px;
+    max-width: 620px;
 }
 
 .oma-value h1 {
     color: var(--golden-color);
-    font-size: 40px;
     font-weight: 400;
 }
 
@@ -48,8 +76,8 @@
 }
 
 .valores-container .web-icon {
+    font-size: 3rem;
     color: var(--golden-color);
-    font-size: 64px;
 }
 
 .founder {
@@ -92,9 +120,6 @@
 }
 
 @media screen and (max-width : 1360px) {
-    .oma-value p {
-        font-size: 16px;
-    }
 
     .valores {
         padding: 68px 153px 72px;
@@ -110,12 +135,16 @@
 
 
 @media screen and (max-width : 880px) {
-    .mision-vision {
+    .about-us{
+        flex-direction: column;
+    }
+
+    .about-us .title-container {
         max-width: 80%;
     }
 
-    .oma-value p {
-        font-size: 18px;
+    .mision-vision {
+        max-width: 80%;
     }
 
     .valores {
@@ -123,12 +152,9 @@
     }
 
     .valores-container {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 60px 0;
-    }
-
-    .value .web-icon {
-        font-size: 50px;
     }
 
     .founder {
@@ -145,10 +171,6 @@
         height: 510px;
     }
 
-    .personal-resume .c-header-container p {
-        font-size: 16px;
-    }
-
     .carousel-section {
         gap: 0 20px;
     }
@@ -157,10 +179,16 @@
 
 @media screen and (max-width : 480px) {
 
+    .about-us .title-container {
+        width: 90%;
+        max-width: none;
+    }
+
     .valores .c-header-container h3::after,
     .valores .c-header-container h3::before {
         width: 60%;
     }
+
     .personal-resume .c-header-container h3::after,
     .personal-resume .c-header-container h3::before {
         width: 60%;
@@ -168,10 +196,6 @@
 
     .founder .image-section {
         height: 410px;
-    }
-
-    .oma-value p {
-        font-size: 16px;
     }
 
     .valores {

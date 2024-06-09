@@ -23,6 +23,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 * {
   padding: 0;
   margin: 0;
@@ -36,24 +37,25 @@ body {
   min-height: 100vh;
 }
 
+
 h1 {
   font-family: var(--primary-font);
   color: var(--silver-color);
-  font-size: 60px;
+  font-size: 4rem;
   font-weight: 400;
 }
 
 h3 {
   font-family: var(--secondary-font);
   color: var(--silver-color);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
 }
 
 p {
   font-family: var(--secondary-font);
   color: var(--silver-color);
-  font-size: 20px;
+  font-size: 1.125rem;
   font-weight: 300;
   text-align: justify;
 }
@@ -62,7 +64,6 @@ a {
   cursor: pointer;
   text-decoration: none;
   font-family: var(--secondary-font);
-  font-size: 16px;
   font-weight: 300;
   color: var(--silver-color);
 }
@@ -71,8 +72,9 @@ span {
   font-family: var(--secondary-font);
 }
 
-.web-icon {
-  font-size: 18px;
+button {
+  font-family: var(--secondary-font);
+  font-size: 1rem;
 }
 
 .image-section {
@@ -81,14 +83,22 @@ span {
 
 @media screen and (max-width : 1330px) {
   h1 {
-    font-size: 48px;
+    font-size: 3rem;
   }
 
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  h1 {
+    font-size: 2.75rem;
+  }
 }
 
 @media screen and (max-width : 480px) {
   h1 {
-    font-size: 36px;
+    font-size: 2.25rem;
   }
-
 }

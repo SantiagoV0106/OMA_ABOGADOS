@@ -8,9 +8,8 @@ import { Loader, TitleSection } from '../../../ui'
 import { heroImages } from '../../../const/heroImages'
 //Style
 import './statistics.css'
-import { statssoma } from '../../../const/statspage'
 
-const URL = 'http://localhost/oma/stats.php'
+const URL = 'https://omaabogados.com.co/oma/stats'
 
 export function StatisticsPage() {
 
@@ -26,7 +25,6 @@ export function StatisticsPage() {
         fetchData()
     }, [])
 
-    console.log(data);
 
     const bgHeroStyle = {
         backgroundImage: `url(${heroImages[2].imageUrl})`
@@ -46,12 +44,19 @@ export function StatisticsPage() {
 
             {
                 loading ?
-                    <Loader /> :
+                    <section className="no-data">
+                        <Loader />
+                    </section>
+                    :
                     error ?
-                        <p>No se pudo cargar las estadísticas
-                        </p> :
+                        <section className="no-data">
+                            <p>
+                                No se pudo cargar las estadísticas
+                            </p>
+                        </section>
+                        :
                         hasData ?
-                            data[0].map(({
+                            data.map(({
                                 id,
                                 titulo,
                                 porcentaje,
@@ -75,29 +80,9 @@ export function StatisticsPage() {
                                 )
                             })
                             :
-                            statssoma.map(({
-                                id,
-                                titulo,
-                                tasaGlobal,
-                                tasasAsociadas
-                            }) => {
-                                return (
-                                    <section
-                                        key={id}
-                                        className="stat-page section">
-                                        <TitleSection
-                                            className='c-header-container'
-                                            subTitle='Estadísticas'
-                                            title={titulo}
-                                        />
-                                        <Stat
-                                            id={id}
-                                            tasa={tasaGlobal}
-                                            tasasAsociadas={tasasAsociadas}
-                                        />
-                                    </section>
-                                )
-                            })
+                            <section className="no-data">
+                                <p>No hay estadísticas para mostrar</p>
+                            </section>
             }
 
             <Footer />

@@ -7,7 +7,7 @@
     cursor: pointer;
 
     color: var(--golden-color);
-    font-size: 16px;
+    
     background-color: transparent;
     border: 1px solid var(--golden-color);
     border-radius: 33px;
@@ -16,7 +16,7 @@
 .primary-btn:disabled {
     cursor: default;
     color: rgb(113, 113, 113);
-    font-size: 16px;
+    
     background-color: rgb(188, 188, 188);
     border-radius: 33px;
     border: 1px solid rgb(188, 188, 188);
@@ -32,7 +32,7 @@
     cursor: pointer;
 
     color: var(--background-color);
-    font-size: 16px;
+    
     background-color: #f73131;
     border: 1px solid #f73131;
     border-radius: 33px;
@@ -46,7 +46,7 @@
     padding: 15px 24px;
     cursor: pointer;
     color: var(--dark-blue-color);
-    font-size: 16px;
+    
     background-color: transparent;
     border: 1px solid var(--dark-blue-color);
     border-radius: 30px;
@@ -61,7 +61,7 @@
     cursor: pointer;
 
     color: var(--dark-blue-color);
-    font-size: 16px;
+    
     background-color: transparent;
     border: 1px solid var(--dark-blue-color);
     border-radius: 33px;
@@ -74,7 +74,7 @@
     padding: 9px 18px;
 
     color: var(--silver-color);
-    font-size: 14px;
+    
     background-color: transparent;
     border: 1px solid var(--silver-color);
     border-radius: 20px;
@@ -85,7 +85,7 @@
     align-content: center;
     padding: 8px 12px 6px;
     color: var(--background-color);
-    font-size: 20px;
+    
     background-color: var(--golden-color);
     border: none;
     border-radius: 10px;
@@ -99,7 +99,7 @@
     align-items: center;
     padding: 8px;
     color: var(--background-color);
-    font-size: 16px;
+    
     background-color: transparent;
     border: 1px solid var(--golden-color);
     border-radius: 10px;
@@ -110,7 +110,7 @@
     cursor: pointer;
     padding: 8px 12px 6px;
     color: var(--background-color);
-    font-size: 20px;
+    
     background-color: #f73131;
     border: none;
     border-radius: 10px;
@@ -138,7 +138,7 @@
         gap: 0 4px;
         padding: 9px 36px;
 
-        font-size: 16px;
+        
         border-radius: 33px;
     }
 
@@ -146,7 +146,7 @@
         gap: 0 4px;
         padding: 9px 20px;
 
-        font-size: 16px;
+        
     }
 
     .terciary-btn {
@@ -155,41 +155,10 @@
         width: max-content;
         align-self: center;
         color: var(--golden-color);
-        font-size: 16px;
+        
         border: 1px solid var(--golden-color);
         border-radius: 33px;
     }
 
 
 }
-
-/* @media screen and (max-width : 480px) {
-
-    .primary-btn {
-        gap: 0 4px;
-        padding: 9px 36px;
-
-        font-size: 16px;
-        border-radius: 33px;
-    }
-
-    .secondary-btn {
-        gap: 0 4px;
-        padding: 9px 20px;
-
-        font-size: 16px;
-    }
-
-    .terciary-btn {
-        gap: 0 4px;
-        padding: 9px 36px;
-        width: max-content;
-        align-self: center;
-        color: var(--golden-color);
-        font-size: 16px;
-        border: 1px solid var(--golden-color);
-        border-radius: 33px;
-    }
-
-
-} */

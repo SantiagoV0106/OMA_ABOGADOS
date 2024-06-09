@@ -1,6 +1,6 @@
 .clients-container {
     display: grid;
-    grid-template-columns: repeat(2, 304px);
+    grid-template-columns: repeat(2, 264px);
 }
 
 .clients-container .client {
@@ -15,13 +15,13 @@
 
 @media screen and (max-width : 1390px) {
     .clients-container {
-        grid-template-columns: repeat(2, 264px);
+        grid-template-columns: repeat(2, 244px);
     }
 }
 
 @media screen and (max-width : 1140px) {
     .clients-container {
-        grid-template-columns: repeat(2, 230px);
+        grid-template-columns: repeat(2, 200px);
     }
 }
 

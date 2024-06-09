@@ -1,45 +1,39 @@
-.office-container {
-    margin: 0 0 50px;
-    max-width: 300px;
+.offices-container {
+display: flex;
+flex-direction: column;
+gap: 60px;
+max-width: 300px;
 }
 
 .office-container .web-icon {
-    font-size: 50px;
     color: var(--golden-color);
+    font-size: 3rem;
+    cursor: pointer;
 }
 
 .office-container .office-title {
     display: flex;
     align-items: flex-end;
     margin: 0 0 20px;
+    gap: 20px;
+    cursor: pointer;
 }
 
 .office-container .office-title h3 {
     font-family: var(--primary-font);
-    font-size: 26px;
+    font-size: 2rem;
     font-weight: 400;
-}
-
-.office-container a {
     cursor: pointer;
-    font-size: 20px;
 }
 
-@media screen and (max-width : 1330px) {
-
-    .office-container a {
-        font-size: 16px;
-    }
-
+.office-container p {
+    cursor: pointer;
 }
 
-@media screen and (max-width : 480px) {
-    .office-container .web-icon {
-        font-size: 40px;
-    }
 
-    .office-container .office-title h3 {
-        font-size: 24px;
-    }
 
+@media screen and (max-width: 480px) {
+    .offices-container {
+        width: 100%;
+    }
 }

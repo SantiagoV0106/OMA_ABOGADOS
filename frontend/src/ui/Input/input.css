@@ -19,7 +19,7 @@ textarea::-webkit-scrollbar {
     color: var(--dark-blue-color);
     font-family: var(--secondary-font);
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
     padding: 28px 33px;
     outline: none;
     border: none;
@@ -41,7 +41,7 @@ input[type="password"]::-webkit-password-toggle-button {
     color: var(--dark-blue-color);
     font-family: var(--secondary-font);
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
     padding: 28px 33px;
     outline: none;
     border: 1px solid var(--golden-color);
@@ -52,7 +52,7 @@ input[type="password"]::-webkit-password-toggle-button {
 
 .input-group label {
     font-family: var(--secondary-font);
-    font-size: 16px;
+    font-size: 1rem;
     position: absolute;
     left: 0;
     padding: 28px 0;
@@ -80,11 +80,9 @@ input[type="password"]::-webkit-password-toggle-button {
     .input-group input,
     .input-group textarea {
         padding: 15px 20px;
-        font-size: 16px;
     }
 
     .input-group label {
         padding: 15px 0;
-        font-size: 16px;
     }
 }

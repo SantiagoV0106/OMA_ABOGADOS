@@ -26,16 +26,20 @@ export function Footer() {
         navigate('/')
     }
 
+    const handleLinkNav = (url) => {
+        window.open(url, '_blank')
+    }
+
 
     return (
         <footer className='footer-container'>
-            <img 
-            onClick={handleNavigateHome}
-            src='/oma-silver.png' alt="Logo-img" />
+            <img
+                onClick={handleNavigateHome}
+                src='/oma-silver.png' alt="Logo-img" />
             <div className="footer-content-container">
                 <ul>
                     <li><IoMailOutline /> luis.orjuela@omaabogados.com.co </li>
-                    <li><FiPhone /> (+57 602) 308 7554 </li>
+                    <li><FiPhone /> (602) 308 7554 </li>
                     <li><FaWhatsapp /> (+57) 310 279 1873</li>
                 </ul>
                 <div className="footer-offices-container">
@@ -52,10 +56,9 @@ export function Footer() {
                 <div className="footer-extra-container">
                     <div className="social-media-container">
                         <h3>Redes sociales</h3>
-                        <FaWhatsapp className="web-icon" />
-                        <FaLinkedin className="web-icon" />
-                        <FaInstagram className="web-icon" />
-                        <p></p>
+                        <FaWhatsapp onClick={() => handleLinkNav('http://wa.me/3102791873')} className="web-icon" />
+                        <FaLinkedin onClick={() => handleLinkNav('https://www.linkedin.com/in/oma-abogados-s-a-s-a54197309')} className="web-icon" />
+                        <FaInstagram onClick={() => handleLinkNav('https://www.instagram.com/omaabogados/')} className="web-icon" />
                     </div>
                     <div className="admin-container">
                         <p>¿Eres administrador?</p>

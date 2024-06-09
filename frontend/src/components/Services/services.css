@@ -16,7 +16,7 @@
 
 .service h1 {
     cursor: pointer;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--dark-blue-color);
 
@@ -25,8 +25,6 @@
 .service .web-icon {
     cursor: pointer;
     color: var(--dark-blue-color);
-    font-size: 20px;
-
 }
 
 @media screen and (max-width : 1330px) {
@@ -45,8 +43,6 @@
 
     .service h1 {
         cursor: pointer;
-        font-size: 20px;
-
     }
 }
 

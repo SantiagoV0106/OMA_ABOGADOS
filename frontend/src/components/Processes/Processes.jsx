@@ -6,9 +6,10 @@ import { useFetch } from '../../user/hooks/useFetch'
 
 // Styles
 import './processes.css'
+import { Loader } from '../../ui'
 
 // Url
-const URL = 'http://localhost/oma/processes.php'
+const URL = 'https://omaabogados.com.co/oma/processes'
 
 export function Processes() {
 
@@ -30,8 +31,7 @@ export function Processes() {
             {
                 loading ?
                     <div className="loading-msg-container">
-                        <p>Cargando los procesos</p>
-                        <span className="loader"></span>
+                    <Loader/>
                     </div>
                     : error ?
                         <p>No se encontraron procesos</p>
@@ -56,7 +56,7 @@ export function Processes() {
                                             </div>
                                             <div className="process-extra-info">
                                                 <p >Radicado <span>{radicado}</span></p>
-                                                <p >Juzgado <span>{juzgado}</span></p>
+                                                <p >{juzgado}</p>
                                             </div>
                                         </div>
                                     )

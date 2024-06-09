@@ -1,3 +1,5 @@
+import { useScroll } from '../../hooks/useScroll'
+import { useNavigate } from 'react-router-dom'
 //
 import {
     Banner,
@@ -31,6 +33,14 @@ export function Home() {
         backgroundImage: `url(${heroImages[0].imageUrl})`
     }
 
+   const {scrollTo} = useScroll()
+
+   const navigate = useNavigate()
+
+   const handleNavigate = () => {
+    navigate('/sobre-nosotros')
+   }
+
     return (
         <>
             <section className="hero" style={bgHeroStyle}>
@@ -46,11 +56,16 @@ export function Home() {
                         también extendemos nuestros servicios legales a personas naturales
                         y jurídicas del orden público y privado.`
                     }</p>
-                    <Button className={'primary-btn'} name={'Contáctanos'} />
+                    <Button
+                        type='button'
+                        className={'primary-btn'}
+                        name={'Contáctanos'} 
+                        onClick={scrollTo}
+                        />
                 </div>
             </section>
             <Banner />
-            <section className='about-us section'>
+            <section className='home-about-us section'>
                 <TitleSection
                     className='title-container'
                     subTitle='Sobre Nosotros'
@@ -66,6 +81,7 @@ export function Home() {
                       proporcionamos asesoramiento integral 
                       y soluciones efectivas para proteger
                        los intereses de nuestros clientes.`}
+                    btnOnClick={handleNavigate}
                     btnClassname='secondary-btn'
                     btnIcon={<FaAngleRight className='web-icon' />}
                     btnName='Conoce más'
@@ -122,6 +138,7 @@ export function Home() {
                     Jurisdiccionales- y defensa en litigios corporativos 
                     para entidades financieras y compañías de seguros. Para cobertura de sus servicios, 
                     la firma cuenta con un equipo de abogados de amplia experiencia profesional y académica.`}
+                    btnOnClick={handleNavigate}
                     btnClassname='secondary-btn'
                     btnIcon={<FaAngleRight className='web-icon' />}
                     btnName='Conoce más'
@@ -145,7 +162,7 @@ export function Home() {
                 />
                 <div className="cobertura-container">
                     <img src={mapImg} alt="Map" />
-                    <div className="office-container">
+                    <div className="offices-container">
                         <Office
                             name={offices[0].name}
                             direction={offices[0].direction}
@@ -159,7 +176,9 @@ export function Home() {
                     </div>
                 </div>
             </section>
-            <section className='contact-us section'>
+            <section
+                id='contact-us'
+                className='contact-us section'>
                 <ContactForm />
                 <ContactTitle />
             </section>

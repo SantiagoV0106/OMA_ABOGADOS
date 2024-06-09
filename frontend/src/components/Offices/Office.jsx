@@ -1,6 +1,8 @@
 // Eslint
 /* eslint-disable react/prop-types */
 
+import { Link } from 'react-router-dom'
+
 // Icons
 import { CiLocationOn } from "react-icons/ci";
 
@@ -9,12 +11,12 @@ import './office.css'
 
 export function Office({ name, direction, directionUrl }) {
     return (
-        <div className="office-container">
+        <Link className="office-container" to={directionUrl} >
             <div className="office-title">
                 <CiLocationOn className="web-icon" />
                 <h3>{name}</h3>
             </div>
-            <a href={directionUrl}>{direction}</a>
-        </div>
+            <p>{direction}</p>
+        </Link>
     )
 }

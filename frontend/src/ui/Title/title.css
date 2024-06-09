@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: self-start;
-    max-width: 562px;
+    max-width: 600px;
     margin: 140px auto 0 104px;
 }
 
@@ -15,7 +15,6 @@
 
 .title-container p {
     position: relative;
-    font-size: 18px;
     margin: 30px 0 60px 25px;
     padding: 0 0 0 30px;
 }
@@ -91,20 +90,12 @@
 @media screen and (max-width : 1330px) {
     .title-container {
         margin: 120px auto 0 60px;
-        width: 45%;
-    }
-
-    .title-container h1,
-    .c-header-container h1 {
-        font-size: 46px;
-
+        width: 50%;
     }
 
     .title-container p {
         padding: 0 0 0 15px;
         margin: 30px 0 40px 25px;
-        font-size: 16px;
-
     }
 }
 
@@ -114,17 +105,9 @@
         
     }
 
-    .title-container h1,
-    .c-header-container h1 {
-        font-size: 42px;
-
-    }
-
     .title-container p {
-        padding: 0 0 0 15px;
+        padding: 0 20px 0 15px;
         margin: 30px 0 40px 25px;
-        font-size: 16px;
-
     }
 }
 
@@ -135,48 +118,26 @@
         align-self: flex-start;
         gap: 15px 0;
         margin: 120px auto 0 30px;
-        width: 60%;
+        width: 80%;
         max-width: none;
-    }
-
-    .title-container h1,
-    .c-header-container h1 {
-        font-size: 38px;
-
     }
 
     .title-container p {
         padding: 0 0 0 15px;
-        font-size: 16px;
     }
 }
 
 @media screen and (max-width : 570px) {
 
     .title-container {
-        width: 80%;
+        width: 100%;
     }
+
 }
-
-
-
-
-
 @media screen and (max-width : 480px) {
 
     .title-container {
         margin: 120px auto 0 18px;
-    }
-
-    .title-container h1,
-    .c-header-container h1 {
-        font-size: 34px;
-
-    }
-
-    .title-container h3 {
-        font-size: 16px;
-
     }
 
 }

@@ -7,11 +7,23 @@
 
 .hero .title-container {
     padding: 0 0 80px;
+    width: 50%;
 }
 
 
 .section {
     margin: 0 124px;
+}
+
+.no-data{
+    height: 50dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-data p {
+    color: var(--golden-color);
 }
 
 @media screen and (max-width : 1440px) {
@@ -32,6 +44,21 @@
         margin: 0 30px;
     }
 }
+
+@media screen and (max-width : 880px) {
+    .hero .title-container {
+        width: 60%;
+    }
+    
+}
+
+@media screen and (max-width : 660px) {
+    .hero .title-container {
+        width: 80%;
+    }
+    
+}
+
 
 @media screen and (max-width : 480px) {
     .section {

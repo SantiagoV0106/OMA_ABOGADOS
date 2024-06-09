@@ -8,7 +8,7 @@
 
 .documentos-de-interes .documentos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px 16px;
     margin: 0 0 140px;
     padding: 0 104px;
@@ -24,19 +24,16 @@
     transition: all 0.6s ease;
 }
 
+.documento .document-info h1 {
+    font-size: 1.875rem;
+}
+
 .documento .action-btn {
     align-self: flex-end;
 }
 
-.documento h1 {
-    font-size: 32px;
-}
-
-.documento p {
-    font-size: 16px;
-}
-
 .documento .document-desc {
+    font-size: 1rem;
     margin: 10px 0;
 }
 
@@ -60,17 +57,26 @@
     }
 
     .documentos-de-interes .documentos {
-        display: grid;
+        margin: 0 0 140px;
+        padding: 0 60px;
+    }
+}
+@media screen and (max-width: 1330px) {
+    .documentos-de-interes .title-container {
+        width: 60%;
+    }
+
+    .documentos-de-interes .documentos {
         margin: 0 0 140px;
         padding: 0 60px;
     }
 }
 
+
+
 @media screen and (max-width: 980px) {
     .documentos-de-interes .documentos {
-        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
-        margin: 0 0 140px;
         padding: 0 30px;
     }
 
@@ -79,10 +85,16 @@
     }
 
 }
+@media screen and (max-width: 880px) {
+    .documentos-de-interes .documentos {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+}
 
 @media screen and (max-width: 630px) {
     .documentos-de-interes .documentos {
-        grid-template-columns: repeat(1, 1fr);
         gap: 30px;
         margin: 0 0 140px;
         padding: 0 30px;
