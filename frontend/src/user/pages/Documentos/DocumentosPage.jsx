@@ -6,7 +6,7 @@ import { Footer, Header } from '../../../components'
 import { Button, Loader, TitleSection } from '../../../ui'
 
 //Images
-import heroImage from '../../../assets/images/hero/documentos-interes.jpg'
+import heroImage from '../../../assets/Images/hero/documentos-interes.jpg'
 
 // Style
 import './documentospage.css'

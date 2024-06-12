@@ -8,7 +8,7 @@ import { Footer, Header } from '../../../components'
 import { Loader, TitleSection } from '../../../ui'
 
 // Images
-import heroImage from '../../../assets/images/hero/noticias.jpg'
+import heroImage from '../../../assets/Images/hero/noticias.jpg'
 
 // Style
 import './noticiaspage.css'

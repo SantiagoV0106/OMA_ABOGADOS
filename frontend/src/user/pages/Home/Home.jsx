@@ -18,9 +18,9 @@ import { Button, ContactTitle, TitleSection } from '../../../ui'
 import { offices } from '../../../const/offices'
 
 // Images
-import statueImg from '../../../assets/images/page/justice-statue.jpg'
-import trayectoriaImg from '../../../assets/images/page/trayectoria.jpg'
-import mapImg from '../../../assets/images/page/map.png'
+import statueImg from '../../../assets/Images/page/justice-statue.jpg'
+import trayectoriaImg from '../../../assets/Images/page/trayectoria.jpg'
+import mapImg from '../../../assets/Images/page/map.png'
 
 // Icons
 import { FaAngleRight } from 'react-icons/fa6'

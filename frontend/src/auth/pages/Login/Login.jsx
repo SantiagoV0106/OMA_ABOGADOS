@@ -10,7 +10,7 @@ import { IoMdEyeOff } from "react-icons/io";
 import { RiErrorWarningFill } from "react-icons/ri";
 
 // Images
-import loginImg from '../../../assets/images/page/login.jpg'
+import loginImg from '../../../assets/Images/page/login.jpg'
 
 // Style
 import './login.css'

@@ -9,8 +9,8 @@ import { Loader, TitleSection } from '../../../ui';
 import { services } from '../../../const/services'
 
 // Images
-import service1Img from '../../../assets/images/services/servicios-1.jpg'
-import service2Img from '../../../assets/images/services/servicios-2.jpg'
+import service1Img from '../../../assets/Images/services/servicios-1.jpg'
+import service2Img from '../../../assets/Images/services/servicios-2.jpg'
 
 // Style
 import './servicepage.css'

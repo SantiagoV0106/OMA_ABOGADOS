@@ -1,7 +1,7 @@
-import bancoPoular from '../assets/images/clients/banco-popular.png'
-import grupoBancolombia from '../assets/images/clients/grupo-bancolombia.png'
-import fiduBancolombia from '../assets/images/clients/fidu-bancolombia.png'
-import renting from '../assets/images/clients/renting.png'
+import bancoPoular from '../assets/Images/clients/banco-popular.png'
+import grupoBancolombia from '../assets/Images/clients/grupo-bancolombia.png'
+import fiduBancolombia from '../assets/Images/clients/fidu-bancolombia.png'
+import renting from '../assets/Images/clients/renting.png'
 
 export const clients = [
     {

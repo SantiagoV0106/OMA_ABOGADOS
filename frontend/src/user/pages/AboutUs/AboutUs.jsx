@@ -6,7 +6,7 @@ import { Button, ContactTitle, TitleSection } from '../../../ui'
 import { heroImages } from '../../../const/heroImages'
 
 // Images
-import founderImg from '../../../assets/images/page/founder.webp'
+import founderImg from '../../../assets/Images/page/founder.webp'
 
 //Icons
 import { CiMedal } from "react-icons/ci";

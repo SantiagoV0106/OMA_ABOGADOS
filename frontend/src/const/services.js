@@ -1,11 +1,11 @@
-import derechoFinImg from '../assets/images/hero/derecho-financiero-seguros.jpg'
-import derechoFamImg from '../assets/images/hero/derecho-familia.jpg'
-import derechoLabImg from '../assets/images/hero/derecho-laboral.jpg'
-import derechoCivComImg from '../assets/images/hero/derecho-civil-comercial.jpg'
-import derechoPenalImg from '../assets/images/hero/derecho-penal.jpg'
-import derechoAdmin from '../assets/images/hero/derecho-admin.jpg'
-import respFiscImg from '../assets/images/hero/res-fical-admin.jpg'
-import prosInsImg from '../assets/images/hero/pros-insolvencia.jpg'
+import derechoFinImg from '../assets/Images/hero/derecho-financiero-seguros.jpg'
+import derechoFamImg from '../assets/Images/hero/derecho-familia.jpg'
+import derechoLabImg from '../assets/Images/hero/derecho-laboral.jpg'
+import derechoCivComImg from '../assets/Images/hero/derecho-civil-comercial.jpg'
+import derechoPenalImg from '../assets/Images/hero/derecho-penal.jpg'
+import derechoAdmin from '../assets/Images/hero/derecho-admin.jpg'
+import respFiscImg from '../assets/Images/hero/res-fical-admin.jpg'
+import prosInsImg from '../assets/Images/hero/pros-insolvencia.jpg'
 
 export const services = [
     {

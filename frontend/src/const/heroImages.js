@@ -1,6 +1,6 @@
-import homeImg from '../../src/assets/images/hero/hero-landing-img.jpg'
-import aboutusImg from '../../src/assets/images/hero/hero-aboutus-img.jpg'
-import statsImg from '../../src/assets/images/hero/hero-stats-img.jpg'
+import homeImg from '../assets/Images/hero/hero-landing-img.jpg'
+import aboutusImg from '../assets/Images/hero//hero-aboutus-img.jpg'
+import statsImg from '../assets/Images/hero//hero-stats-img.jpg'
 
 export const heroImages = [
     {
