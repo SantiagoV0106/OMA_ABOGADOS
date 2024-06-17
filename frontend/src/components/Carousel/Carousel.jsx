@@ -1,5 +1,5 @@
 // Hooks
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 // Styles
 import './carousel.css'
@@ -19,6 +19,28 @@ export function Carousel() {
         setCurrentBlock((prevBlock) => (prevBlock === totalBlocks - 1 ? 0 : prevBlock + 1));
     };
 
+    useEffect(() => {
+        const carouselSection = document.querySelector('.carousel-section');
+        const carouselContainer = document.querySelector('.carousel-container');
+        const secondBlock = carouselContainer.children[1];
+
+        const checkClasses = () => {
+            if (secondBlock.classList.contains('active') && secondBlock.classList.contains('block')) {
+                carouselSection.classList.add('taller');
+            } else {
+                carouselSection.classList.remove('taller');
+            }
+        };
+
+        checkClasses(); // Initial check
+
+        // Observe mutations to the class attribute of the second block
+        const observer = new MutationObserver(checkClasses);
+        observer.observe(secondBlock, { attributes: true, attributeFilter: ['class'] });
+
+        // Cleanup on unmount
+        return () => observer.disconnect();
+    }, [currentBlock]);
 
     return (
         <div className="carousel-section">

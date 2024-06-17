@@ -119,6 +119,9 @@ export function AboutUsPage() {
                 <Carousel />
             </section>
             <section
+            style={{
+                padding : '50px 0 180px'
+            }}
                 id='contact-us'
                 className='contact-us section'>
                 <ContactForm />

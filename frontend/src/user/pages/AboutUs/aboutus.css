@@ -116,7 +116,10 @@
     align-items: center;
     justify-content: center;
     gap: 0 150px;
-    margin: 50px 0 0;
+    margin: 50px 0 50px;
+}
+.carousel-section.taller {
+    margin: 50px 0 200px;
 }
 
 @media screen and (max-width : 1360px) {
@@ -173,6 +176,11 @@
 
     .carousel-section {
         gap: 0 20px;
+        margin: 50px 0 0;
+    }
+
+    .carousel-section.taller {
+        margin: 50px 0 0;
     }
 
 }

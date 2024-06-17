@@ -35,7 +35,7 @@ export function Footer() {
         <footer className='footer-container'>
             <img
                 onClick={handleNavigateHome}
-                src='/oma-silver.png' alt="Logo-img" />
+                src='/oma-silver.webp' alt="Logo-img" />
             <div className="footer-content-container">
                 <ul>
                     <li><IoMailOutline /> luis.orjuela@omaabogados.com.co </li>

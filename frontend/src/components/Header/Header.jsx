@@ -51,7 +51,7 @@ export function Header() {
         <div className={`header-container ${active ? 'active' : ''}`}>
             <img
                 className='logo-img'
-                src='/oma-gold.png'
+                src='/oma-gold.webp'
                 alt="Logo-img"
                 onClick={handleNavigateHome} />
             < div className={`header-menu-container ${active ? 'active' : ''}`}>
