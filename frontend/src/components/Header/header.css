@@ -125,7 +125,7 @@
 
     .logo-img {
         cursor: pointer;
-        width: 160px;
+        width: 180px;
     }
 
     .header-interactions {
@@ -243,12 +243,6 @@
         margin: 0 20px 0;
         transition: all 0.6s ease;
     }
-
-    .logo-img {
-        cursor: pointer;
-        width: 140px;
-    }
-
 
     .header-container.active {
         padding: 20px 20px 0;

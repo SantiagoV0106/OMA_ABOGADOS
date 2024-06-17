@@ -44,7 +44,7 @@ export function LoginPage() {
         <div className="login">
             <div className="bg-img" style={bgImg}>
                 <img
-                    src="/oma-gold.png" alt="oma-logo"
+                    src="/oma-gold.webp" alt="oma-logo"
                     onClick={() => navigate('/')} />
             </div>
             <section className="form">

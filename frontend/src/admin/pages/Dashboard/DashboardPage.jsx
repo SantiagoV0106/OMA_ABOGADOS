@@ -15,7 +15,7 @@ export function DashboardPage() {
     return (
         <>
             <header className='dashboard-header'>
-                <img src="/oma-gold.png" alt="oma-logo" />
+                <img src="/oma-gold.webp" alt="oma-logo" />
                 <Button
                     onClick={handleLogOut}
                     className='primary-btn'
