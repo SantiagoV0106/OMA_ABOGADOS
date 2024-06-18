@@ -49,7 +49,7 @@ export const services = [
         link: 'derecho-de-familia',
         service: 'Derecho de familia',
         heroUrl: derechoFamImg,
-        desc: `Se ofrece asesoría en los siguientes ámbitos del Derecho de familia.
+        desc: `Se ofrece asesoría y representación judicial en los siguientes ámbitos del Derecho de familia.
 
         •	Sucesiones testada e intestada.
         
@@ -109,19 +109,8 @@ export const services = [
         service: 'Derecho civil y comercial',
         heroUrl: derechoCivComImg,
         desc: `Se ofrece asesoría y defensa técnica en procesos civiles:
-
-
-        -	Estructuración de contratos con el fin de minimizar riesgos en los negocios jurídicos. 
-        -	Representación o defensa técnica en controversias de índole contractual.
-        -	Suscripción de convenios y contratos.
-        -	Pertenencias.
-        -	Expropiación.
-        -	Divisorios.
-        -	Fideicomiso civil.
-        -	Resolución de compraventa.
-        -	Reivindicatorios de dominio.
-        -	Deslinde y amojonamiento.
-        -	Servidumbres.`,
+        Estructuración de contratos, litigios de índole civil y comercial, expertos en derecho societario.`,
+        
         normativa: [
             {
                 id: crypto.randomUUID(),

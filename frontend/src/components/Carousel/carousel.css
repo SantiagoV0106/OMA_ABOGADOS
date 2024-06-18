@@ -5,8 +5,8 @@
 
 .carousel-section .web-icon {
     font-size: 2rem;
-    cursor: pointer;
     color: var(--golden-color);
+    cursor: pointer;
 }
 
 .block {

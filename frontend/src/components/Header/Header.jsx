@@ -92,7 +92,7 @@ export function Header() {
                         }
                     </ul>
                     <div className={`${active ? 'interaction-btn-container' : ''}`} >
-                        <a className='terciary-btn' href="http://wa.me/3102791873"> <FaWhatsapp className='web-icon' /> (+57) 310 279 1873 </a>
+                        <a className='terciary-btn' href="http://wa.me/573102791873" target='_blank' rel='noopener noreferrer'> <FaWhatsapp className='web-icon' /> (+57) 310 279 1873 </a>
                     </div>
                     <div className='header-social-links'>
                         <FaLinkedin

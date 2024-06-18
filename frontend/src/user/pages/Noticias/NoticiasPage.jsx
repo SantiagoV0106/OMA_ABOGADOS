@@ -101,30 +101,3 @@ export function NoticiasPage() {
         </>
     )
 }
-// {
-//     data.map(({
-//         id,
-//         titulo,
-//         descripcion,
-//         enlace
-//     }) => {
-//         return (
-//             <div
-//                 key={id}
-//                 className="documento">
-//                 <div className="document-info">
-//                     <h1> {titulo} </h1>
-//                     <p className='document-desc'>
-//                         {descripcion}
-//                     </p>
-//                 </div>
-//                 <Link
-//                     className='action-btn'
-//                     to={enlace}
-//                 >
-//                     Leer más
-//                 </Link>
-//             </div>
-//         )
-//     })
-// }

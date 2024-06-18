@@ -77,6 +77,11 @@ button {
   font-size: 1rem;
 }
 
+
+.web-icon path {
+  cursor: pointer;
+}
+
 .image-section {
   height: 600px;
 }

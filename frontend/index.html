@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/OMA-Logo.svg" />
+  <link id="logo-icon" rel="icon" type="image/svg+xml" href="/oma-light-icon.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -16,6 +16,23 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
+  <script>
+    const updateFavicon = (theme) => {
+      const favicon = document.getElementById('logo-icon');
+      if (theme === 'dark') {
+        favicon.href = '/oma-dark-icon.webp';
+      } else {
+        favicon.href = '/oma-light-icon.webp';
+      }
+    };
+
+    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    updateFavicon(isDarkMode ? 'dark' : 'light');
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      updateFavicon(e.matches ? 'dark' : 'light');
+    });
+  </script>
 </body>
 
 </html>

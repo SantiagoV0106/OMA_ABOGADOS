@@ -56,7 +56,7 @@ export function Footer() {
                 <div className="footer-extra-container">
                     <div className="social-media-container">
                         <h3>Redes sociales</h3>
-                        <FaWhatsapp onClick={() => handleLinkNav('http://wa.me/3102791873')} className="web-icon" />
+                        <FaWhatsapp onClick={() => handleLinkNav('http://wa.me/573102791873')} className="web-icon" />
                         <FaLinkedin onClick={() => handleLinkNav('https://www.linkedin.com/in/oma-abogados-s-a-s-a54197309')} className="web-icon" />
                         <FaInstagram onClick={() => handleLinkNav('https://www.instagram.com/omaabogados/')} className="web-icon" />
                     </div>

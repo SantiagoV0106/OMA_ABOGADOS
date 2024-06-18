@@ -109,7 +109,7 @@ export function Carousel() {
                                 «Director de la firma legal OMA ABOGADOS S.A.S.»</p>
                             <p><span className='cargo' >Cargo ocupado:</span> Litigante y Consultor en áreas del Derecho civil, administrativo, penal, disciplinario, laboral, comercial, financiero y de seguros.
                                 (Jurisdicción: Bogotá, Cundinamarca, Santiago de Cali, Valle del Cauca, Departamento del Cauca y Eje cafetero).
-                                Proveedor de servicios legales para el Grupo Bancolombia S.A. y Banco Popular S.A.</p>
+                                Proveedor de servicios legales para el Grupo Bancolombia S.A., Banco Popular S.A., entre otros.</p>
                             <p className='date'> Julio 2018 - Actualidad </p>
                         </div>
                     </div>

@@ -69,7 +69,7 @@ export function Home() {
                 <TitleSection
                     className='title-container'
                     subTitle='Sobre Nosotros'
-                    title='Bienvenidos a OMA ABOGADOS S.A.S'
+                    title='Bienvenidos a OMA ABOGADOS S.A.S.'
                     desc={`En OMA ABOGADOS S.A.S.
                      nos especializamos en la defensa 
                      judicial de entidades financieras y 

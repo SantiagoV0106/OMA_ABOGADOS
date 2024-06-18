@@ -29,7 +29,7 @@ export function AboutUsPage() {
                 <Header />
                 <div className={'title-container'}>
                     <h3>{'Sobre Nosotros'}</h3>
-                    <h1>{'OMA ABOGADOS S.A.S'}</h1>
+                    <h1>{'OMA ABOGADOS S.A.S.'}</h1>
                     <Button
                         onClick={scrollTo}
                         type='button'
@@ -55,7 +55,7 @@ export function AboutUsPage() {
                     </div>
                     <div className="oma-value">
                         <h1>Visión</h1>
-                        <p>Para el año 2026, OMA ABOGADOS S.A.S se consolidará en las zonas
+                        <p>Para el año 2026, OMA ABOGADOS S.A.S. se consolidará en las zonas
                             que integra Valle del Cauca, Cauca, Eje cafetero, Bogotá D.C. y
                             Cundinamarca; liderando, con ahínco los intereses jurídicos de nuestros
                             clientes a través de la excelencia en la prestación de los servicios
