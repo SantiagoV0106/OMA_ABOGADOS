@@ -10,7 +10,7 @@ export function ContactTitle() {
             <h3>Contacto</h3>
             <h1>Te ayudamos al instante</h1>
             <ul>
-                <li><FiPhone className='web-icon' /> (602) 308 7554 </li>
+                <li><FiPhone className='web-icon' /> (602) 333 9222 </li>
                 <li><FaWhatsapp className='web-icon' /> (+57) 310 279 1873 </li>
                 <li> <IoMailOutline className='web-icon' /> luis.orjuela@omaabogados.com.co </li>
             </ul>

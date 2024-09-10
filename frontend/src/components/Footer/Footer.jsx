@@ -39,7 +39,7 @@ export function Footer() {
             <div className="footer-content-container">
                 <ul>
                     <li><IoMailOutline /> luis.orjuela@omaabogados.com.co </li>
-                    <li><FiPhone /> (602) 308 7554 </li>
+                    <li><FiPhone /> (602) 333 9222 </li>
                     <li><FaWhatsapp /> (+57) 310 279 1873</li>
                 </ul>
                 <div className="footer-offices-container">

@@ -33,13 +33,13 @@ export function Home() {
         backgroundImage: `url(${heroImages[0].imageUrl})`
     }
 
-   const {scrollTo} = useScroll()
+    const { scrollTo } = useScroll()
 
-   const navigate = useNavigate()
+    const navigate = useNavigate()
 
-   const handleNavigate = () => {
-    navigate('/sobre-nosotros')
-   }
+    const handleNavigate = () => {
+        navigate('/sobre-nosotros')
+    }
 
     return (
         <>
@@ -59,9 +59,9 @@ export function Home() {
                     <Button
                         type='button'
                         className={'primary-btn'}
-                        name={'Contáctanos'} 
+                        name={'Contáctanos'}
                         onClick={scrollTo}
-                        />
+                    />
                 </div>
             </section>
             <Banner />
@@ -112,15 +112,10 @@ export function Home() {
                     className='title-container'
                     subTitle='Nuestros clientes'
                     title='Clientes'
-                    desc={`OMA ABOGADOS S.A.S. 
-                    se enorgullece de haber prestado sus servicios 
-                    legales a una amplia gama de clientes, 
-                    entre los cuales se encuentran destacadas instituciones 
-                    financieras como Banco Popular, Grupo Bancolombia, 
-                    Fiduciaria Bancolombia y Renting Colombia. 
-                    Nuestra firma se compromete a brindar asesoramiento 
-                    jurídico especializado y soluciones efectivas para proteger 
-                    los intereses de nuestros clientes en cada caso.`}
+                    desc={`OMA ABOGADOS S.A.S. se enorgullece de prestar sus servicios legales a una amplia gama de clientes, 
+                        entre los cuales se encuentran destacadas instituciones financieras como Banco Popular, Grupo Bancolombia, 
+                        Fiduciaria Bancolombia y Renting Colombia. Nuestra firma se compromete a brindar asesoramiento jurídico especializado y 
+                        soluciones efectivas para proteger los intereses de nuestros clientes en cada caso.`}
                     btnClassname='secondary-btn'
                     btnIcon={<FaAngleRight className='web-icon' />}
                     btnName='Conoce más'

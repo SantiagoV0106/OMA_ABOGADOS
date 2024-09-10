@@ -1,10 +1,8 @@
 export const offices = [
     {
         name: 'Oficina Cali',
-        direction: `Avenida 5A Norte #23DN - 68
-        Oficina 302, Centro Comercial
-        “La Pasarela”, Cali, Valle del Cauca`,
-        directionUrl: 'https://maps.app.goo.gl/G9sKwkkP7dYsKC79A'
+        direction: `Avenida 6 #17-92 oficina 509. Cali – Valle. Edificio Plaza Versalles`,
+        directionUrl: 'https://maps.app.goo.gl/ZLeY3d4WwZVQKnZW8'
     },
     {
         name: 'Oficina Bogotá',
